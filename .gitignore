@@ -1,0 +1,5 @@
+Binaries
+Intermediate
+Backup
+*.db
+*.ipch
