@@ -133,7 +133,7 @@ void ARealSenseActor::Tick(float DeltaTime)
 							//draw a debug points at each face landmark
 							DrawDebugPoint(GetWorld(), pose, 3.f, FColor(0, 255, 0), false, 0.03f);
 						}
-						delete landmarkPoints;
+						delete[] landmarkPoints;
 					}
 				}
 

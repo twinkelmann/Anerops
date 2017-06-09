@@ -10,6 +10,8 @@
 #include <RealSense/Face/FaceData.h>
 #include <RealSense/Face/FaceModule.h>
 
+#include <vector>
+
 #include "RealSenseActor.generated.h"
 
 using namespace Intel::RealSense;
@@ -20,6 +22,10 @@ class ANEROPS_API ARealSenseActor : public AActor
 	GENERATED_BODY()
 
 public:
+	FVector m_headLocation;
+	FQuat m_headRotation;
+	std::vector<FVector> m_landmarks;
+
 	// Sets default values for this actor's properties
 	ARealSenseActor();
 	~ARealSenseActor();
