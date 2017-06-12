@@ -3,4 +3,5 @@ Intermediate
 Backup
 Logs
 *.db
+*.db-*
 *.ipch

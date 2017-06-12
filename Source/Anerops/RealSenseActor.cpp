@@ -66,7 +66,7 @@ void ARealSenseActor::BeginPlay()
 	if (m_status < STATUS_NO_ERROR)
 	{
 		UE_LOG(GeneralLog, Warning, TEXT("Error initializing streaming pipeline: %d. Exiting."), static_cast<int>(m_status));
-		UKismetSystemLibrary::QuitGame(GetWorld(),NULL,EQuitPreference::Type::Quit);
+		UKismetSystemLibrary::QuitGame(GetWorld(), NULL, EQuitPreference::Type::Quit);
 	}
 
 	m_outputData = m_faceAnalyzer->CreateOutput();
@@ -98,10 +98,12 @@ void ARealSenseActor::Tick(float DeltaTime)
 
 	//AcquireFrame true -> wait for all cameras to be ready before getting new frame
 	m_status = m_manager->AcquireFrame(true);
+
 	//values greater than 0 means warnings. below 0 are errors
 	if(m_status >= STATUS_NO_ERROR)
 	{
 		m_outputData->Update();
+		//m_landmarks.clear();
 
 		// iterate through faces
 		int32_t numOfFaces = m_outputData->QueryNumberOfDetectedFaces();
@@ -129,6 +131,7 @@ void ARealSenseActor::Tick(float DeltaTime)
 							FVector pose = Utilities::RsToUnrealVector(landmarkPoints[y].world);
 							//meters to milimeters
 							pose *= 1000.f;
+							//m_landmarks.push_back(pose);
 
 							//draw a debug points at each face landmark
 							DrawDebugPoint(GetWorld(), pose, 3.f, FColor(0, 255, 0), false, 0.03f);
@@ -153,7 +156,7 @@ void ARealSenseActor::Tick(float DeltaTime)
 						roll   - turn around forward axis, positif right
 						*/
 						FQuat newQuat(headRot.z, headRot.x, -headRot.y, headRot.w);
-						SetActorRotation(newQuat);
+						//SetActorRotation(newQuat);
 					}
 
 					//position

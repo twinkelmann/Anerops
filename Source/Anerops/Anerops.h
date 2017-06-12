@@ -6,4 +6,3 @@
 
 //custom log type
 DECLARE_LOG_CATEGORY_EXTERN(GeneralLog, Log, All);
-
