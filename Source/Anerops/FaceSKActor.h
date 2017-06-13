@@ -2,14 +2,14 @@
 
 #pragma once
 
-#include "Components/PoseableMeshComponent.h"
-#include "RealSensePoseComponent.generated.h"
+#include "Animation/SkeletalMeshActor.h"
+#include "FaceSKActor.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class ANEROPS_API URealSensePoseComponent : public UPoseableMeshComponent
+class ANEROPS_API AFaceSKActor : public ASkeletalMeshActor
 {
 	GENERATED_BODY()
 	
