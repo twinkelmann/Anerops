@@ -1,8 +1,9 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+// "Anerops" is licenced under the GNU GPL 3 licence.
+// Visit <https://www.gnu.org/licenses/> for more information
 
 #include "Anerops.h"
 
-IMPLEMENT_PRIMARY_GAME_MODULE( FDefaultGameModuleImpl, Anerops, "Anerops" );
+IMPLEMENT_PRIMARY_GAME_MODULE( FDefaultGameModuleImpl, Anerops, "Anerops" )
 
 //custom log type
-DEFINE_LOG_CATEGORY(GeneralLog);
+DEFINE_LOG_CATEGORY(GeneralLog)

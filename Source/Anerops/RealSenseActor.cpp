@@ -1,9 +1,9 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+// "Anerops" is licenced under the GNU GPL 3 licence.
+// Visit <https://www.gnu.org/licenses/> for more information
 
 #include "Anerops.h"
 #include "RealSenseActor.h"
 #include "Utilities.h"
-
 
 // Sets default values
 ARealSenseActor::ARealSenseActor() :
@@ -11,9 +11,13 @@ ARealSenseActor::ARealSenseActor() :
 	m_session(NULL),
 	m_status(STATUS_NO_ERROR)
 {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	// Set this actor to call Tick() every frame.
 	PrimaryActorTick.bCanEverTick = true;
 
+	m_headLocation = FVector(0,0,0);
+	m_headRotation = FQuat(0,0,0,0);
+	m_landmarks.Empty();
+	m_offsetLocations.Empty();
 }
 
 ARealSenseActor::~ARealSenseActor()
@@ -33,40 +37,62 @@ void ARealSenseActor::BeginPlay()
 	if (m_manager == NULL)
 	{
 		//logging with a custom defined log type
-		UE_LOG(GeneralLog, Warning, TEXT("Coulnd not create RealSense Instance. Exiting."));
+		UE_LOG(GeneralLog,
+			   Warning,
+			   TEXT("Coulnd not create RealSense Instance. Exiting."));
 		//request for a clean exit
-		UKismetSystemLibrary::QuitGame(GetWorld(), NULL, EQuitPreference::Type::Quit);
+		UKismetSystemLibrary::QuitGame(GetWorld(),
+									   NULL,
+									   EQuitPreference::Type::Quit);
 	}
 
 	m_session = m_manager->QuerySession();
 	if (m_session == NULL)
 	{
-		UE_LOG(GeneralLog, Warning, TEXT("Coulnd not retrieve session. Exiting."));
-		UKismetSystemLibrary::QuitGame(GetWorld(), NULL, EQuitPreference::Type::Quit);
+		UE_LOG(GeneralLog,
+			   Warning,
+			   TEXT("Coulnd not retrieve session. Exiting."));
+		UKismetSystemLibrary::QuitGame(GetWorld(),
+									   NULL,
+									   EQuitPreference::Type::Quit);
 	}
 
 	//enable face module for landmark finding
 	m_status = m_manager->EnableFace();
 	if (m_status < STATUS_NO_ERROR)
 	{
-		UE_LOG(GeneralLog, Warning, TEXT("Error enabling faces: %d. Exiting."), static_cast<int>(m_status));
-		UKismetSystemLibrary::QuitGame(GetWorld(), NULL, EQuitPreference::Type::Quit);
+		UE_LOG(GeneralLog,
+			   Warning,
+			   TEXT("Error enabling faces: %d. Exiting."),
+			   static_cast<int>(m_status));
+		UKismetSystemLibrary::QuitGame(GetWorld(),
+									   NULL,
+									   EQuitPreference::Type::Quit);
 	}
 
 	//object responsable for face analyzing
 	m_faceAnalyzer = m_manager->QueryFace();
 	if (m_faceAnalyzer == NULL)
 	{
-		UE_LOG(GeneralLog, Warning, TEXT("Error creating face analyser. Exiting."));
-		UKismetSystemLibrary::QuitGame(GetWorld(), NULL, EQuitPreference::Type::Quit);
+		UE_LOG(GeneralLog,
+			   Warning,
+			   TEXT("Error creating face analyser. Exiting."));
+		UKismetSystemLibrary::QuitGame(GetWorld(),
+									   NULL,
+									   EQuitPreference::Type::Quit);
 	}
 
 	//steaming pipeling
 	m_status = m_manager->Init();
 	if (m_status < STATUS_NO_ERROR)
 	{
-		UE_LOG(GeneralLog, Warning, TEXT("Error initializing streaming pipeline: %d. Exiting."), static_cast<int>(m_status));
-		UKismetSystemLibrary::QuitGame(GetWorld(), NULL, EQuitPreference::Type::Quit);
+		UE_LOG(GeneralLog,
+			   Warning,
+			   TEXT("Error initializing streaming pipeline: %d. Exiting."),
+			   static_cast<int>(m_status));
+		UKismetSystemLibrary::QuitGame(GetWorld(),
+									   NULL,
+									   EQuitPreference::Type::Quit);
 	}
 
 	m_outputData = m_faceAnalyzer->CreateOutput();
@@ -74,7 +100,9 @@ void ARealSenseActor::BeginPlay()
 	//configuration of the analyzer
 	//TODO: remove useless things : face detection, position ?
 	m_config = m_faceAnalyzer->CreateActiveConfiguration();
-	m_config->SetTrackingMode(Face::FaceConfiguration::TrackingModeType::FACE_MODE_COLOR_PLUS_DEPTH);
+	m_config->SetTrackingMode(Face::FaceConfiguration::TrackingModeType::
+							  FACE_MODE_COLOR_PLUS_DEPTH);
+
 	//face detection
 	m_config->detection.isEnabled = true;
 	m_config->detection.maxTrackedFaces = MAX_FACES;
@@ -91,36 +119,65 @@ void ARealSenseActor::BeginPlay()
 
 }
 
+using namespace Face;
+
 // Called every frame
 void ARealSenseActor::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	//AcquireFrame true -> wait for all cameras to be ready before getting new frame
+	//AcquireFrame true
+	//-> wait for all sensors to be ready before getting new frame
 	m_status = m_manager->AcquireFrame(true);
 
 	//values greater than 0 means warnings. below 0 are errors
 	if(m_status >= STATUS_NO_ERROR)
 	{
 		m_outputData->Update();
-		//m_landmarks.clear();
+		m_landmarks.Empty();
 
 		// iterate through faces
-		int32_t numOfFaces = m_outputData->QueryNumberOfDetectedFaces();
+		int numOfFaces = m_outputData->QueryNumberOfDetectedFaces();
 
-		for (int32_t i = 0; i < numOfFaces; i++)
+		for (int i = 0; i < numOfFaces; i++)
 		{
 			//for each face by index
-			Face::FaceData::Face *trackedFace = m_outputData->QueryFaceByIndex(i);
+			FaceData::Face* trackedFace = m_outputData->QueryFaceByIndex(i);
 			if (trackedFace != NULL)
 			{
+
+				//position data
+				FaceData::PoseData* poseData = trackedFace->QueryPose();
+				if (poseData != NULL)
+				{
+					FaceData::PoseQuaternion headRot;
+					FaceData::HeadPosition headPose;
+
+					//rotation
+					if (poseData->QueryPoseQuaternion(&headRot) != NULL)
+					{
+						m_headRotation = Utilities::RsToUnrealQuat(headRot);
+						//SetActorRotation(m_headRotation);
+					}
+
+					//position
+					if (poseData->QueryHeadPosition(&headPose))
+					{
+						m_headLocation = Utilities::RsToUnrealVector(
+									headPose.headCenter);
+						//SetActorLocation(m_headLocation);
+					}
+				}
+
 				//landmark data
-				Face::FaceData::LandmarksData* landmarkData = trackedFace->QueryLandmarks();
+				FaceData::LandmarksData* landmarkData =
+						trackedFace->QueryLandmarks();
 				if (landmarkData != NULL)
 				{
-					pxcI32 numPoints = landmarkData->QueryNumPoints();
+					int numPoints = landmarkData->QueryNumPoints();
 					//static list that will contain the points
-					Face::FaceData::LandmarkPoint* landmarkPoints = new Face::FaceData::LandmarkPoint[numPoints];
+					FaceData::LandmarkPoint* landmarkPoints =
+							new FaceData::LandmarkPoint[numPoints];
 
 					if (landmarkData->QueryPoints(landmarkPoints) != NULL)
 					{
@@ -128,53 +185,29 @@ void ARealSenseActor::Tick(float DeltaTime)
 						for (int y = 0; y < numPoints; y++)
 						{
 							//convert realsens pos
-							FVector pose = Utilities::RsToUnrealVector(landmarkPoints[y].world);
+							FVector pose = Utilities::RsToUnrealVector(
+										landmarkPoints[y].world);
 							//meters to milimeters
 							pose *= 1000.f;
-							//m_landmarks.push_back(pose);
+							//go from world space to head local space
+							pose-=m_headLocation;
+
+							FLandmark landmark;
+							landmark.location = pose;
+							landmark.identifier = static_cast<int>(
+										landmarkPoints[y].source.alias);
+
+							m_landmarks.Add(landmark);
 
 							//draw a debug points at each face landmark
-							DrawDebugPoint(GetWorld(), pose, 3.f, FColor(0, 255, 0), false, 0.03f);
+							/*DrawDebugPoint(GetWorld(),
+										   pose,
+										   3.f,
+										   FColor(0, 0, 255),
+										   false,
+										   0.03f);*/
 						}
 						delete[] landmarkPoints;
-					}
-				}
-
-				//position data
-				Face::FaceData::PoseData* poseData = trackedFace->QueryPose();
-				if (poseData != NULL)
-				{
-					Face::FaceData::PoseQuaternion headRot;
-					Face::FaceData::HeadPosition headPose;
-
-					//rotation
-					if (poseData->QueryPoseQuaternion(&headRot) != NULL)
-					{
-						/*
-						pitch - turn around left axis, positif back
-						yaw  - turn around up axis, positif right
-						roll   - turn around forward axis, positif right
-						*/
-						FQuat newQuat(headRot.z, headRot.x, -headRot.y, headRot.w);
-						//SetActorRotation(newQuat);
-					}
-
-					//position
-					if (poseData->QueryHeadPosition(&headPose))
-					{
-						/*
-						SR300
-						x - left-right, left positive
-						y - up-down, up positive
-						z - closer,further, further positive, mid point (chair): 800
-
-						x in range -240 - +280 (at 0 y)
-						y in range -280 - +150 (at 0 x)
-						z  in range 400 - 1300
-						*/
-
-						FVector newPos = Utilities::RsToUnrealVector(headPose.headCenter);
-						SetActorLocation(newPos);
 					}
 				}
 			}
@@ -182,9 +215,13 @@ void ARealSenseActor::Tick(float DeltaTime)
 	}
 	else
 	{
-		//in case of error
-		UE_LOG(GeneralLog, Warning, TEXT("Error getting frame: %d."), static_cast<int>(m_status));
+		//in case of error, we simply report it
+		UE_LOG(GeneralLog,
+			   Warning,
+			   TEXT("Error getting frame: %d."),
+			   static_cast<int>(m_status));
 	}
 
+	//release the frame in any case
 	m_manager->ReleaseFrame();
 }

@@ -5,3 +5,4 @@ Logs
 *.db
 *.db-*
 *.ipch
+*.opendb
