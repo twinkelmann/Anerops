@@ -9,7 +9,10 @@
 ARealSenseActor::ARealSenseActor() :
 	m_manager(NULL),
 	m_session(NULL),
-	m_status(STATUS_NO_ERROR)
+	m_status(STATUS_NO_ERROR),
+	m_firstFrame(true),
+	m_lowThreshold(2.0),
+	m_highThreshold(20.0)
 {
 	// Set this actor to call Tick() every frame.
 	PrimaryActorTick.bCanEverTick = true;
@@ -17,7 +20,7 @@ ARealSenseActor::ARealSenseActor() :
 	m_headLocation = FVector(0,0,0);
 	m_headRotation = FQuat(0,0,0,0);
 	m_landmarks.Empty();
-	m_offsetLocations.Empty();
+	m_lastLandmarks.Empty();
 }
 
 ARealSenseActor::~ARealSenseActor()
@@ -122,9 +125,9 @@ void ARealSenseActor::BeginPlay()
 using namespace Face;
 
 // Called every frame
-void ARealSenseActor::Tick(float DeltaTime)
+void ARealSenseActor::Tick(float deltaTime)
 {
-	Super::Tick(DeltaTime);
+	Super::Tick(deltaTime);
 
 	//AcquireFrame true
 	//-> wait for all sensors to be ready before getting new frame
@@ -134,6 +137,8 @@ void ARealSenseActor::Tick(float DeltaTime)
 	if(m_status >= STATUS_NO_ERROR)
 	{
 		m_outputData->Update();
+		m_lastLandmarks.Empty();
+		m_lastLandmarks.Append(m_landmarks);
 		m_landmarks.Empty();
 
 		// iterate through faces
@@ -175,7 +180,7 @@ void ARealSenseActor::Tick(float DeltaTime)
 				if (landmarkData != NULL)
 				{
 					int numPoints = landmarkData->QueryNumPoints();
-					//static list that will contain the points
+					//static list that will contain the landmar
 					FaceData::LandmarkPoint* landmarkPoints =
 							new FaceData::LandmarkPoint[numPoints];
 
@@ -189,23 +194,37 @@ void ARealSenseActor::Tick(float DeltaTime)
 										landmarkPoints[y].world);
 							//meters to milimeters
 							pose *= 1000.f;
-							//go from world space to head local space
-							pose-=m_headLocation;
 
 							FLandmark landmark;
-							landmark.location = pose;
-							landmark.identifier = static_cast<int>(
-										landmarkPoints[y].source.alias);
+							landmark.identifier = landmarkPoints[y].source.alias;
+
+							if(m_firstFrame || m_lastLandmarks.Num() <= 0)
+							{
+								landmark.location = pose;
+							}
+							else
+							{
+								FLandmark last = getLandmarkById(m_lastLandmarks, landmark.identifier);
+								landmark.location = smoothVector(pose, last.location);
+							}
 
 							m_landmarks.Add(landmark);
 
-							//draw a debug points at each face landmark
-							/*DrawDebugPoint(GetWorld(),
+							/*
+							//debug point
+							DrawDebugPoint(GetWorld(),
 										   pose,
 										   3.f,
-										   FColor(0, 0, 255),
+										   FColor(0, 255, 0),
 										   false,
 										   0.03f);*/
+							/*
+							DrawDebugString(GetWorld(),
+											pose,
+											FString::FromInt(
+												landmark.identifier),
+											0,
+											FColor(255,0,0),.001f);*/
 						}
 						delete[] landmarkPoints;
 					}
@@ -222,6 +241,57 @@ void ARealSenseActor::Tick(float DeltaTime)
 			   static_cast<int>(m_status));
 	}
 
+	//if we are at the first frame, we copy the landmarks
+	if(m_firstFrame)
+	{
+		m_firstFrame = false;
+		m_lastLandmarks.Append(m_landmarks);
+	}
+
 	//release the frame in any case
 	m_manager->ReleaseFrame();
+}
+
+FVector ARealSenseActor::smoothVector(const FVector &current, const FVector &last)
+{
+	FVector out = current;
+
+	if(current.X == 0 && current.Y == 0 && current.Z == 0)
+	{
+		//prevent jumping to default position when landmark is lost
+		out = last;
+		UE_LOG(GeneralLog, Warning, TEXT("Landmark found at (0,0,0)"));
+	}
+	else
+	{
+		FVector difference = current-last;
+		float dist = difference.Size();
+
+		if(dist <= m_lowThreshold)
+		{
+			//fixed if not enough mouvement
+			out = last;
+		}
+		else if(dist >= m_highThreshold)
+		{
+			//moved mostly back where it was if too much movement
+			out = (last + last + last + current) / 4.f;
+		}
+	}
+
+	return out;
+}
+
+FLandmark ARealSenseActor::getLandmarkById(TArray<FLandmark> landmarks, int id)
+{
+	int index = 0;
+	for(int i = 0; i < landmarks.Num(); i++)
+	{
+		if(landmarks[i].identifier == id)
+		{
+			index = i;
+		}
+	}
+
+	return landmarks[index];
 }

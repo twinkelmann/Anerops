@@ -20,7 +20,3 @@ public:
 	/** returns a quaternion in the unreal world space from a pose quaternion in the realsense world space*/
 	static FQuat RsToUnrealQuat(Face::FaceData::PoseQuaternion &rotation);
 };
-/*
-UFUNCTION(BlueprintCallable, Category="Utilities|Transformation", meta=(DisplayName="AddLocalRotationQuat", AdvancedDisplay="bSweep,SweepHitResult,bTeleport"))
-void AddLocalRotationQuat(const FQuat &DeltaRotation, bool bSweep=false, FHitResult* OutSweepHitResult=nullptr, ETeleportType Teleport = ETeleportType::None);
-*/

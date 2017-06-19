@@ -28,9 +28,3 @@ FQuat Utilities::RsToUnrealQuat(Face::FaceData::PoseQuaternion &rotation)
 	*/
 	return FQuat(rotation.z, rotation.x, -rotation.y, rotation.w);
 }
-/*
-void AddLocalRotationQuat(const FQuat &DeltaRotation, bool bSweep, FHitResult* OutSweepHitResult, ETeleportType Teleport)
-{
-	AddLocalRotation(DeltaRotation,bSweep,OutSweepHitResult,Teleport);
-}
-*/
