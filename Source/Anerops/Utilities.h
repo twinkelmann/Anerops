@@ -16,7 +16,7 @@ class ANEROPS_API Utilities
 {
 public:
 	/** returns a vector in the unreal world space from a 3D point in the realsense world space*/
-	static FVector RsToUnrealVector(Point3DF32 &position);
+	static FVector RsToUnrealVector(const Point3DF32 &position);
 	/** returns a quaternion in the unreal world space from a pose quaternion in the realsense world space*/
-	static FQuat RsToUnrealQuat(Face::FaceData::PoseQuaternion &rotation);
+	static FQuat RsToUnrealQuat(const Face::FaceData::PoseQuaternion& rotation);
 };

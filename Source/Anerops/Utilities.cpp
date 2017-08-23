@@ -4,7 +4,7 @@
 #include "Anerops.h"
 #include "Utilities.h"
 
-FVector Utilities::RsToUnrealVector(Point3DF32 &position)
+FVector Utilities::RsToUnrealVector(const Point3DF32 &position)
 {
 	/*
 	SR300
@@ -19,7 +19,7 @@ FVector Utilities::RsToUnrealVector(Point3DF32 &position)
 	return FVector(-position.x, -position.z, position.y);
 }
 
-FQuat Utilities::RsToUnrealQuat(Face::FaceData::PoseQuaternion &rotation)
+FQuat Utilities::RsToUnrealQuat(const Face::FaceData::PoseQuaternion &rotation)
 {
 	/*
 	pitch - turn around left axis, positif back

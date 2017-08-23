@@ -9,24 +9,36 @@
 ARealSenseActor::ARealSenseActor() :
 	m_manager(NULL),
 	m_session(NULL),
-	m_status(STATUS_NO_ERROR),
-	m_firstFrame(true),
-	m_lowThreshold(2.0),
-	m_highThreshold(20.0)
+	m_headSmoother(NULL),
+	m_status(STATUS_NO_ERROR)
 {
 	// Set this actor to call Tick() every frame.
 	PrimaryActorTick.bCanEverTick = true;
 
 	m_headLocation = FVector(0,0,0);
 	m_headRotation = FQuat(0,0,0,0);
-	m_landmarks.Empty();
-	m_lastLandmarks.Empty();
+	//m_landmarks.Empty();
 }
 
 ARealSenseActor::~ARealSenseActor()
 {
-	if (m_manager != NULL)
+	m_config->Release();
+
+
+	if(m_headSmoother != NULL)
 	{
+		m_headSmoother->Release();
+	}
+
+	for(auto smoother : m_landmarkSmoothers)
+	{
+		smoother->Release();
+	}
+
+	//has to be last to get released
+	if(m_manager != NULL)
+	{
+		m_manager->Close();
 		m_manager->Release();
 	}
 }
@@ -37,12 +49,12 @@ void ARealSenseActor::BeginPlay()
 	Super::BeginPlay();
 
 	m_manager = SenseManager::CreateInstance();
-	if (m_manager == NULL)
+	if(m_manager == NULL)
 	{
 		//logging with a custom defined log type
 		UE_LOG(GeneralLog,
 			   Warning,
-			   TEXT("Coulnd not create RealSense Instance. Exiting."));
+			   TEXT("Could not create RealSense Instance. Exiting."));
 		//request for a clean exit
 		UKismetSystemLibrary::QuitGame(GetWorld(),
 									   NULL,
@@ -50,19 +62,44 @@ void ARealSenseActor::BeginPlay()
 	}
 
 	m_session = m_manager->QuerySession();
-	if (m_session == NULL)
+	if(m_session == NULL)
 	{
 		UE_LOG(GeneralLog,
 			   Warning,
-			   TEXT("Coulnd not retrieve session. Exiting."));
+			   TEXT("Could not retrieve session. Exiting."));
 		UKismetSystemLibrary::QuitGame(GetWorld(),
 									   NULL,
 									   EQuitPreference::Type::Quit);
 	}
 
+
+	Utility::Smoother* smootherFactory = NULL;
+	//create smoother for the head position
+	m_session->CreateImpl<Utility::Smoother>(&smootherFactory);
+	m_headSmoother = smootherFactory->Create3DQuadratic(0.1f);
+
+	if(m_headSmoother == NULL)
+	{
+		UE_LOG(GeneralLog,
+			   Warning,
+			   TEXT("Could not create head smoother. Exiting"));
+		UKismetSystemLibrary::QuitGame(GetWorld(),
+									   NULL,
+									   EQuitPreference::Type::Quit);
+	}
+
+	//create a smoother for each landmark
+
+	for(int i = 0; i < m_numLandmarks; i++)
+	{
+		m_landmarkSmoothers.push_back(smootherFactory->Create3DQuadratic(0.4f));
+	}
+
+	smootherFactory->Release();
+
 	//enable face module for landmark finding
 	m_status = m_manager->EnableFace();
-	if (m_status < STATUS_NO_ERROR)
+	if(m_status < STATUS_NO_ERROR)
 	{
 		UE_LOG(GeneralLog,
 			   Warning,
@@ -75,7 +112,7 @@ void ARealSenseActor::BeginPlay()
 
 	//object responsable for face analyzing
 	m_faceAnalyzer = m_manager->QueryFace();
-	if (m_faceAnalyzer == NULL)
+	if(m_faceAnalyzer == NULL)
 	{
 		UE_LOG(GeneralLog,
 			   Warning,
@@ -87,7 +124,7 @@ void ARealSenseActor::BeginPlay()
 
 	//steaming pipeling
 	m_status = m_manager->Init();
-	if (m_status < STATUS_NO_ERROR)
+	if(m_status < STATUS_NO_ERROR)
 	{
 		UE_LOG(GeneralLog,
 			   Warning,
@@ -108,15 +145,15 @@ void ARealSenseActor::BeginPlay()
 
 	//face detection
 	m_config->detection.isEnabled = true;
-	m_config->detection.maxTrackedFaces = MAX_FACES;
+	m_config->detection.maxTrackedFaces = m_maxFaces;
 	//landmark detection
 	m_config->landmarks.isEnabled = true;
-	m_config->landmarks.maxTrackedFaces = MAX_FACES;
+	m_config->landmarks.maxTrackedFaces = m_maxFaces;
 	//position detection
 	m_config->pose.isEnabled = true;
-	m_config->pose.maxTrackedFaces = MAX_FACES;
+	m_config->pose.maxTrackedFaces = m_maxFaces;
 	//events
-	m_config->EnableAllAlerts();
+	//m_config->EnableAllAlerts();
 
 	m_config->ApplyChanges();
 
@@ -130,83 +167,79 @@ void ARealSenseActor::Tick(float deltaTime)
 	Super::Tick(deltaTime);
 
 	//AcquireFrame true
-	//-> wait for all sensors to be ready before getting new frame
+	//true -> wait for all sensors to be ready before getting new frame
 	m_status = m_manager->AcquireFrame(true);
 
 	//values greater than 0 means warnings. below 0 are errors
 	if(m_status >= STATUS_NO_ERROR)
 	{
 		m_outputData->Update();
-		m_lastLandmarks.Empty();
-		m_lastLandmarks.Append(m_landmarks);
 		m_landmarks.Empty();
 
 		// iterate through faces
-		int numOfFaces = m_outputData->QueryNumberOfDetectedFaces();
+		const int numOfFaces = m_outputData->QueryNumberOfDetectedFaces();
 
-		for (int i = 0; i < numOfFaces; i++)
+		if(numOfFaces > 0)
 		{
-			//for each face by index
-			FaceData::Face* trackedFace = m_outputData->QueryFaceByIndex(i);
-			if (trackedFace != NULL)
+			//we only care about one face, so we take the first one
+			FaceData::Face* trackedFace = m_outputData->QueryFaceByIndex(0);
+			if(trackedFace != NULL)
 			{
 
 				//position data
 				FaceData::PoseData* poseData = trackedFace->QueryPose();
-				if (poseData != NULL)
+				if(poseData != NULL)
 				{
 					FaceData::PoseQuaternion headRot;
 					FaceData::HeadPosition headPose;
 
 					//rotation
-					if (poseData->QueryPoseQuaternion(&headRot) != NULL)
+					if(poseData->QueryPoseQuaternion(&headRot) != NULL)
 					{
 						m_headRotation = Utilities::RsToUnrealQuat(headRot);
-						//SetActorRotation(m_headRotation);
 					}
 
 					//position
-					if (poseData->QueryHeadPosition(&headPose))
+					if(poseData->QueryHeadPosition(&headPose))
 					{
-						m_headLocation = Utilities::RsToUnrealVector(
+						Point3DF32 smoothedPoint = m_headSmoother->SmoothValue(
 									headPose.headCenter);
-						//SetActorLocation(m_headLocation);
+						m_headLocation = Utilities::RsToUnrealVector(
+									smoothedPoint);
 					}
 				}
 
 				//landmark data
 				FaceData::LandmarksData* landmarkData =
 						trackedFace->QueryLandmarks();
-				if (landmarkData != NULL)
+				if(landmarkData != NULL)
 				{
-					int numPoints = landmarkData->QueryNumPoints();
-					//static list that will contain the landmar
+					const int numPoints = landmarkData->QueryNumPoints();
+					//static list that will contain the landmarks
 					FaceData::LandmarkPoint* landmarkPoints =
 							new FaceData::LandmarkPoint[numPoints];
 
-					if (landmarkData->QueryPoints(landmarkPoints) != NULL)
+					if(landmarkData->QueryPoints(landmarkPoints) != NULL)
 					{
 						//points are valid, use them
-						for (int y = 0; y < numPoints; y++)
+						for(int i = 0; i < numPoints; i++)
 						{
+							//create a new landmark structure
+							FLandmark landmark;
+							//get the identifier
+							landmark.identifier = landmarkPoints[i].source.alias;
+
+							//smooth the position with it's personnal smoother.
+							//-1 because ids start at 1
+							Utility::Smoother::Smoother3D* smoother = m_landmarkSmoothers[landmark.identifier - 1];
+
+							Point3DF32 smoothedPoint = smoother->SmoothValue(landmarkPoints[i].world);
 							//convert realsens pos
-							FVector pose = Utilities::RsToUnrealVector(
-										landmarkPoints[y].world);
+							FVector pose = Utilities::RsToUnrealVector(smoothedPoint);
 							//meters to milimeters
 							pose *= 1000.f;
 
-							FLandmark landmark;
-							landmark.identifier = landmarkPoints[y].source.alias;
-
-							if(m_firstFrame || m_lastLandmarks.Num() <= 0)
-							{
-								landmark.location = pose;
-							}
-							else
-							{
-								FLandmark last = getLandmarkById(m_lastLandmarks, landmark.identifier);
-								landmark.location = smoothVector(pose, last.location);
-							}
+							landmark.location = pose;
 
 							m_landmarks.Add(landmark);
 
@@ -217,14 +250,15 @@ void ARealSenseActor::Tick(float deltaTime)
 										   3.f,
 										   FColor(0, 255, 0),
 										   false,
-										   0.03f);*/
-							/*
+										   0.03f);
+
 							DrawDebugString(GetWorld(),
 											pose,
 											FString::FromInt(
 												landmark.identifier),
 											0,
-											FColor(255,0,0),.001f);*/
+											FColor(255,0,0),.001f);
+											*/
 						}
 						delete[] landmarkPoints;
 					}
@@ -241,45 +275,8 @@ void ARealSenseActor::Tick(float deltaTime)
 			   static_cast<int>(m_status));
 	}
 
-	//if we are at the first frame, we copy the landmarks
-	if(m_firstFrame)
-	{
-		m_firstFrame = false;
-		m_lastLandmarks.Append(m_landmarks);
-	}
-
 	//release the frame in any case
 	m_manager->ReleaseFrame();
-}
-
-FVector ARealSenseActor::smoothVector(const FVector &current, const FVector &last)
-{
-	FVector out = current;
-
-	if(current.X == 0 && current.Y == 0 && current.Z == 0)
-	{
-		//prevent jumping to default position when landmark is lost
-		out = last;
-		UE_LOG(GeneralLog, Warning, TEXT("Landmark found at (0,0,0)"));
-	}
-	else
-	{
-		FVector difference = current-last;
-		float dist = difference.Size();
-
-		if(dist <= m_lowThreshold)
-		{
-			//fixed if not enough mouvement
-			out = last;
-		}
-		else if(dist >= m_highThreshold)
-		{
-			//moved mostly back where it was if too much movement
-			out = (last + last + last + current) / 4.f;
-		}
-	}
-
-	return out;
 }
 
 FLandmark ARealSenseActor::getLandmarkById(TArray<FLandmark> landmarks, int id)
@@ -292,6 +289,5 @@ FLandmark ARealSenseActor::getLandmarkById(TArray<FLandmark> landmarks, int id)
 			index = i;
 		}
 	}
-
 	return landmarks[index];
 }

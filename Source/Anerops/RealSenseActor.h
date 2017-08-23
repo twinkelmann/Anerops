@@ -10,7 +10,9 @@
 #include "RealSense/Face/FaceConfiguration.h"
 #include "RealSense/Face/FaceData.h"
 #include "RealSense/Face/FaceModule.h"
+#include "Realsense/Utility/Smoother.h"
 
+#include <list>
 #include <vector>
 #include "Utilities.h"
 
@@ -44,8 +46,6 @@ class ANEROPS_API ARealSenseActor : public AActor
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="RealSense", Meta=(DisplayName = "Landmarks"))
 	TArray<FLandmark> m_landmarks;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="RealSense", Meta=(DisplayName = "Last Landmarks"))
-	TArray<FLandmark> m_lastLandmarks;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="RealSense", Meta=(DisplayName = "Head Location"))
 	FVector m_headLocation;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="RealSense", Meta=(DisplayName = "Head Rotation"))
@@ -58,12 +58,14 @@ public:
 	// Called every frame
 	virtual void Tick(float deltaTime) override;
 
+	UFUNCTION(BlueprintCallable, meta=(DisplayName = "GetLandmarkById"), Category="RealSense")
+	static FLandmark getLandmarkById(TArray<FLandmark> landmarks, int id);
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
 private:
-
 	//realsense componants
 	SenseManager* m_manager;
 	Session* m_session;
@@ -72,17 +74,12 @@ private:
 	Face::FaceModule* m_faceAnalyzer;
 	Face::FaceData* m_outputData;
 	Face::FaceConfiguration* m_config;
-	bool m_firstFrame;
 
-	FVector smoothVector(const FVector &current, const FVector &last);
+	//the smoother object for the face position
+	Utility::Smoother::Smoother3D* m_headSmoother;
+	//the list of smoother objects for each landmarks
+	std::vector<Utility::Smoother::Smoother3D*> m_landmarkSmoothers;
 
-	UFUNCTION(BlueprintCallable, meta=(DisplayName = "GetLandmarkById"), Category="RealSense")
-	static FLandmark getLandmarkById(TArray<FLandmark> landmarks, int id);
-
-	UPROPERTY(EditAnywhere)
-	float m_lowThreshold;
-	UPROPERTY(EditAnywhere)
-	float m_highThreshold;
-
-	unsigned int MAX_FACES = 1;
+	unsigned int m_maxFaces = 1;
+	int m_numLandmarks = 32;
 };
