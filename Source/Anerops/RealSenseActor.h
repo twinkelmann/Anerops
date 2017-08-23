@@ -78,7 +78,7 @@ private:
 	//the smoother object for the face position
 	Utility::Smoother::Smoother3D* m_headSmoother;
 	//the list of smoother objects for each landmarks
-	std::vector<Utility::Smoother::Smoother3D*> m_landmarkSmoothers;
+	//std::vector<Utility::Smoother::Smoother3D*> m_landmarkSmoothers;
 
 	unsigned int m_maxFaces = 1;
 	int m_numLandmarks = 32;

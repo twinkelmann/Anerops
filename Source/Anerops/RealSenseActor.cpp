@@ -29,11 +29,13 @@ ARealSenseActor::~ARealSenseActor()
 	{
 		m_headSmoother->Release();
 	}
+	/*
 
 	for(auto smoother : m_landmarkSmoothers)
 	{
 		smoother->Release();
 	}
+	*/
 
 	//has to be last to get released
 	if(m_manager != NULL)
@@ -89,11 +91,12 @@ void ARealSenseActor::BeginPlay()
 	}
 
 	//create a smoother for each landmark
-
+	/*
 	for(int i = 0; i < m_numLandmarks; i++)
 	{
 		m_landmarkSmoothers.push_back(smootherFactory->Create3DQuadratic(0.4f));
 	}
+	*/
 
 	smootherFactory->Release();
 
@@ -231,9 +234,9 @@ void ARealSenseActor::Tick(float deltaTime)
 
 							//smooth the position with it's personnal smoother.
 							//-1 because ids start at 1
-							Utility::Smoother::Smoother3D* smoother = m_landmarkSmoothers[landmark.identifier - 1];
+							//Utility::Smoother::Smoother3D* smoother = m_landmarkSmoothers[landmark.identifier - 1];
 
-							Point3DF32 smoothedPoint = smoother->SmoothValue(landmarkPoints[i].world);
+							Point3DF32 smoothedPoint = /*smoother->SmoothValue(*/landmarkPoints[i].world;
 							//convert realsens pos
 							FVector pose = Utilities::RsToUnrealVector(smoothedPoint);
 							//meters to milimeters
