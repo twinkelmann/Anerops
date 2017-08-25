@@ -18,6 +18,7 @@ ARealSenseActor::ARealSenseActor() :
 	m_headLocation = FVector(0,0,0);
 	m_headRotation = FQuat(0,0,0,0);
 	//m_landmarks.Empty();
+	m_landmarkSmoothers.clear();
 }
 
 ARealSenseActor::~ARealSenseActor()
@@ -29,13 +30,14 @@ ARealSenseActor::~ARealSenseActor()
 	{
 		m_headSmoother->Release();
 	}
-	/*
 
-	for(auto smoother : m_landmarkSmoothers)
+	for(int i = 0; i < m_landmarkSmoothers.size(); i++)
 	{
-		smoother->Release();
+		if(m_landmarkSmoothers[i] != NULL)
+		{
+			m_landmarkSmoothers[i]->Release();
+		}
 	}
-	*/
 
 	//has to be last to get released
 	if(m_manager != NULL)
@@ -91,12 +93,11 @@ void ARealSenseActor::BeginPlay()
 	}
 
 	//create a smoother for each landmark
-	/*
+
 	for(int i = 0; i < m_numLandmarks; i++)
 	{
-		m_landmarkSmoothers.push_back(smootherFactory->Create3DQuadratic(0.4f));
+		m_landmarkSmoothers.push_back(smootherFactory->Create3DQuadratic(0.1f));
 	}
-	*/
 
 	smootherFactory->Release();
 
@@ -232,17 +233,17 @@ void ARealSenseActor::Tick(float deltaTime)
 							//get the identifier
 							landmark.identifier = landmarkPoints[i].source.alias;
 
+							Point3DF32 location = landmarkPoints[i].world;
+
 							//smooth the position with it's personnal smoother.
-							//-1 because ids start at 1
-							//Utility::Smoother::Smoother3D* smoother = m_landmarkSmoothers[landmark.identifier - 1];
-
-							Point3DF32 smoothedPoint = /*smoother->SmoothValue(*/landmarkPoints[i].world;
+							//landmarks 0 are ignored
+							if(landmark.identifier != 0)
+							{
+								location = m_landmarkSmoothers[landmark.identifier - 1]->SmoothValue(location);
+							}
 							//convert realsens pos
-							FVector pose = Utilities::RsToUnrealVector(smoothedPoint);
 							//meters to milimeters
-							pose *= 1000.f;
-
-							landmark.location = pose;
+							landmark.location = Utilities::RsToUnrealVector(location) * 1000.f;
 
 							m_landmarks.Add(landmark);
 
