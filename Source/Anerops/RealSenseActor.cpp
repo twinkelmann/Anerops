@@ -5,27 +5,31 @@
 #include "RealSenseActor.h"
 #include "Utilities.h"
 
+using namespace Face;
+
 // Sets default values
 ARealSenseActor::ARealSenseActor() :
 	m_manager(NULL),
 	m_session(NULL),
-	m_headSmoother(NULL),
-	m_status(STATUS_NO_ERROR)
+	m_faceAnalyzer(NULL),
+	m_outputData(NULL),
+	m_config(NULL),
+	m_headSmoother(NULL)
 {
 	// Set this actor to call Tick() every frame.
 	PrimaryActorTick.bCanEverTick = true;
 
 	m_headLocation = FVector(0,0,0);
 	m_headRotation = FQuat(0,0,0,0);
+	m_status = STATUS_NO_ERROR;
+
+	//not necessary
 	//m_landmarks.Empty();
-	m_landmarkSmoothers.clear();
+	//m_landmarkSmoothers.clear();
 }
 
 ARealSenseActor::~ARealSenseActor()
 {
-	m_config->Release();
-
-
 	if(m_headSmoother != NULL)
 	{
 		m_headSmoother->Release();
@@ -39,6 +43,26 @@ ARealSenseActor::~ARealSenseActor()
 		}
 	}
 
+	if(m_config != NULL)
+	{
+		m_config->Release();
+	}
+
+	if(m_outputData != NULL)
+	{
+		m_outputData->Release();
+	}
+
+	if(m_faceAnalyzer)
+	{
+		m_faceAnalyzer->Release();
+	}
+
+	if(m_session != NULL)
+	{
+		m_session->Release();
+	}
+
 	//has to be last to get released
 	if(m_manager != NULL)
 	{
@@ -50,29 +74,22 @@ ARealSenseActor::~ARealSenseActor()
 // Called when the game starts or when spawned
 void ARealSenseActor::BeginPlay()
 {
-	Super::BeginPlay();
-
 	m_manager = SenseManager::CreateInstance();
 	if(m_manager == NULL)
 	{
-		//logging with a custom defined log type
-		UE_LOG(GeneralLog,
-			   Warning,
-			   TEXT("Could not create RealSense Instance. Exiting."));
+		UE_LOG(GeneralLog, Warning,
+			   TEXT("Couldn't create RealSense Manager. Exiting."));
 		//request for a clean exit
-		UKismetSystemLibrary::QuitGame(GetWorld(),
-									   NULL,
+		UKismetSystemLibrary::QuitGame(GetWorld(), NULL,
 									   EQuitPreference::Type::Quit);
 	}
 
 	m_session = m_manager->QuerySession();
 	if(m_session == NULL)
 	{
-		UE_LOG(GeneralLog,
-			   Warning,
-			   TEXT("Could not retrieve session. Exiting."));
-		UKismetSystemLibrary::QuitGame(GetWorld(),
-									   NULL,
+		UE_LOG(GeneralLog, Warning,
+			   TEXT("Couldn't retrieve session. Exiting."));
+		UKismetSystemLibrary::QuitGame(GetWorld(), NULL,
 									   EQuitPreference::Type::Quit);
 	}
 
@@ -84,11 +101,9 @@ void ARealSenseActor::BeginPlay()
 
 	if(m_headSmoother == NULL)
 	{
-		UE_LOG(GeneralLog,
-			   Warning,
-			   TEXT("Could not create head smoother. Exiting"));
-		UKismetSystemLibrary::QuitGame(GetWorld(),
-									   NULL,
+		UE_LOG(GeneralLog, Warning,
+			   TEXT("Couldn't create head smoother. Exiting"));
+		UKismetSystemLibrary::QuitGame(GetWorld(), NULL,
 									   EQuitPreference::Type::Quit);
 	}
 
@@ -97,20 +112,29 @@ void ARealSenseActor::BeginPlay()
 	for(int i = 0; i < m_numLandmarks; i++)
 	{
 		m_landmarkSmoothers.push_back(smootherFactory->Create3DQuadratic(0.1f));
+
+		if(m_landmarkSmoothers[m_landmarkSmoothers.size() - 1] == NULL)
+		{
+			UE_LOG(GeneralLog, Warning,
+				   TEXT("Couldn't create landmark smoother. Exiting"));
+			UKismetSystemLibrary::QuitGame(GetWorld(), NULL,
+										   EQuitPreference::Type::Quit);
+		}
 	}
 
+	//we don't need the factory anymore
 	smootherFactory->Release();
 
 	//enable face module for landmark finding
 	m_status = m_manager->EnableFace();
+
+	//status below 0 are errors. above 0 are warnings
 	if(m_status < STATUS_NO_ERROR)
 	{
-		UE_LOG(GeneralLog,
-			   Warning,
-			   TEXT("Error enabling faces: %d. Exiting."),
+		UE_LOG(GeneralLog, Warning,
+			   TEXT("Error enabling faces: %d. Exiting"),
 			   static_cast<int>(m_status));
-		UKismetSystemLibrary::QuitGame(GetWorld(),
-									   NULL,
+		UKismetSystemLibrary::QuitGame(GetWorld(), NULL,
 									   EQuitPreference::Type::Quit);
 	}
 
@@ -118,11 +142,9 @@ void ARealSenseActor::BeginPlay()
 	m_faceAnalyzer = m_manager->QueryFace();
 	if(m_faceAnalyzer == NULL)
 	{
-		UE_LOG(GeneralLog,
-			   Warning,
+		UE_LOG(GeneralLog, Warning,
 			   TEXT("Error creating face analyser. Exiting."));
-		UKismetSystemLibrary::QuitGame(GetWorld(),
-									   NULL,
+		UKismetSystemLibrary::QuitGame(GetWorld(), NULL,
 									   EQuitPreference::Type::Quit);
 	}
 
@@ -130,23 +152,19 @@ void ARealSenseActor::BeginPlay()
 	m_status = m_manager->Init();
 	if(m_status < STATUS_NO_ERROR)
 	{
-		UE_LOG(GeneralLog,
-			   Warning,
-			   TEXT("Error initializing streaming pipeline: %d. Exiting."),
+		UE_LOG(GeneralLog, Warning,
+			   TEXT("Error initializing streaming pipeline: %d. Exiting"),
 			   static_cast<int>(m_status));
-		UKismetSystemLibrary::QuitGame(GetWorld(),
-									   NULL,
+		UKismetSystemLibrary::QuitGame(GetWorld(), NULL,
 									   EQuitPreference::Type::Quit);
 	}
 
 	m_outputData = m_faceAnalyzer->CreateOutput();
 
 	//configuration of the analyzer
-	//TODO: remove useless things : face detection, position ?
 	m_config = m_faceAnalyzer->CreateActiveConfiguration();
-	m_config->SetTrackingMode(Face::FaceConfiguration::TrackingModeType::
+	m_config->SetTrackingMode(FaceConfiguration::TrackingModeType::
 							  FACE_MODE_COLOR_PLUS_DEPTH);
-
 	//face detection
 	m_config->detection.isEnabled = true;
 	m_config->detection.maxTrackedFaces = m_maxFaces;
@@ -161,26 +179,24 @@ void ARealSenseActor::BeginPlay()
 
 	m_config->ApplyChanges();
 
+	//begin play for parent class
+	Super::BeginPlay();
 }
 
-using namespace Face;
-
-// Called every frame
+//called every frame
 void ARealSenseActor::Tick(float deltaTime)
 {
 	Super::Tick(deltaTime);
 
-	//AcquireFrame true
 	//true -> wait for all sensors to be ready before getting new frame
 	m_status = m_manager->AcquireFrame(true);
 
-	//values greater than 0 means warnings. below 0 are errors
 	if(m_status >= STATUS_NO_ERROR)
 	{
 		m_outputData->Update();
 		m_landmarks.Empty();
 
-		// iterate through faces
+		//iterate through faces
 		const int numOfFaces = m_outputData->QueryNumberOfDetectedFaces();
 
 		if(numOfFaces > 0)
@@ -189,7 +205,6 @@ void ARealSenseActor::Tick(float deltaTime)
 			FaceData::Face* trackedFace = m_outputData->QueryFaceByIndex(0);
 			if(trackedFace != NULL)
 			{
-
 				//position data
 				FaceData::PoseData* poseData = trackedFace->QueryPose();
 				if(poseData != NULL)
@@ -208,6 +223,7 @@ void ARealSenseActor::Tick(float deltaTime)
 					{
 						Point3DF32 smoothedPoint = m_headSmoother->SmoothValue(
 									headPose.headCenter);
+
 						m_headLocation = Utilities::RsToUnrealVector(
 									smoothedPoint);
 					}
@@ -228,41 +244,55 @@ void ARealSenseActor::Tick(float deltaTime)
 						//points are valid, use them
 						for(int i = 0; i < numPoints; i++)
 						{
-							//create a new landmark structure
-							FLandmark landmark;
-							//get the identifier
-							landmark.identifier = landmarkPoints[i].source.alias;
-
-							Point3DF32 location = landmarkPoints[i].world;
-
-							//smooth the position with it's personnal smoother.
-							//landmarks 0 are ignored
-							if(landmark.identifier != 0)
+							//we ignore landmarks of alias 0 (we can't know
+							//what they are)
+							//we also ignore landmarks with a depth of 0. it
+							//means it is lost
+							if(landmarkPoints[i].source.alias != 0 &&
+							   landmarkPoints[i].source.alias != 30 &&
+							   landmarkPoints[i].source.alias != 31 &&
+							   landmarkPoints[i].world.z != 0)
 							{
-								location = m_landmarkSmoothers[landmark.identifier - 1]->SmoothValue(location);
+								//create a new landmark structure
+								//TODO: remove structure. store location
+								//directly at the identifier's index
+								FLandmark landmark;
+
+								landmark.identifier = landmarkPoints[i].source.alias;
+
+								//smooth the position with it's personnal smoother.
+								//landmarks go from 1 to 32,
+								//indicies go from 0 to 31, so "id - 1"
+								Point3DF32 location = m_landmarkSmoothers
+										[landmark.identifier - 1]->SmoothValue(
+											landmarkPoints[i].world);
+
+								//convert realsens pos
+								//meters to milimeters
+								landmark.location = Utilities::RsToUnrealVector(
+											location) * 1000.f;
+
+								m_landmarks.Add(landmark);
+
+								/*
+								//debug point
+								DrawDebugPoint(GetWorld(),
+											   pose,
+											   3.f,
+											   FColor(0, 255, 0),
+											   false,
+											   0.03f);*/
+
+								/*
+								 * //debug text
+								DrawDebugString(GetWorld(),
+												pose,
+												FString::FromInt(
+													landmark.identifier),
+												0,
+												FColor(255,0,0),.001f);
+												*/
 							}
-							//convert realsens pos
-							//meters to milimeters
-							landmark.location = Utilities::RsToUnrealVector(location) * 1000.f;
-
-							m_landmarks.Add(landmark);
-
-							/*
-							//debug point
-							DrawDebugPoint(GetWorld(),
-										   pose,
-										   3.f,
-										   FColor(0, 255, 0),
-										   false,
-										   0.03f);
-
-							DrawDebugString(GetWorld(),
-											pose,
-											FString::FromInt(
-												landmark.identifier),
-											0,
-											FColor(255,0,0),.001f);
-											*/
 						}
 						delete[] landmarkPoints;
 					}
@@ -273,9 +303,7 @@ void ARealSenseActor::Tick(float deltaTime)
 	else
 	{
 		//in case of error, we simply report it
-		UE_LOG(GeneralLog,
-			   Warning,
-			   TEXT("Error getting frame: %d."),
+		UE_LOG(GeneralLog, Warning, TEXT("Error getting frame: %d."),
 			   static_cast<int>(m_status));
 	}
 
