@@ -14,7 +14,8 @@ ARealSenseActor::ARealSenseActor() :
 	m_faceAnalyzer(NULL),
 	m_outputData(NULL),
 	m_config(NULL),
-	m_headSmoother(NULL)
+	m_headSmoother(NULL),
+	m_alertHandler(NULL)
 {
 	// Set this actor to call Tick() every frame.
 	PrimaryActorTick.bCanEverTick = true;
@@ -30,6 +31,9 @@ ARealSenseActor::ARealSenseActor() :
 
 ARealSenseActor::~ARealSenseActor()
 {
+
+	UE_LOG(GeneralLog, Warning, TEXT("--RealSense actor destruction---"));
+
 	if(m_headSmoother != NULL)
 	{
 		m_headSmoother->Release();
@@ -69,11 +73,16 @@ ARealSenseActor::~ARealSenseActor()
 		m_manager->Close();
 		m_manager->Release();
 	}
+
+	UE_LOG(GeneralLog, Warning, TEXT("--Done destructing RealSense Actor---"));
 }
 
 // Called when the game starts or when spawned
 void ARealSenseActor::BeginPlay()
 {
+
+	UE_LOG(GeneralLog, Warning, TEXT("--BeginPlay for RealSense actor---"));
+
 	m_manager = SenseManager::CreateInstance();
 	if(m_manager == NULL)
 	{
@@ -107,8 +116,7 @@ void ARealSenseActor::BeginPlay()
 									   EQuitPreference::Type::Quit);
 	}
 
-	//create a smoother for each landmark
-
+	//create a smoothers for each landmark
 	for(int i = 0; i < m_numLandmarks; i++)
 	{
 		m_landmarkSmoothers.push_back(smootherFactory->Create3DQuadratic(0.1f));
@@ -174,13 +182,17 @@ void ARealSenseActor::BeginPlay()
 	//position detection
 	m_config->pose.isEnabled = true;
 	m_config->pose.maxTrackedFaces = m_maxFaces;
-	//events
-	//m_config->EnableAllAlerts();
 
-	m_config->ApplyChanges();
+	//alerts
+	m_alertHandler = new FaceTrackingAlertHandler();
+
+	m_config->EnableAllAlerts();
+	m_config->SubscribeAlert(m_alertHandler);
 
 	//begin play for parent class
 	Super::BeginPlay();
+
+	UE_LOG(GeneralLog, Warning, TEXT("--Config done for RealSense actor---"));
 }
 
 //called every frame

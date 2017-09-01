@@ -15,6 +15,7 @@
 #include <list>
 #include <vector>
 #include "Utilities.h"
+#include "FaceTrackingAlertHandler.h"
 
 #include "RealSenseActor.generated.h"
 
@@ -79,6 +80,8 @@ private:
 	Utility::Smoother::Smoother3D* m_headSmoother;
 	//the list of smoother objects for each landmarks
 	std::vector<Utility::Smoother::Smoother3D*> m_landmarkSmoothers;
+
+	FaceTrackingAlertHandler* m_alertHandler;
 
 	unsigned int m_maxFaces = 1;
 	int m_numLandmarks = 32;
