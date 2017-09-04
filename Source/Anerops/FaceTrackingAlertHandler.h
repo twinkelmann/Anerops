@@ -14,5 +14,11 @@ public:
 	FaceTrackingAlertHandler();
 	virtual void PXCAPI OnFiredAlert(const Face::FaceData::AlertData* alertData);
 
-	~FaceTrackingAlertHandler();
+	inline bool shouldMaskBeHidden(){return m_shouldMaskBeHidden;}
+	inline bool shouldCaptureDefault(){return m_shouldCaptureDefault;}
+	inline void resetShouldCaptureDefault(){m_shouldCaptureDefault = false;}
+
+private:
+	bool m_shouldMaskBeHidden;
+	bool m_shouldCaptureDefault;
 };

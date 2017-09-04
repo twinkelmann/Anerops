@@ -4,27 +4,44 @@
 #include "Anerops.h"
 #include "Utilities.h"
 
+/**
+ * @brief Utilities::RsToUnrealVector
+ * Converts a vector to the UE world from the RealSense world
+ * @param position a Point3DF32 in the RealSense world
+ * @return an FVector in the UE world
+ */
 FVector Utilities::RsToUnrealVector(const Point3DF32 &position)
 {
 	/*
-	SR300
+	Gathered data for the SR300:
+	TODO: move to documentation
 	x - left-right, left positive
 	y - up-down, up positive
-	z - closer,further, further positive, screen-chair : 800
+	z - closer-further, further positive
 
-	x in range -240 - +280 (at 0 y)
-	y in range -280 - +150 (at 0 x)
-	z  in range 400 - 1300
+	screen-chair: z ~= 800
+
+	x in range -240 - +280 (at y = 0)
+	y in range -280 - +150 (at x = 0)
+	z in range 400 - 1300
 	*/
 	return FVector(-position.x, -position.z, position.y);
 }
 
+/**
+ * @brief Utilities::RsToUnrealQuat
+ * Converts a Quaternion to the UE world from the RealSense world
+ * @param rotation a PoseQuaternion in the RealSense world
+ * @return an FQuat in the UE world
+ */
 FQuat Utilities::RsToUnrealQuat(const Face::FaceData::PoseQuaternion &rotation)
 {
 	/*
+	Gathered data:
+	TODO: move to documentation
 	pitch - turn around left axis, positif back
-	yaw  - turn around up axis, positif right
-	roll   - turn around forward axis, positif right
+	yaw   - turn around up axis, positif right
+	roll  - turn around forward axis, positif right
 	*/
 	return FQuat(rotation.z, rotation.x, -rotation.y, rotation.w);
 }

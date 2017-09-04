@@ -11,12 +11,20 @@ AActorUtilities::AActorUtilities()
 
 }
 
-bool AActorUtilities::SetActorRotationQuat(AActor* Target, const FQuat& NewRotation, bool bTeleportPhysics)
+/**
+ * @brief AActorUtilities::SetActorRotationQuat
+ * Set the Actor's rotation instantly to the specified quaternion rotation.
+ * @param Target the target Actor to rotate
+ * @param NewRotation the new rotation for the Actor
+ * @param bTeleportPhysics whether we teleport the physics state (if physics collision is enabled for this object).
+ *			If true, physics velocity for this object is unchanged (so ragdoll parts are not affected by change in location).
+ *			If false, physics velocity is updated based on the change in position (affecting ragdoll parts).
+ * @return whether the rotation was successfully set
+ */
+bool AActorUtilities::SetActorRotationQuat(AActor* Target, const FQuat &NewRotation, bool bTeleportPhysics)
 {
-	ETeleportType Teleport = ETeleportType::None;
-	if(bTeleportPhysics)
-	{
-		Teleport = ETeleportType::TeleportPhysics;
-	}
-	return Target->SetActorRotation(NewRotation,Teleport);
+	ETeleportType Teleport = bTeleportPhysics ?
+				ETeleportType::TeleportPhysics :
+				ETeleportType::None;
+	return Target->SetActorRotation(NewRotation, Teleport);
 }

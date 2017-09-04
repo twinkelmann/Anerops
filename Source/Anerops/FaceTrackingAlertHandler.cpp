@@ -3,39 +3,42 @@
 #include "Anerops.h"
 #include "FaceTrackingAlertHandler.h"
 
-FaceTrackingAlertHandler::FaceTrackingAlertHandler()
+FaceTrackingAlertHandler::FaceTrackingAlertHandler() :
+	m_shouldMaskBeHidden(true),
+	m_shouldCaptureDefault(false)
 {
 	UE_LOG(GeneralLog, Warning, TEXT("---Created Alert Handler---"));
-}
-
-FaceTrackingAlertHandler::~FaceTrackingAlertHandler()
-{
 }
 
 using namespace Face;
 
 void PXCAPI FaceTrackingAlertHandler::OnFiredAlert(const FaceData::AlertData* alertData)
 {
-	UE_LOG(GeneralLog, Warning, TEXT("new alert"));
-
 	switch(alertData->label)
 	{
 	case FaceData::AlertData::ALERT_NEW_FACE_DETECTED:
+		m_shouldMaskBeHidden = false;
+		m_shouldCaptureDefault = true;
 		UE_LOG(GeneralLog, Warning, TEXT("ALERT_NEW_FACE_DETECTED"));
 		break;
 	case FaceData::AlertData::ALERT_FACE_OUT_OF_FOV:
+		m_shouldMaskBeHidden = true;
 		UE_LOG(GeneralLog, Warning, TEXT("ALERT_FACE_OUT_OF_FOV"));
 		break;
 	case FaceData::AlertData::ALERT_FACE_BACK_TO_FOV:
+		m_shouldMaskBeHidden = false;
 		UE_LOG(GeneralLog, Warning, TEXT("ALERT_FACE_BACK_TO_FOV"));
 		break;
 	case FaceData::AlertData::ALERT_FACE_OCCLUDED:
+		m_shouldMaskBeHidden = true;
 		UE_LOG(GeneralLog, Warning, TEXT("ALERT_FACE_OCCLUDED"));
 		break;
 	case FaceData::AlertData::ALERT_FACE_NO_LONGER_OCCLUDED:
+		m_shouldMaskBeHidden = false;
 		UE_LOG(GeneralLog, Warning, TEXT("ALERT_FACE_NO_LONGER_OCCLUDED"));
 		break;
 	case FaceData::AlertData::ALERT_FACE_LOST:
+		m_shouldMaskBeHidden = true;
 		UE_LOG(GeneralLog, Warning, TEXT("ALERT_FACE_LOST"));
 		break;
 	default:

@@ -19,6 +19,12 @@
 
 #include "RealSenseActor.generated.h"
 
+
+/**
+ * @brief The FLandmark struct
+ * Contains a FVector position and an int identifier
+ * representing a face landmark
+ */
 USTRUCT(BlueprintType)
 struct ANEROPS_API FLandmark
 {
@@ -37,52 +43,68 @@ struct ANEROPS_API FLandmark
 	}
 };
 
+//base RealSense namespace
 using namespace Intel::RealSense;
 
+/**
+ * @brief The ARealSenseActor class
+ * This class is the middleman between UE4 and the RealSense SDK
+ */
 UCLASS()
 class ANEROPS_API ARealSenseActor : public AActor
 {
 	GENERATED_BODY()
 
 public:
+	//the list of landmarks, updated every frame
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="RealSense", Meta=(DisplayName = "Landmarks"))
 	TArray<FLandmark> m_landmarks;
+	//the head location in space, updated every frame
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="RealSense", Meta=(DisplayName = "Head Location"))
 	FVector m_headLocation;
+	//the head rotation in space, updated every frame
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="RealSense", Meta=(DisplayName = "Head Rotation"))
 	FQuat m_headRotation;
+	//boolean saying if the mask should be hidden based on the face visibility
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="RealSense", Meta=(DisplayName = "Should Mask Be Hidden"))
+	bool m_shouldMaskBeHidden;
+	//boolean saying if a new face has been detected and the defaults should be captured
+	//it has to be reset to false by whoever uses it
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="RealSense", Meta=(DisplayName = "Should Capture Default"))
+	bool m_shouldCaptureDefault;
+	//boolean saying if we should draw debug points at each landmarks or not
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="RealSense", Meta=(DisplayName = "Show Landmarks"))
+	bool m_showLandmarks;
 
-	// Sets default values for this actor's properties
 	ARealSenseActor();
 	~ARealSenseActor();
 
-	// Called every frame
 	virtual void Tick(float deltaTime) override;
 
 	UFUNCTION(BlueprintCallable, meta=(DisplayName = "GetLandmarkById"), Category="RealSense")
 	static FLandmark getLandmarkById(TArray<FLandmark> landmarks, int id);
 
 protected:
-	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
 private:
-	//realsense componants
-	SenseManager* m_manager;
-	Session* m_session;
-	NSStatus::Status m_status;
-
-	Face::FaceModule* m_faceAnalyzer;
-	Face::FaceData* m_outputData;
+	//RealSense componants
+	Session*                 m_session;
+	SenseManager*            m_manager;
+	NSStatus::Status         m_status;
+	Face::FaceModule*        m_faceAnalyzer;
+	Face::FaceData*          m_outputData;
 	Face::FaceConfiguration* m_config;
 
 	//the smoother object for the face position
 	Utility::Smoother::Smoother3D* m_headSmoother;
 	//the list of smoother objects for each landmarks
 	std::vector<Utility::Smoother::Smoother3D*> m_landmarkSmoothers;
+	//the custom alert handler
+	FaceTrackingAlertHandler m_alertHandler;
 
-	FaceTrackingAlertHandler* m_alertHandler;
-
-	unsigned int m_maxFaces = 1;
-	int m_numLandmarks = 32;
+	//maximum number of faces to track. should stay at 1
+	static const int m_maxFaces = 1;
+	//number of named landmarks in the realsense SDK
+	static const int m_numLandmarks = 32;
 };
