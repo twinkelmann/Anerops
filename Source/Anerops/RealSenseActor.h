@@ -11,6 +11,7 @@
 #include "RealSense/Face/FaceData.h"
 #include "RealSense/Face/FaceModule.h"
 #include "Realsense/Utility/Smoother.h"
+#include "RealSense/SampleReader.h"
 
 #include <list>
 #include <vector>
@@ -95,6 +96,7 @@ private:
 	Face::FaceModule*        m_faceAnalyzer;
 	Face::FaceData*          m_outputData;
 	Face::FaceConfiguration* m_config;
+	SampleReader*			 m_reader;
 
 	//the smoother object for the face position
 	Utility::Smoother::Smoother3D* m_headSmoother;
@@ -103,8 +105,14 @@ private:
 	//the custom alert handler
 	FaceTrackingAlertHandler m_alertHandler;
 
+
+	UTexture2D* m_texture;
+
 	//maximum number of faces to track. should stay at 1
 	static const int m_maxFaces = 1;
 	//number of named landmarks in the realsense SDK
 	static const int m_numLandmarks = 32;
+	static const int m_streamWidth = 1280;
+	static const int m_streamHeight = 720;
+	static const int m_streamFps = 0;
 };

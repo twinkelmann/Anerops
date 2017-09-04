@@ -45,3 +45,24 @@ FQuat Utilities::RsToUnrealQuat(const Face::FaceData::PoseQuaternion &rotation)
 	*/
 	return FQuat(rotation.z, rotation.x, -rotation.y, rotation.w);
 }
+
+void Utilities::UpdateTexture(UTexture2D* tex, Sample* sample)
+{
+	ImageData data;
+
+	sample->color->AcquireAccess(ImageAccess::ACCESS_READ, &data);
+	ImageInfo info = sample->color->QueryInfo();
+
+	sample->color->ReleaseAccess(&data);
+
+	//MAGIC!
+	uint8* mipData = (uint8*)tex->PlatformData->Mips[0].BulkData.Lock(LOCK_READ_WRITE);
+	FMemory::Memcpy(mipData, (void*)data.planes[0], info.width * info.height * 4);
+	tex->PlatformData->Mips[0].BulkData.Unlock();
+
+	//Setting some Parameters for the Texture and finally returning it
+	tex->PlatformData->NumSlices = 1;
+	tex->NeverStream = true;
+
+	tex->UpdateResource();
+}

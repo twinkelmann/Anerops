@@ -20,12 +20,14 @@ ARealSenseActor::ARealSenseActor() :
 	m_outputData(NULL),
 	m_config(NULL),
 	m_headSmoother(NULL),
+	m_reader(NULL),
 	m_alertHandler(),
 	m_status(STATUS_NO_ERROR),
 	m_shouldMaskBeHidden(true),
 	m_showLandmarks(false),
 	m_headLocation(0, 0, 0),
-	m_headRotation(0, 0, 0, 0)
+	m_headRotation(0, 0, 0, 0),
+	m_texture(UTexture2D::CreateTransient(m_streamWidth, m_streamHeight, PF_B8G8R8A8))
 {
 	UE_LOG(GeneralLog, Warning, TEXT("--RealSense actor construction---"));
 
@@ -57,6 +59,11 @@ ARealSenseActor::~ARealSenseActor()
 	if(m_faceAnalyzer != NULL)
 	{
 		m_faceAnalyzer->Release();
+	}
+
+	if(m_reader != NULL)
+	{
+		m_reader->Release();
 	}
 
 	for(int i = 0; i < m_landmarkSmoothers.size(); i++)
@@ -172,6 +179,21 @@ void ARealSenseActor::BeginPlay()
 									   EQuitPreference::Type::Quit);
 	}
 
+
+	//enable video stream
+	m_reader = SampleReader::Activate(m_manager);
+	if(m_reader == NULL)
+	{
+		UE_LOG(GeneralLog, Warning,
+			   TEXT("Error creating stream reader. Exiting."));
+		UKismetSystemLibrary::QuitGame(GetWorld(), NULL,
+									   EQuitPreference::Type::Quit);
+	}
+	m_reader->EnableStream(StreamType::STREAM_TYPE_COLOR,
+						   m_streamWidth,
+						   m_streamHeight,
+						   m_streamFps);
+
 	//steaming pipeling
 	m_status = m_manager->Init();
 	if(m_status != STATUS_NO_ERROR)
@@ -234,6 +256,15 @@ void ARealSenseActor::Tick(float deltaTime)
 
 	if(m_status == STATUS_NO_ERROR)
 	{
+		//video stream
+
+		Utilities::UpdateTexture(m_texture, m_reader->GetSample());
+
+		//TODO: stream data to texture
+		//UE_LOG(GeneralLog, Warning, TEXT("width: %d, height: %d"), info.width, info.height);
+
+		//landmark
+
 		m_status = m_outputData->Update();
 
 		if(m_status != STATUS_NO_ERROR)
