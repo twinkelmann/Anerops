@@ -50,19 +50,39 @@ void Utilities::UpdateTexture(UTexture2D* tex, Sample* sample)
 {
 	ImageData data;
 
-	sample->color->AcquireAccess(ImageAccess::ACCESS_READ, &data);
+	sample->color->AcquireAccess(ImageAccess::ACCESS_READ, PixelFormat::PIXEL_FORMAT_BGRA, &data);
+
 	ImageInfo info = sample->color->QueryInfo();
+
+	UE_LOG(GeneralLog, Warning, TEXT("format: %d"), static_cast<int>(data.format));
+
+	UE_LOG(GeneralLog, Warning, TEXT("Mip size: %d"), tex->PlatformData->Mips.Num());
+
+	/*
+	FTexture2DMipMap myMipMap = tex->PlatformData->Mips[0];
+	FByteBulkData rawImageData = myMipMap.BulkData;
+	FColor* formatedImageData = static_cast<FColor*>(rawImageData.Lock(LOCK_READ_ONLY));
+
+	uint8 PixelX = 5, PixelY = 10;
+	uint32 TextureWidth = myMipMap.SizeX, TextureHeight = myMipMap.SizeY;
+	FColor PixelColor;
+
+	if(PixelX >= 0 && PixelX < TextureWidth && PixelY >= 0 && PixelY < TextureHeight)
+	{
+		PixelColor = formatedImageData[PixelY * TextureWidth + PixelX];
+		UE_LOG(GeneralLog, Warning, TEXT("r: %d, g: %d, b: %d"), PixelColor.R, PixelColor.G, PixelColor.B);
+	}
+
+	rawImageData.Unlock();
+	*/
+
+	//uint8* mipData = (uint8*)bulkData.Lock(LOCK_READ_WRITE);
+
+	//FMemory::Memcpy(mipData, (void*)data.planes[0], info.width * info.height * 4);
+	//tex->PlatformData->Mips[0].BulkData.Unlock();
+
+	//tex->UpdateResource();
 
 	sample->color->ReleaseAccess(&data);
 
-	//MAGIC!
-	uint8* mipData = (uint8*)tex->PlatformData->Mips[0].BulkData.Lock(LOCK_READ_WRITE);
-	FMemory::Memcpy(mipData, (void*)data.planes[0], info.width * info.height * 4);
-	tex->PlatformData->Mips[0].BulkData.Unlock();
-
-	//Setting some Parameters for the Texture and finally returning it
-	tex->PlatformData->NumSlices = 1;
-	tex->NeverStream = true;
-
-	tex->UpdateResource();
 }

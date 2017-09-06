@@ -34,6 +34,13 @@ ARealSenseActor::ARealSenseActor() :
 	//Set this actor to call Tick() every frame.
 	PrimaryActorTick.bCanEverTick = true;
 
+	//default settings for the texture
+	/*
+	m_texture->PlatformData->NumSlices = 1;
+
+	m_texture->NeverStream = true;
+	*/
+
 	UE_LOG(GeneralLog, Warning, TEXT("--Done constructing RealSense actor---"));
 }
 
@@ -258,7 +265,9 @@ void ARealSenseActor::Tick(float deltaTime)
 	{
 		//video stream
 
-		Utilities::UpdateTexture(m_texture, m_reader->GetSample());
+		Sample* sample = m_reader->GetSample();
+
+		Utilities::UpdateTexture(m_texture, sample);
 
 		//TODO: stream data to texture
 		//UE_LOG(GeneralLog, Warning, TEXT("width: %d, height: %d"), info.width, info.height);
