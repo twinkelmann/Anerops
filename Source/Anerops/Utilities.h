@@ -20,5 +20,5 @@ class ANEROPS_API Utilities
 public:
 	static FVector RsToUnrealVector(const Point3DF32 &position);
 	static FQuat RsToUnrealQuat(const Face::FaceData::PoseQuaternion& rotation);
-	static void UpdateTexture(UTexture2D* tex, Sample* sample);
+	//static void UpdateTexture(UTexture2D* tex, Sample* sample);
 };

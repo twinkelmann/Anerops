@@ -27,7 +27,8 @@ ARealSenseActor::ARealSenseActor() :
 	m_showLandmarks(false),
 	m_headLocation(0, 0, 0),
 	m_headRotation(0, 0, 0, 0),
-	m_texture(UTexture2D::CreateTransient(m_streamWidth, m_streamHeight, PF_B8G8R8A8))
+	m_texture()
+	//m_texture(UTexture2D::CreateTransient(m_streamWidth, m_streamHeight, PF_B8G8R8A8))
 {
 	UE_LOG(GeneralLog, Warning, TEXT("--RealSense actor construction---"));
 
@@ -267,7 +268,7 @@ void ARealSenseActor::Tick(float deltaTime)
 
 		Sample* sample = m_reader->GetSample();
 
-		Utilities::UpdateTexture(m_texture, sample);
+		m_texture.updateTexture(sample);
 
 		//TODO: stream data to texture
 		//UE_LOG(GeneralLog, Warning, TEXT("width: %d, height: %d"), info.width, info.height);

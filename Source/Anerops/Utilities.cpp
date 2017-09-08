@@ -46,6 +46,7 @@ FQuat Utilities::RsToUnrealQuat(const Face::FaceData::PoseQuaternion &rotation)
 	return FQuat(rotation.z, rotation.x, -rotation.y, rotation.w);
 }
 
+/*
 void Utilities::UpdateTexture(UTexture2D* tex, Sample* sample)
 {
 	ImageData data;
@@ -58,7 +59,6 @@ void Utilities::UpdateTexture(UTexture2D* tex, Sample* sample)
 
 	UE_LOG(GeneralLog, Warning, TEXT("Mip size: %d"), tex->PlatformData->Mips.Num());
 
-	/*
 	FTexture2DMipMap myMipMap = tex->PlatformData->Mips[0];
 	FByteBulkData rawImageData = myMipMap.BulkData;
 	FColor* formatedImageData = static_cast<FColor*>(rawImageData.Lock(LOCK_READ_ONLY));
@@ -74,7 +74,6 @@ void Utilities::UpdateTexture(UTexture2D* tex, Sample* sample)
 	}
 
 	rawImageData.Unlock();
-	*/
 
 	//uint8* mipData = (uint8*)bulkData.Lock(LOCK_READ_WRITE);
 
@@ -86,3 +85,4 @@ void Utilities::UpdateTexture(UTexture2D* tex, Sample* sample)
 	sample->color->ReleaseAccess(&data);
 
 }
+*/

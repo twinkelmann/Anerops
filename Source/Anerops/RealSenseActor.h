@@ -17,6 +17,7 @@
 #include <vector>
 #include "Utilities.h"
 #include "FaceTrackingAlertHandler.h"
+#include "DynamicMaterial.h"
 
 #include "RealSenseActor.generated.h"
 
@@ -106,7 +107,7 @@ private:
 	FaceTrackingAlertHandler m_alertHandler;
 
 
-	UTexture2D* m_texture;
+	ADynamicMaterial m_texture;
 
 	//maximum number of faces to track. should stay at 1
 	static const int m_maxFaces = 1;

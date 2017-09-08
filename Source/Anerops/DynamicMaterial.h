@@ -1,70 +1,45 @@
-// "Anerops" is licenced under the GNU GPL 3 licence. Visit <https://www.gnu.org/licenses/> for more information
+// "Anerops" is licenced under the GNU GPL 3 licence.
+// Visit <https://www.gnu.org/licenses/> for more information
 
 #pragma once
 
-#include "GameFramework/Actor.h"
-#include "DynamicMaterial.generated.h"
+#include "Anerops.h"
 
-UCLASS()
-class ANEROPS_API ADynamicMaterial : public AActor
+#include "RealSense/SampleReader.h"
+
+//base RealSense namespace
+using namespace Intel::RealSense;
+
+class ANEROPS_API ADynamicMaterial
 {
-	GENERATED_BODY()
-	
 public:
-												/*
-	// Sets default values for this actor's properties
+
 	ADynamicMaterial();
+	~ADynamicMaterial();
 
-	// update class instances in the editor if changes are made to their properties
-	virtual void OnConstruction(const FTransform& Transform) override;
-
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
-
-	// Called after the actors components have been initialized
-	virtual void PostInitializeComponents() override;
-
-	// Called every frame
-	virtual void Tick( float DeltaSeconds ) override;
-
-	// Dynamic texture methods
-	void CreateTexture(bool argForceMake);
-	void UpdateTexture();
-
-	// Magic method to draw texture really quickly
-	//void UpdateTextureRegions(UTexture2D* Texture, int32 MipIndex, uint32 NumRegions, FUpdateTextureRegion2D* Regions, uint32 SrcPitch, uint32 SrcBpp, uint8* SrcData, bool bFreeData);
-
-	// Quick random function for testing
-	double rnd();
+	void updateTexture(Image* image);
+	static void copyColorImageToBuffer(Image* image, TArray<uint8>& data, const uint32 width, const uint32 height);
 
 private:
-	// pivot component
-	UPROPERTY()
-	USceneComponent* root;
+	void createTexture(bool force);
+	static void updateTextureRegions(UTexture2D* Texture, int32 MipIndex, uint32 NumRegions, FUpdateTextureRegion2D* Regions, uint32 SrcPitch, uint32 SrcBpp, uint8* SrcData, bool bFreeData);
 
-	// mesh component
-	UPROPERTY()
-	UStaticMeshComponent* testMesh;
+	//texture info
+	static const int m_width = 1280;
+	static const int m_height = 720;
+	static const int m_bytesPerPixel = 4;
 
-	// dTex res
-	int dtWidth;
-	int dtHeight;
-	int dtBytesPerPixel;
+	//buffer info
+	uint8* m_buffer;
+	int m_bufferSize;
+	int m_bufferSizeSqrt;
 
-	// dTex buffer
-	uint8 *dtBuffer;
-	int dtBufferSize;
-	int dtBufferSizeSqrt;
+	FUpdateTextureRegion2D m_updateTextureRegion;
 
-	// dynamic material
-	UPROPERTY()
-	UMaterialInstanceDynamic* dtMaterialInstanceDynamic;
+	//dynamic material
+	//UMaterialInstanceDynamic* m_materialInstanceDynamic;
 
-	// dynamic texture
-	UPROPERTY()
-	UTexture2D* dtTexture;
+	//dynamic texture
+	UTexture2D* m_texture;
 
-	// update texture region magic thingy
-	//FUpdateTextureRegion2D* dtUpdateTextureRegion;
-													*/
 };
