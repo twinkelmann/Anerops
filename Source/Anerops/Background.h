@@ -14,7 +14,9 @@
 using namespace Intel::RealSense;
 
 /**
- * Background actor, showing the camera color stream
+ * @brief The ABackground class
+ * This Actor is the background stream. It can be updated
+ * with a new image by using the `updateImage` method
  */
 UCLASS()
 class ANEROPS_API ABackground : public AStaticMeshActor
@@ -25,7 +27,6 @@ public:
 	~ABackground();
 	virtual void PostInitializeComponents() override;
 
-
 	bool updateImage(Image* image);
 
 private:
@@ -35,13 +36,10 @@ private:
 
 	UPROPERTY()
 	UTexture2D* m_dynamicTexture;
-
+	//the region tu update (the whole image)
 	FUpdateTextureRegion2D* m_updateTextureRegion;
 
 	uint8* m_colors;
 	uint32 m_dataSize;
 	uint32 m_dataSizeSqrt;
-
-	static const uint32 m_width = 1920;
-	static const uint32 m_height = 1080;
 };

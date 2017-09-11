@@ -108,14 +108,4 @@ private:
 	std::vector<Utility::Smoother::Smoother3D*> m_landmarkSmoothers;
 	//the custom alert handler
 	FaceTrackingAlertHandler m_alertHandler;
-
-	//stream data
-	static const int m_streamWidth = 1920;
-	static const int m_streamHeight = 1080;
-	static const int m_streamFps = 0;
-
-	//maximum number of faces to track. should stay at 1
-	static const int m_maxFaces = 1;
-	//number of named landmarks in the realsense SDK
-	static const int m_numLandmarks = 32;
 };

@@ -27,7 +27,6 @@ ARealSenseActor::ARealSenseActor() :
 	m_showLandmarks(false),
 	m_headLocation(0, 0, 0),
 	m_headRotation(0, 0, 0, 0)
-  //m_texture(UTexture2D::CreateTransient(m_streamWidth, m_streamHeight, PF_B8G8R8A8))
 {
 	UE_LOG(GeneralLog, Warning, TEXT("--RealSense actor construction---"));
 
@@ -138,7 +137,7 @@ void ARealSenseActor::BeginPlay()
 	}
 
 	//create a smoothers for each landmark
-	for(int i = 0; i < m_numLandmarks; i++)
+	for(int i = 0; i < Constantes::NUM_LANDMARKS; i++)
 	{
 		m_landmarkSmoothers.push_back(smootherFactory->Create3DQuadratic(0.1f));
 
@@ -190,9 +189,9 @@ void ARealSenseActor::BeginPlay()
 									   EQuitPreference::Type::Quit);
 	}
 	m_reader->EnableStream(StreamType::STREAM_TYPE_COLOR,
-						   m_streamWidth,
-						   m_streamHeight,
-						   m_streamFps);
+						   Constantes::STREAM_WIDTH,
+						   Constantes::STREAM_HEIGHT,
+						   Constantes::STREAM_FRAMERATE);
 
 	//steaming pipeling
 	m_status = m_manager->Init();
@@ -227,13 +226,13 @@ void ARealSenseActor::BeginPlay()
 							  FACE_MODE_COLOR_PLUS_DEPTH);
 	//face detection
 	m_config->detection.isEnabled = true;
-	m_config->detection.maxTrackedFaces = m_maxFaces;
+	m_config->detection.maxTrackedFaces = Constantes::MAX_FACES;
 	//landmark detection
 	m_config->landmarks.isEnabled = true;
-	m_config->landmarks.maxTrackedFaces = m_maxFaces;
+	m_config->landmarks.maxTrackedFaces = Constantes::MAX_FACES;
 	//position detection
 	m_config->pose.isEnabled = true;
-	m_config->pose.maxTrackedFaces = m_maxFaces;
+	m_config->pose.maxTrackedFaces = Constantes::MAX_FACES;
 
 	m_config->ApplyChanges();
 
