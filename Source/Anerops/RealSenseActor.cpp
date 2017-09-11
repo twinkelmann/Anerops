@@ -26,21 +26,13 @@ ARealSenseActor::ARealSenseActor() :
 	m_shouldMaskBeHidden(true),
 	m_showLandmarks(false),
 	m_headLocation(0, 0, 0),
-	m_headRotation(0, 0, 0, 0),
-	m_texture()
-	//m_texture(UTexture2D::CreateTransient(m_streamWidth, m_streamHeight, PF_B8G8R8A8))
+	m_headRotation(0, 0, 0, 0)
+  //m_texture(UTexture2D::CreateTransient(m_streamWidth, m_streamHeight, PF_B8G8R8A8))
 {
 	UE_LOG(GeneralLog, Warning, TEXT("--RealSense actor construction---"));
 
 	//Set this actor to call Tick() every frame.
 	PrimaryActorTick.bCanEverTick = true;
-
-	//default settings for the texture
-	/*
-	m_texture->PlatformData->NumSlices = 1;
-
-	m_texture->NeverStream = true;
-	*/
 
 	UE_LOG(GeneralLog, Warning, TEXT("--Done constructing RealSense actor---"));
 }
@@ -266,12 +258,14 @@ void ARealSenseActor::Tick(float deltaTime)
 	{
 		//video stream
 
-		Sample* sample = m_reader->GetSample();
-
-		m_texture.updateTexture(sample);
-
-		//TODO: stream data to texture
-		//UE_LOG(GeneralLog, Warning, TEXT("width: %d, height: %d"), info.width, info.height);
+		if(m_stream != NULL)
+		{
+			m_stream->updateImage(m_reader->GetSample()->color);
+		}
+		else
+		{
+			UE_LOG(GeneralLog, Warning, TEXT("--Background actor is NULL---"));
+		}
 
 		//landmark
 

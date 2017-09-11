@@ -17,7 +17,7 @@
 #include <vector>
 #include "Utilities.h"
 #include "FaceTrackingAlertHandler.h"
-#include "DynamicMaterial.h"
+#include "Background.h"
 
 #include "RealSenseActor.generated.h"
 
@@ -77,6 +77,9 @@ public:
 	//boolean saying if we should draw debug points at each landmarks or not
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="RealSense", Meta=(DisplayName = "Show Landmarks"))
 	bool m_showLandmarks;
+	//background actor set from editor
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="RealSense", Meta=(DisplayName = "Background Actor"))
+	ABackground* m_stream;
 
 	ARealSenseActor();
 	~ARealSenseActor();
@@ -106,14 +109,13 @@ private:
 	//the custom alert handler
 	FaceTrackingAlertHandler m_alertHandler;
 
-
-	ADynamicMaterial m_texture;
+	//stream data
+	static const int m_streamWidth = 1920;
+	static const int m_streamHeight = 1080;
+	static const int m_streamFps = 0;
 
 	//maximum number of faces to track. should stay at 1
 	static const int m_maxFaces = 1;
 	//number of named landmarks in the realsense SDK
 	static const int m_numLandmarks = 32;
-	static const int m_streamWidth = 1280;
-	static const int m_streamHeight = 720;
-	static const int m_streamFps = 0;
 };

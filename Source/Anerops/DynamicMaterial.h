@@ -4,7 +4,7 @@
 #pragma once
 
 #include "Anerops.h"
-
+/*
 #include "RealSense/SampleReader.h"
 
 //base RealSense namespace
@@ -18,11 +18,12 @@ public:
 	~ADynamicMaterial();
 
 	void updateTexture(Image* image);
-	static void copyColorImageToBuffer(Image* image, TArray<uint8>& data, const uint32 width, const uint32 height);
 
 private:
 	void createTexture(bool force);
 	static void updateTextureRegions(UTexture2D* Texture, int32 MipIndex, uint32 NumRegions, FUpdateTextureRegion2D* Regions, uint32 SrcPitch, uint32 SrcBpp, uint8* SrcData, bool bFreeData);
+	static bool copyColorImageToBuffer(Image* image, const TArray<uint8>& data, const uint32 width, const uint32 height);
+	static bool copyBufferToTexture2D(const TArray<uint8>& data, UTexture2D* texture);
 
 	//texture info
 	static const int m_width = 1280;
@@ -30,7 +31,7 @@ private:
 	static const int m_bytesPerPixel = 4;
 
 	//buffer info
-	uint8* m_buffer;
+	TArray<uint8> m_buffer;
 	int m_bufferSize;
 	int m_bufferSizeSqrt;
 
@@ -42,4 +43,5 @@ private:
 	//dynamic texture
 	UTexture2D* m_texture;
 
-};
+
+};*/

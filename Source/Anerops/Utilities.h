@@ -7,6 +7,7 @@
 #include "RealSense/Type.h"
 #include "RealSense/Face/FaceData.h"
 #include "RealSense/SampleReader.h"
+#include "RealSenseActor.h"
 
 //basic RealSense namespace
 using namespace Intel::RealSense;
