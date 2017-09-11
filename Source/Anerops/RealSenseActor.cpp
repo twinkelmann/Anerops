@@ -366,7 +366,7 @@ void ARealSenseActor::Tick(float deltaTime)
 												   3.f,
 												   FColor(255, 0, 0),
 												   false,
-												   0.03f);
+												   1.f / 60);
 								}
 
 								/*
