@@ -69,7 +69,7 @@ public:
 	FQuat m_headRotation;
 	//boolean saying if the mask should be hidden based on the face visibility
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="RealSense", Meta=(DisplayName = "Should Mask Be Hidden"))
-	bool m_shouldMaskBeHidden;
+	bool m_shouldMaskBeHidden = false;
 	//boolean saying if a new face has been detected and the defaults should be captured
 	//it has to be reset to false by whoever uses it
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="RealSense", Meta=(DisplayName = "Should Capture Default"))
@@ -80,6 +80,12 @@ public:
 	//background actor set from editor
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="RealSense", Meta=(DisplayName = "Background Actor"))
 	ABackground* m_stream;
+	//boolean saying if the data should be smoothed
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="RealSense", Meta=(DisplayName = "Smooth data"))
+	bool m_smoothData = true;
+	//boolean saying if the mask should be hidden when the face is lost
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="RealSense", Meta=(DisplayName = "Hide mask when lost"))
+	bool m_hideOnLost = true;
 
 	ARealSenseActor();
 	~ARealSenseActor();
@@ -87,7 +93,7 @@ public:
 	virtual void Tick(float deltaTime) override;
 
 	UFUNCTION(BlueprintCallable, meta=(DisplayName = "GetLandmarkById"), Category="RealSense")
-	static FLandmark getLandmarkById(TArray<FLandmark> landmarks, int id);
+	static FLandmark getLandmarkById(TArray<FLandmark> landmarks, const int id);
 
 protected:
 	virtual void BeginPlay() override;

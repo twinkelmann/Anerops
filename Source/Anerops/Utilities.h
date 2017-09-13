@@ -26,15 +26,10 @@ public:
 
 namespace Constantes
 {
-	const uint32 STREAM_WIDTH = 1920;
-	const uint32 STREAM_HEIGHT = 1080;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Constantes", Meta=(DisplayName = "Frame Rate"))
-	const uint32 STREAM_FRAMERATE = 0;
+	const uint32 STREAM_WIDTH = /*1920*/960;
+	const uint32 STREAM_HEIGHT = /*1080*/540;
+	const uint32 STREAM_FRAMERATE = 60;
 	const uint32 MAX_FACES = 1;
 	const uint32 NUM_LANDMARKS = 32;
 	const uint32 BYTES_PER_PIXEL = 4;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Constantes", Meta=(DisplayName = "Mask Offset"))
-	const FVector MASK_OFFSET(0, 0, 0);
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Constantes", Meta=(DisplayName = "Scale Factor"))
-	const FVector SCALE_FACTOR(1, 1, 1);
 } //namespace constantes
