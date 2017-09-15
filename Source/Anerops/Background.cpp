@@ -84,7 +84,7 @@ void ABackground::updateDynamicTexture()
  * @param image the RealSense color image
  * @return true if it succeded, false otherwise
  */
-bool ABackground::updateImage(Image *image)
+bool ABackground::updateImage(Image* image)
 {
 	if(image == NULL)
 	{

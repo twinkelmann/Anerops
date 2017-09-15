@@ -36,34 +36,9 @@ ARealSenseActor::ARealSenseActor() :
 	UE_LOG(GeneralLog, Warning, TEXT("--Done constructing RealSense actor---"));
 }
 
-/**
- * @brief ARealSenseActor::~ARealSenseActor
- * The destructor of the RealSense Actor
- * Releases everything is should
- */
-ARealSenseActor::~ARealSenseActor()
+void ARealSenseActor::EndPlay(const EEndPlayReason::Type EndPlayReason)
 {
-	UE_LOG(GeneralLog, Warning, TEXT("--RealSense actor destruction---"));
-
-	if(m_config != NULL)
-	{
-		m_config->Release();
-	}
-
-	if(m_outputData != NULL)
-	{
-		m_outputData->Release();
-	}
-
-	if(m_faceAnalyzer != NULL)
-	{
-		m_faceAnalyzer->Release();
-	}
-
-	if(m_reader != NULL)
-	{
-		m_reader->Release();
-	}
+	UE_LOG(GeneralLog, Warning, TEXT("--RealSense actor EndPlay---"));
 
 	if(m_smoothData)
 	{
@@ -72,27 +47,32 @@ ARealSenseActor::~ARealSenseActor()
 			if(m_landmarkSmoothers[i] != NULL)
 			{
 				m_landmarkSmoothers[i]->Release();
+				m_landmarkSmoothers[i] = NULL;
 			}
 		}
 
 		if(m_headSmoother != NULL)
 		{
 			m_headSmoother->Release();
+			m_headSmoother = NULL;
 		}
 	}
 
 	if(m_session != NULL)
 	{
 		m_session->Release();
+		m_session = NULL;
 	}
 
-	//has to be last to get released
 	if(m_manager != NULL)
 	{
-		//m_manager->Release();
+		m_manager->Release();
+		m_manager = NULL;
 	}
 
-	UE_LOG(GeneralLog, Warning, TEXT("--Done destroying RealSense actor---"));
+	UE_LOG(GeneralLog, Warning, TEXT("--Done EndPlay for RealSense actor---"));
+
+	Super::EndPlay(EndPlayReason);
 }
 
 /**
@@ -116,7 +96,7 @@ void ARealSenseActor::BeginPlay()
 									   EQuitPreference::Type::Quit);
 	}
 
-	m_manager = SenseManager::CreateInstance(m_session);
+	m_session->CreateImpl<SenseManager>(&m_manager);
 	if(m_manager == NULL)
 	{
 		UE_LOG(GeneralLog, Warning,
@@ -200,17 +180,12 @@ void ARealSenseActor::BeginPlay()
 						   Constantes::STREAM_HEIGHT,
 						   Constantes::STREAM_FRAMERATE);
 
-	//steaming pipeling
-	m_status = m_manager->Init();
-	if(m_status != STATUS_NO_ERROR)
-	{
-		UE_LOG(GeneralLog, Warning,
-			   TEXT("Error initializing streaming pipeline: %d. Exiting"),
-			   static_cast<int>(m_status));
-		UKismetSystemLibrary::QuitGame(GetWorld(), NULL,
-									   EQuitPreference::Type::Quit);
-	}
+	m_reader->EnableStream(StreamType::STREAM_TYPE_DEPTH,
+						   Constantes::STREAM_WIDTH_DEPTH,
+						   Constantes::STREAM_HEIGHT_DEPTH,
+						   Constantes::STREAM_FRAMERATE_DEPTH);
 
+	//output placeholder
 	m_outputData = m_faceAnalyzer->CreateOutput();
 
 	//configuration of the analyzer
@@ -243,6 +218,16 @@ void ARealSenseActor::BeginPlay()
 
 	m_config->ApplyChanges();
 
+	//steaming pipeling (last)
+	m_status = m_manager->Init();
+	if(m_status != STATUS_NO_ERROR)
+	{
+		UE_LOG(GeneralLog, Warning,
+			   TEXT("Error initializing streaming pipeline: %d. Exiting"),
+			   static_cast<int>(m_status));
+		UKismetSystemLibrary::QuitGame(GetWorld(), NULL,
+									   EQuitPreference::Type::Quit);
+	}
 
 	UE_LOG(GeneralLog, Warning, TEXT("--Config done for RealSense actor---"));
 }
@@ -258,15 +243,20 @@ void ARealSenseActor::Tick(float deltaTime)
 	Super::Tick(deltaTime);
 
 	//true -> wait for all sensors to be ready before getting new frame
-	m_status = m_manager->AcquireFrame(true);
-
+	m_status = m_manager->AcquireFrame(false, Constantes::FRAME_TIMOUT);
 	if(m_status == STATUS_NO_ERROR)
 	{
 		//video stream
 
 		if(m_stream != NULL)
 		{
-			m_stream->updateImage(m_reader->GetSample()->color);
+			//since we do not wait for both color and depth images
+			//the sample will be NULL half the time
+			Sample* sample = m_reader->GetSample();
+			if(sample != NULL)
+			{
+				m_stream->updateImage(sample->color);
+			}
 		}
 		else
 		{
@@ -277,139 +267,152 @@ void ARealSenseActor::Tick(float deltaTime)
 
 		m_status = m_outputData->Update();
 
-		if(m_status != STATUS_NO_ERROR)
+		if(m_status == STATUS_NO_ERROR)
 		{
-			UE_LOG(GeneralLog, Warning,
-				   TEXT("Error updating output data: %d. Continuing"),
-				   static_cast<int>(m_status));
-		}
-
-		if(m_outputData->QueryNumberOfDetectedFaces() > 0)
-		{
-			//we only care about one face, so we take the first one
-			FaceData::Face* trackedFace = m_outputData->QueryFaceByIndex(0);
-			if(trackedFace != NULL)
+			if(m_outputData->QueryNumberOfDetectedFaces() > 0)
 			{
-				//position data
-				FaceData::PoseData* poseData = trackedFace->QueryPose();
-				if(poseData != NULL)
+				//we only care about one face, so we take the first one
+				FaceData::Face* trackedFace = m_outputData->QueryFaceByIndex(0);
+				if(trackedFace != NULL)
 				{
-					FaceData::PoseQuaternion headRot;
-					FaceData::HeadPosition headPose;
-
-					//rotation
-					if(poseData->QueryPoseQuaternion(&headRot) != NULL)
+					//position data
+					FaceData::PoseData* poseData = trackedFace->QueryPose();
+					if(poseData != NULL)
 					{
-						m_headRotation = Utilities::RsToUnrealQuat(headRot);
-					}
+						FaceData::PoseQuaternion headRot;
+						FaceData::HeadPosition headPose;
 
-					//position
-					if(poseData->QueryHeadPosition(&headPose))
-					{
-						Point3DF32 location = headPose.headCenter;
-
-						if(m_smoothData)
+						//rotation
+						if(poseData->QueryPoseQuaternion(&headRot) != NULL)
 						{
-							location = m_headSmoother->SmoothValue(
+							m_headRotation = Utilities::RsToUnrealQuat(headRot);
+						}
+
+						//position
+						if(poseData->QueryHeadPosition(&headPose))
+						{
+							Point3DF32 location = headPose.headCenter;
+
+							if(m_smoothData)
+							{
+								location = m_headSmoother->SmoothValue(
+											location);
+							}
+
+							m_headLocation = Utilities::RsToUnrealVector(
 										location);
 						}
-
-						m_headLocation = Utilities::RsToUnrealVector(
-									location);
 					}
-				}
-				else
-				{
-					UE_LOG(GeneralLog, Warning, TEXT("poseData is NULL"));
-				}
-
-				//landmark data
-				FaceData::LandmarksData* landmarkData =
-						trackedFace->QueryLandmarks();
-				if(landmarkData != NULL)
-				{
-					const int numPoints = landmarkData->QueryNumPoints();
-					//static list that will contain the landmarks
-					FaceData::LandmarkPoint* landmarkPoints =
-							new FaceData::LandmarkPoint[numPoints];
-
-					if(landmarkData->QueryPoints(landmarkPoints) != NULL)
+					else
 					{
-						//only if we are sure we have new data do we erease
-						//the old one
-						m_landmarks.Empty();
+						UE_LOG(GeneralLog, Warning, TEXT("poseData is NULL"));
+					}
 
-						for(int i = 0; i < numPoints; i++)
+					//landmark data
+					FaceData::LandmarksData* landmarkData =
+							trackedFace->QueryLandmarks();
+					if(landmarkData != NULL)
+					{
+						const int numPoints = landmarkData->QueryNumPoints();
+						//static list that will contain the landmarks
+						FaceData::LandmarkPoint* landmarkPoints =
+								new FaceData::LandmarkPoint[numPoints];
+
+						if(landmarkData->QueryPoints(landmarkPoints))
 						{
-							//we ignore landmarks of alias 0 (we can't know
-							//what they are)
-							//we also ignore landmarks with a depth of 0. it
-							//means it is lost
-							//we also ignore landmarks 30 and 31 (too unstable)
-							if(landmarkPoints[i].source.alias != 0 &&
-							   landmarkPoints[i].source.alias != 30 &&
-							   landmarkPoints[i].source.alias != 31 &&
-							   landmarkPoints[i].world.z != 0)
+							//only if we are sure we have new data do we erease
+							//the old one
+							m_landmarks.Empty();
+
+							for(int i = 0; i < numPoints; i++)
 							{
-								//create a new landmark structure
-								FLandmark landmark;
-
-								landmark.identifier =
-										landmarkPoints[i].source.alias;
-
-								Point3DF32 location = landmarkPoints[i].world;
-
-								//smooth the position with it's personnal smoother.
-								//landmarks go from 1 to 32,
-								//indicies go from 0 to 31, so "id - 1"
-								if(m_smoothData)
+								//we ignore landmarks of alias 0 (we can't know
+								//what they are)
+								//we also ignore landmarks with a depth of 0. it
+								//means it is lost
+								//we also ignore landmarks 30 and 31 (too unstable)
+								if(landmarkPoints[i].source.alias != 0 &&
+								   landmarkPoints[i].source.alias != 30 &&
+								   landmarkPoints[i].source.alias != 31 &&
+								   landmarkPoints[i].world.z != 0)
 								{
-									location = m_landmarkSmoothers
-											[landmark.identifier - 1]->
-											SmoothValue(location);
+									//create a new landmark structure
+									FLandmark landmark;
+
+									landmark.identifier =
+											landmarkPoints[i].source.alias;
+
+									Point3DF32 location = landmarkPoints[i].world;
+
+									//smooth the position with it's personnal smoother.
+									//landmarks go from 1 to 32,
+									//indicies go from 0 to 31, so "id - 1"
+									if(m_smoothData)
+									{
+										location = m_landmarkSmoothers
+												[landmark.identifier - 1]->
+												SmoothValue(location);
+									}
+
+									//convert realsens pos
+									//meters to milimeters
+									landmark.location = Utilities::RsToUnrealVector(
+												location) * 1000.f;
+
+									m_landmarks.Add(landmark);
+
+
+									if(m_showLandmarks)
+									{
+										DrawDebugPoint(GetWorld(),
+													   landmark.location,
+													   3.f,
+													   FColor(255, 0, 0),
+													   false,
+													   0.03);
+									}
+
+									/*
+									//debug text
+									DrawDebugString(GetWorld(),
+													pose,
+													FString::FromInt(
+														landmark.identifier),
+													0,
+													FColor(255,0,0),.001f);
+													*/
+
 								}
-
-								//convert realsens pos
-								//meters to milimeters
-								landmark.location = Utilities::RsToUnrealVector(
-											location) * 1000.f;
-
-								m_landmarks.Add(landmark);
-
-
-								if(m_showLandmarks)
-								{
-									DrawDebugPoint(GetWorld(),
-												   landmark.location,
-												   3.f,
-												   FColor(255, 0, 0),
-												   false,
-												   0.03);
-								}
-
-								/*
-								/debug text
-								DrawDebugString(GetWorld(),
-												pose,
-												FString::FromInt(
-													landmark.identifier),
-												0,
-												FColor(255,0,0),.001f);
-												*/
 							}
+							delete[] landmarkPoints;
 						}
-						delete[] landmarkPoints;
+						else
+						{
+							UE_LOG(GeneralLog, Warning,
+								   TEXT("QueryPoints returned false"));
+						}
+					}
+					else
+					{
+						UE_LOG(GeneralLog, Warning, TEXT("landmarkData is NULL"));
 					}
 				}
 				else
 				{
-					UE_LOG(GeneralLog, Warning, TEXT("landmarkData is NULL"));
+					UE_LOG(GeneralLog, Warning, TEXT("trackedFace is NULL"));
 				}
 			}
 			else
 			{
-				UE_LOG(GeneralLog, Warning, TEXT("trackedFace is NULL"));
+				//useless to spam the console with this message
+				//UE_LOG(GeneralLog, Warning, TEXT("No face detected"));
 			}
+		}
+		else
+		{
+			UE_LOG(GeneralLog, Warning,
+				   TEXT("Error updating output data: %d. Continuing"),
+				   static_cast<int>(m_status));
 		}
 	}
 	else
@@ -419,15 +422,15 @@ void ARealSenseActor::Tick(float deltaTime)
 			   static_cast<int>(m_status));
 	}
 
+	//release the frame in any case
+	m_manager->ReleaseFrame();
+
 	if(m_hideOnLost)
 	{
 		m_shouldMaskBeHidden = m_alertHandler.shouldMaskBeHidden();
 	}
 	m_shouldCaptureDefault = m_alertHandler.shouldCaptureDefault();
 	m_alertHandler.resetShouldCaptureDefault();
-
-	//release the frame in any case
-	m_manager->ReleaseFrame();
 }
 
 /**
@@ -456,7 +459,8 @@ FLandmark ARealSenseActor::getLandmarkById(TArray<FLandmark> landmarks, const in
 	}
 	else
 	{
-		UE_LOG(GeneralLog, Warning, TEXT("Landmark array is empty. Returning default landmark"));
+		//useless to spam the console with this message
+		//UE_LOG(GeneralLog, Warning, TEXT("Landmark array is empty. Returning default landmark"));
 		return FLandmark();
 	}
 }

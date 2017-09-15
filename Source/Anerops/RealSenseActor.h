@@ -88,7 +88,7 @@ public:
 	bool m_hideOnLost = true;
 
 	ARealSenseActor();
-	~ARealSenseActor();
+	//~ARealSenseActor();
 
 	virtual void Tick(float deltaTime) override;
 
@@ -97,6 +97,7 @@ public:
 
 protected:
 	virtual void BeginPlay() override;
+	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
 
 private:
 	//RealSense componants
