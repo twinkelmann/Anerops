@@ -6,4 +6,4 @@
 #include "Engine.h"
 
 //custom log type
-DECLARE_LOG_CATEGORY_EXTERN(GeneralLog, Log, All)
+DECLARE_LOG_CATEGORY_EXTERN(GeneralLog, Log, All);
