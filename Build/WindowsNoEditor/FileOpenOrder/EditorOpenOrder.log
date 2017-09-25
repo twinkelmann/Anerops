@@ -1393,112 +1393,112 @@
 "../../../Engine/Content/BasicShapes/Cone.uasset" 1393
 "../../../Engine/Content/BasicShapes/Plane.uasset" 1394
 "../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Intermediate/CachedAssetRegistry.bin" 1395
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Background/MAT_Background.uasset" 1396
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Background/MAT_Light.uasset" 1397
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/BP_BoneControl.uasset" 1398
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/SSP_DefaultProfile.uasset" 1399
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/SSP_GoblinProfile.uasset" 1400
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Maps/Main.umap" 1401
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Maps/Main_BuiltData.uasset" 1402
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/BP_BoneControl_Auto2.uasset" 1403
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/NewBlueprint_Auto2.uasset" 1404
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Background/MAT_Sky_Auto2.uasset" 1405
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Background/TEX_Sky_Auto1.uasset" 1406
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Background/TEX_Sky_Auto2.uasset" 1407
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Data/MAT_Background_Auto2.uasset" 1408
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Data/MAT_Background_Stream_Auto1.uasset" 1409
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Data/MAT_Dynamic_Emissive_Auto1.uasset" 1410
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/ANEROPS-FBX-TEST_MESH_02_Auto1.uasset" 1411
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/ANEROPS-FBX-TEST_MESH_02_PhysicsAsset_Auto1.uasset" 1412
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/ANEROPS-FBX-TEST_MESH_02_Skeleton_Auto1.uasset" 1413
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/ANEROPS-FBX-Test_Mesh_Auto1.uasset" 1414
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/BP_BoneControl_Auto1.uasset" 1415
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/BP_BoneControl_Auto2.uasset" 1416
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/BP_BoneControl_Auto3.uasset" 1417
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/BP_BoneControl_Auto4.uasset" 1418
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/BP_BoneControl_Auto5.uasset" 1419
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/BP_BoneControl_Auto6.uasset" 1420
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/BP_BoneControl_Auto7.uasset" 1421
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/IMBATMAN_Auto1.uasset" 1422
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/IMBATMAN_PhysicsAsset_Auto1.uasset" 1423
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/IMBATMAN_Skeleton_Auto1.uasset" 1424
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/MAT_Goblin-Hair_Auto1.uasset" 1425
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/SKEL_Alien_Auto2.uasset" 1426
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/SKEL_Daxter_Auto1.uasset" 1427
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/SKEL_Face02_Auto1.uasset" 1428
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/SKEL_FaceTest_Auto2.uasset" 1429
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/SK_Alien_Auto1.uasset" 1430
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/SK_Alien_PhysicsAsset_Auto1.uasset" 1431
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/SK_Alien_Skeleton_Auto1.uasset" 1432
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/SK_Batman_Auto1.uasset" 1433
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/SK_Daxter_Auto2.uasset" 1434
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/SK_Daxter_Skeleton_Auto1.uasset" 1435
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/SK_FaceTest_Auto1.uasset" 1436
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/SK_FaceTest_PhysicsAsset_Auto1.uasset" 1437
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/SK_FaceTest_Skeleton_Auto1.uasset" 1438
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/SK_TestMesh_Auto4.uasset" 1439
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/SK_Wankul_PhysicsAsset_Auto1.uasset" 1440
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/SK_Wankul_Skeleton_Auto1.uasset" 1441
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/SSP_DefaultProfile_2_Auto1.uasset" 1442
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/WB_CaptureDelay_Auto1.uasset" 1443
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/Materials/face_texture_Auto1.uasset" 1444
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/Materials/MAT_BaseFace_Auto1.uasset" 1445
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/Materials/MI_Batman_Auto1.uasset" 1446
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/Textures/antoine-couleurs_Auto1.uasset" 1447
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/Textures/Bob_N_Auto2.uasset" 1448
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/Textures/V2_Batman_Head_D_lighter_Auto1.uasset" 1449
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/Textures/Default/default_face_color_Auto1.uasset" 1450
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/Textures/Default/default_face_normal_Auto1.uasset" 1451
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/Textures/Default/default_face_specular_Auto1.uasset" 1452
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Maps/Face-Test-01_Auto2.uasset" 1453
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Maps/Face-Test-01_Auto3.uasset" 1454
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Maps/Face-Test-01_PhysicsAsset_Auto2.uasset" 1455
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Maps/Face-Test-01_PhysicsAsset_Auto3.uasset" 1456
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Maps/Face-Test-01_Skeleton_Auto2.uasset" 1457
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Maps/Face-Test-01_Skeleton_Auto3.uasset" 1458
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Maps/Main_Auto1.umap" 1459
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Maps/Main_Auto2.umap" 1460
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Maps/Main_Auto3.umap" 1461
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Maps/Main_Auto4.umap" 1462
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Maps/Main_Auto5.umap" 1463
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Maps/Main_Auto6.umap" 1464
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Maps/UEDPCMain.umap" 1465
-"C:/Users/winktim/Documents/Unreal Projects/Anerops/Saved/Cooked/WindowsNoEditor/Anerops/CookedIniVersion.txt" 1466
-"../../../Engine/Content/EditorBlueprintResources/StandardMacros.uasset" 1467
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/WB_CaptureDelay.uasset" 1468
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/SK_Bob.uasset" 1469
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/MI_Bob.uasset" 1470
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/MAT_Base.uasset" 1471
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/TEX_Default_D.uasset" 1472
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/TEX_Default_N.uasset" 1473
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/TEX_Default_S.uasset" 1474
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/TEX_Bob_D.uasset" 1475
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/TEX_Bob_N.uasset" 1476
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/TEX_Bob_S.uasset" 1477
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/SKEL_Bob.uasset" 1478
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/SK_Batman.uasset" 1479
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/M_Eyes.uasset" 1480
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/TEX_Eyes.uasset" 1481
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/MI_Batman.uasset" 1482
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/TEX_Batman_D.uasset" 1483
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/TEX_Batman_N.uasset" 1484
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/TEX_Batman_S.uasset" 1485
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/SKEL_Batman.uasset" 1486
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/SK_Goblin.uasset" 1487
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/MAT_Goblin-Hair.uasset" 1488
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/TEX_Goblin-Hair_A.uasset" 1489
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/TEX_Goblin-Hair_D.uasset" 1490
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/MI_Goblin.uasset" 1491
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/TEX_Goblin_AO.uasset" 1492
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/TEX_Goblin_D.uasset" 1493
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/TEX_Goblin_N.uasset" 1494
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/TEX_Goblin_S.uasset" 1495
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/SKEL_Goblin.uasset" 1496
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Background/SM_Background.uasset" 1497
-"../../../Engine/Content/Functions/Engine_MaterialFunctions01/ImageAdjustment/CheapContrast_RGB.uasset" 1498
-"../../../Engine/Content/EngineDebugMaterials/HeatmapGradient.uasset" 1499
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Background/TEX_Background.uasset" 1500
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Background/SM_LightPlane.uasset" 1501
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Maps/Main.umap" 1396
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Maps/Main_BuiltData.uasset" 1397
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/BP_BoneControl_Auto2.uasset" 1398
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/NewBlueprint_Auto2.uasset" 1399
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Background/MAT_Sky_Auto2.uasset" 1400
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Background/TEX_Sky_Auto1.uasset" 1401
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Background/TEX_Sky_Auto2.uasset" 1402
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Data/MAT_Background_Auto2.uasset" 1403
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Data/MAT_Background_Stream_Auto1.uasset" 1404
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Data/MAT_Dynamic_Emissive_Auto1.uasset" 1405
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/ANEROPS-FBX-TEST_MESH_02_Auto1.uasset" 1406
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/ANEROPS-FBX-TEST_MESH_02_PhysicsAsset_Auto1.uasset" 1407
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/ANEROPS-FBX-TEST_MESH_02_Skeleton_Auto1.uasset" 1408
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/ANEROPS-FBX-Test_Mesh_Auto1.uasset" 1409
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/BP_BoneControl_Auto1.uasset" 1410
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/BP_BoneControl_Auto2.uasset" 1411
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/BP_BoneControl_Auto3.uasset" 1412
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/BP_BoneControl_Auto4.uasset" 1413
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/BP_BoneControl_Auto5.uasset" 1414
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/BP_BoneControl_Auto6.uasset" 1415
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/BP_BoneControl_Auto7.uasset" 1416
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/IMBATMAN_Auto1.uasset" 1417
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/IMBATMAN_PhysicsAsset_Auto1.uasset" 1418
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/IMBATMAN_Skeleton_Auto1.uasset" 1419
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/MAT_Goblin-Hair_Auto1.uasset" 1420
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/SKEL_Alien_Auto2.uasset" 1421
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/SKEL_Daxter_Auto1.uasset" 1422
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/SKEL_Face02_Auto1.uasset" 1423
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/SKEL_FaceTest_Auto2.uasset" 1424
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/SK_Alien_Auto1.uasset" 1425
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/SK_Alien_PhysicsAsset_Auto1.uasset" 1426
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/SK_Alien_Skeleton_Auto1.uasset" 1427
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/SK_Batman_Auto1.uasset" 1428
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/SK_Daxter_Auto2.uasset" 1429
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/SK_Daxter_Skeleton_Auto1.uasset" 1430
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/SK_FaceTest_Auto1.uasset" 1431
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/SK_FaceTest_PhysicsAsset_Auto1.uasset" 1432
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/SK_FaceTest_Skeleton_Auto1.uasset" 1433
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/SK_TestMesh_Auto4.uasset" 1434
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/SK_Wankul_PhysicsAsset_Auto1.uasset" 1435
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/SK_Wankul_Skeleton_Auto1.uasset" 1436
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/SSP_DefaultProfile_2_Auto1.uasset" 1437
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/WB_CaptureDelay_Auto1.uasset" 1438
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/Materials/face_texture_Auto1.uasset" 1439
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/Materials/MAT_BaseFace_Auto1.uasset" 1440
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/Materials/MI_Batman_Auto1.uasset" 1441
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/Textures/antoine-couleurs_Auto1.uasset" 1442
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/Textures/Bob_N_Auto2.uasset" 1443
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/Textures/V2_Batman_Head_D_lighter_Auto1.uasset" 1444
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/Textures/Default/default_face_color_Auto1.uasset" 1445
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/Textures/Default/default_face_normal_Auto1.uasset" 1446
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Faces/Textures/Default/default_face_specular_Auto1.uasset" 1447
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Maps/Face-Test-01_Auto2.uasset" 1448
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Maps/Face-Test-01_Auto3.uasset" 1449
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Maps/Face-Test-01_PhysicsAsset_Auto2.uasset" 1450
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Maps/Face-Test-01_PhysicsAsset_Auto3.uasset" 1451
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Maps/Face-Test-01_Skeleton_Auto2.uasset" 1452
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Maps/Face-Test-01_Skeleton_Auto3.uasset" 1453
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Maps/Main_Auto1.umap" 1454
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Maps/Main_Auto2.umap" 1455
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Maps/Main_Auto3.umap" 1456
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Maps/Main_Auto4.umap" 1457
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Maps/Main_Auto5.umap" 1458
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Maps/Main_Auto6.umap" 1459
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Autosaves/Game/Maps/UEDPCMain.umap" 1460
+"C:/Users/winktim/Documents/Unreal Projects/Anerops/Saved/Cooked/WindowsNoEditor/Anerops/CookedIniVersion.txt" 1461
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/BP_BoneControl.uasset" 1462
+"../../../Engine/Content/EditorBlueprintResources/StandardMacros.uasset" 1463
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/WB_CaptureDelay.uasset" 1464
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/SK_Bob.uasset" 1465
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/MI_Bob.uasset" 1466
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/MAT_Base.uasset" 1467
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/SSP_DefaultProfile.uasset" 1468
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/TEX_Default_D.uasset" 1469
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/TEX_Default_N.uasset" 1470
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/TEX_Default_S.uasset" 1471
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/TEX_Bob_D.uasset" 1472
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/TEX_Bob_N.uasset" 1473
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/TEX_Bob_S.uasset" 1474
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/SKEL_Bob.uasset" 1475
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/SK_Batman.uasset" 1476
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/M_Eyes.uasset" 1477
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/TEX_Eyes.uasset" 1478
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/MI_Batman.uasset" 1479
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/TEX_Batman_D.uasset" 1480
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/TEX_Batman_N.uasset" 1481
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/TEX_Batman_S.uasset" 1482
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/SKEL_Batman.uasset" 1483
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/SK_Goblin.uasset" 1484
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/MAT_Goblin-Hair.uasset" 1485
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/TEX_Goblin-Hair_A.uasset" 1486
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/TEX_Goblin-Hair_D.uasset" 1487
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/MI_Goblin.uasset" 1488
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/SSP_GoblinProfile.uasset" 1489
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/TEX_Goblin_AO.uasset" 1490
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/TEX_Goblin_D.uasset" 1491
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/TEX_Goblin_N.uasset" 1492
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/TEX_Goblin_S.uasset" 1493
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Faces/SKEL_Goblin.uasset" 1494
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Background/SM_Background.uasset" 1495
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Background/MAT_Background.uasset" 1496
+"../../../Engine/Content/Functions/Engine_MaterialFunctions01/ImageAdjustment/CheapContrast_RGB.uasset" 1497
+"../../../Engine/Content/EngineDebugMaterials/HeatmapGradient.uasset" 1498
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Background/TEX_Background.uasset" 1499
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Background/SM_LightPlane.uasset" 1500
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Background/MAT_Light.uasset" 1501
 "../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Background/SM_Sphere.uasset" 1502
 "../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Background/MAT_Sky.uasset" 1503
 "../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Background/TEX_Sky.uasset" 1504
@@ -1546,135 +1546,135 @@
 "../../../Engine/Content/Tutorial/Foliage/Foliage_Intro_Tutorial.uasset" 1546
 "../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/TutorialMaterial.uasset" 1547
 "../../../Engine/Content/EngineMeshes/Cube.uasset" 1548
-"C:/Users/winktim/AppData/Local/Temp/UnrealShaderWorkingDir/5177FD414621BCB9B3B4579E5D0A6E6E/0/WorkerOutputOnly.out" 1549
+"C:/Users/winktim/AppData/Local/Temp/UnrealShaderWorkingDir/CF55E7404F5DA56930AD1F9CB86FC840/0/WorkerOutputOnly.out" 1549
 "../../../Engine/Config/HTML5/HTML5Engine.ini" 1550
 "../../../Engine/Content/EditorResources/EmptyActor.uasset" 1551
 "C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/9/7/MATSM_DBBC4FB34C0F423698AA0729642543E3_PCD3D_SM5_7__BC5N_NOCCBN_DEV_SL_DBUF_UN__F2D073F4B1ED4DB01B4B9EDA451C33A165A49648.udd" 1552
 "C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/1/5/MATSM_DBBC4FB34C0F423698AA0729642543E3_PCD3D_SM4_7__BC5N_NOCCBN_DEV_SL_DBUF_UN__4B6F5788906B1FC26EC12371466026BC8A7411E2.udd" 1553
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/6/6/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_A6CB5FFD48B6AAC7733CA59C4C7E1__6100F8B85473CA1398B1373E36714801385EFE5F.udd" 1554
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/2/5/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_A6CB5FFD48B6AAC7733CA59C4C7E1__2FB7E7471F2EDA3050443090DA622A6140B6297F.udd" 1555
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/9/5/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_A6CB5FFD48B6AAC7733CA59C4C7E1__4F51DFDCCA57034BE6FE111B5A83A3999943442D.udd" 1556
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/7/1/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_A6CB5FFD48B6AAC7733CA59C4C7E1__E2C35FC23452C2F381D22D1CA71EBD48A59D756A.udd" 1557
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/6/2/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_A6CB5FFD48B6AAC7733CA59C4C7E1__4EBB1B5A9E21CE977BC201B60EC74B4CF4680EFF.udd" 1558
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/9/3/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_EEC3EE1F43439089CB3F77BFACA2C__86AAC1631BB07AC67D416C15902534C1D2EB5805.udd" 1559
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/6/9/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_EEC3EE1F43439089CB3F77BFACA2C__C4ECCFB6E2954617AEBBCCAC49E66C8702A14FEA.udd" 1560
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/5/6/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_BB71EB6C44A9F7F90595FEBC74E9F490___6AC6F031719B7F4819E253F31789E09F0709481A.udd" 1561
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/2/1/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_BB71EB6C44A9F7F90595FEBC74E9F490___36EFFA5A0D8C1D34E347D3AD5F1F421DCC5ECD4F.udd" 1562
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/9/3/TEXTURE_814DCC3DC72143F49509781513CB9855_BGRA8_987AA53D49AF485193E50A84D25219B__FF5E6F1E5D6CECEDE0A030A42DE3C3CF3FF68CCF.udd" 1563
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/4/4/TEXTURE_814DCC3DC72143F49509781513CB9855_BGRA8_987AA53D49AF485193E50A84D25219B__CDBDAAF2668A18895A8F4A13941075884D5D9AB4.udd" 1564
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/6/4/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_B59DB3564854C4D85D74428D513E5__8953FA0D2F635209EF6C4BCF1F32440C9950C820.udd" 1565
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/7/9/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_B59DB3564854C4D85D74428D513E5__56E0C4BC5002B41D100B6AD71CF2FCD322C20C32.udd" 1566
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/8/5/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_60E5DB4F43C9821801048ABF8E6779B1___0B12CD89B204BC0D3759676BD4F2658002DEB6A9.udd" 1567
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/4/8/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_B59DB3564854C4D85D74428D513E5__2B96AC8B79DB70F4098D1FD42E7901F83579AFEF.udd" 1568
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/2/7/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_60E5DB4F43C9821801048ABF8E6779B1___C3A9771C595CFC4E2CE79C6FA035D6A1DB28F399.udd" 1569
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/3/5/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_B59DB3564854C4D85D74428D513E5__51547A8BD54E00763EC883AF627E6433A18D258E.udd" 1570
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/5/6/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_B59DB3564854C4D85D74428D513E5__F6894FB0812CDD1875C2CF81400DEF38F2F2BE46.udd" 1571
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/2/6/MATSM_DBBC4FB34C0F423698AA0729642543E3_PCD3D_SM5_7__BC5N_NOCCBN_DEV_SL_DBUF_UN__07166CEC4DCEE48E25219684E29C5EC745926B8D.udd" 1572
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/3/8/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_60E5DB4F43C9821801048ABF8E6779B1___728923549851393AC2BC9AD796C9799075F5002C.udd" 1573
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/1/0/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_60E5DB4F43C9821801048ABF8E6779B1___882E5FA4624CA4DD681FF03B38BCEB03303B87F4.udd" 1574
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/7/8/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_60E5DB4F43C9821801048ABF8E6779B1___81C02140C92D464207F7FBC6CDCC7428814BF046.udd" 1575
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/2/9/MATSM_DBBC4FB34C0F423698AA0729642543E3_PCD3D_SM4_7__BC5N_NOCCBN_DEV_SL_DBUF_UN__B883060D83E478B88E700EA36C3ADCE52CBD6E64.udd" 1576
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/9/4/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_D22972E14E0629A6A6406CA680A14__07B6CC170D55AF7A8EFA07B9A3FE46F1E476D82E.udd" 1577
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/9/3/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_EEC3EE1F43439089CB3F77BFACA2C__86AAC1631BB07AC67D416C15902534C1D2EB5805.udd" 1554
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/6/9/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_EEC3EE1F43439089CB3F77BFACA2C__C4ECCFB6E2954617AEBBCCAC49E66C8702A14FEA.udd" 1555
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/9/3/TEXTURE_814DCC3DC72143F49509781513CB9855_BGRA8_987AA53D49AF485193E50A84D25219B__FF5E6F1E5D6CECEDE0A030A42DE3C3CF3FF68CCF.udd" 1556
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/4/4/TEXTURE_814DCC3DC72143F49509781513CB9855_BGRA8_987AA53D49AF485193E50A84D25219B__CDBDAAF2668A18895A8F4A13941075884D5D9AB4.udd" 1557
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/5/6/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_BB71EB6C44A9F7F90595FEBC74E9F490___6AC6F031719B7F4819E253F31789E09F0709481A.udd" 1558
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/6/4/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_B59DB3564854C4D85D74428D513E5__8953FA0D2F635209EF6C4BCF1F32440C9950C820.udd" 1559
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/7/9/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_B59DB3564854C4D85D74428D513E5__56E0C4BC5002B41D100B6AD71CF2FCD322C20C32.udd" 1560
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/2/1/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_BB71EB6C44A9F7F90595FEBC74E9F490___36EFFA5A0D8C1D34E347D3AD5F1F421DCC5ECD4F.udd" 1561
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/4/8/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_B59DB3564854C4D85D74428D513E5__2B96AC8B79DB70F4098D1FD42E7901F83579AFEF.udd" 1562
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/8/5/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_60E5DB4F43C9821801048ABF8E6779B1___0B12CD89B204BC0D3759676BD4F2658002DEB6A9.udd" 1563
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/3/5/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_B59DB3564854C4D85D74428D513E5__51547A8BD54E00763EC883AF627E6433A18D258E.udd" 1564
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/2/6/MATSM_DBBC4FB34C0F423698AA0729642543E3_PCD3D_SM5_7__BC5N_NOCCBN_DEV_SL_DBUF_UN__07166CEC4DCEE48E25219684E29C5EC745926B8D.udd" 1565
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/2/7/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_60E5DB4F43C9821801048ABF8E6779B1___C3A9771C595CFC4E2CE79C6FA035D6A1DB28F399.udd" 1566
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/3/8/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_60E5DB4F43C9821801048ABF8E6779B1___728923549851393AC2BC9AD796C9799075F5002C.udd" 1567
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/5/6/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_B59DB3564854C4D85D74428D513E5__F6894FB0812CDD1875C2CF81400DEF38F2F2BE46.udd" 1568
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/1/0/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_60E5DB4F43C9821801048ABF8E6779B1___882E5FA4624CA4DD681FF03B38BCEB03303B87F4.udd" 1569
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/2/9/MATSM_DBBC4FB34C0F423698AA0729642543E3_PCD3D_SM4_7__BC5N_NOCCBN_DEV_SL_DBUF_UN__B883060D83E478B88E700EA36C3ADCE52CBD6E64.udd" 1570
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/7/8/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_60E5DB4F43C9821801048ABF8E6779B1___81C02140C92D464207F7FBC6CDCC7428814BF046.udd" 1571
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/6/6/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_A6CB5FFD48B6AAC7733CA59C4C7E1__6100F8B85473CA1398B1373E36714801385EFE5F.udd" 1572
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/2/5/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_A6CB5FFD48B6AAC7733CA59C4C7E1__2FB7E7471F2EDA3050443090DA622A6140B6297F.udd" 1573
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/9/5/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_A6CB5FFD48B6AAC7733CA59C4C7E1__4F51DFDCCA57034BE6FE111B5A83A3999943442D.udd" 1574
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/9/4/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_D22972E14E0629A6A6406CA680A14__07B6CC170D55AF7A8EFA07B9A3FE46F1E476D82E.udd" 1575
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/7/1/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_A6CB5FFD48B6AAC7733CA59C4C7E1__E2C35FC23452C2F381D22D1CA71EBD48A59D756A.udd" 1576
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/6/2/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_A6CB5FFD48B6AAC7733CA59C4C7E1__4EBB1B5A9E21CE977BC201B60EC74B4CF4680EFF.udd" 1577
 "C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/3/7/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_D22972E14E0629A6A6406CA680A14__C16C3844A74526BA6E36480ABD72F919EB658DD8.udd" 1578
 "C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/6/4/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_D22972E14E0629A6A6406CA680A14__06D768FCC31633A0CE425FF6BA8753BD65E338DE.udd" 1579
 "C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/6/4/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_CD9741C64B03F9DCCB63A7BA1E46D__EE413E52060071724EE054BD845D2A042C961430.udd" 1580
 "C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/1/4/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_CD9741C64B03F9DCCB63A7BA1E46D__F9EBAFE4A52B4524C7B2FF6223C9D8C05D24C475.udd" 1581
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/2/7/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_D9F540F74C6081232CB4E4BEBA8077CD___DDCB9CB6A42D2D624C0BA50804FCD51A7C175275.udd" 1582
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/1/4/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_D9F540F74C6081232CB4E4BEBA8077CD___58647B487D2A8D64FB3768657009C095B4F694F4.udd" 1583
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/3/8/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_CD9741C64B03F9DCCB63A7BA1E46D__6C3406D1C94FC735171D83FD2AE968044019902C.udd" 1584
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/7/1/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_CD9741C64B03F9DCCB63A7BA1E46D__75232F1F3BCBB462A2D30549DF779AA395CA41B4.udd" 1585
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/7/8/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_CD9741C64B03F9DCCB63A7BA1E46D__F2FB12BF2DF6B6289E6EA1327C8FC9E8109CD613.udd" 1586
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/0/4/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_CD9741C64B03F9DCCB63A7BA1E46D__43AF39DF6D900F34B4FFB73865C0372E49E7B877.udd" 1587
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/3/1/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_D9F540F74C6081232CB4E4BEBA8077CD___305664900E57960641BBF5328D8BCCFDD27FEE3E.udd" 1588
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/9/5/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_D9ED2E44476002AEDF91929CA3898__086F49EA39B314B8BEED872FDF26BADEAAD986F4.udd" 1589
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/2/0/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_D9ED2E44476002AEDF91929CA3898__F55044296C4727A86C73F97BBDF1B43B25DF8E32.udd" 1590
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/9/1/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_D9F540F74C6081232CB4E4BEBA8077CD___0BFD27A6290D455CE2250A43B84B7B01B903CFE3.udd" 1591
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/7/7/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_D9F540F74C6081232CB4E4BEBA8077CD___9ED315E4F594B1DAED2CE7F9BC42D9432C1FA4C3.udd" 1592
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/6/1/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_D9ED2E44476002AEDF91929CA3898__ED7BB66E4344D91EB28DBB3F97A9CA7CF0140BF7.udd" 1593
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/7/8/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_CD9741C64B03F9DCCB63A7BA1E46D__F2FB12BF2DF6B6289E6EA1327C8FC9E8109CD613.udd" 1582
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/2/7/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_D9F540F74C6081232CB4E4BEBA8077CD___DDCB9CB6A42D2D624C0BA50804FCD51A7C175275.udd" 1583
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/1/4/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_D9F540F74C6081232CB4E4BEBA8077CD___58647B487D2A8D64FB3768657009C095B4F694F4.udd" 1584
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/3/8/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_CD9741C64B03F9DCCB63A7BA1E46D__6C3406D1C94FC735171D83FD2AE968044019902C.udd" 1585
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/6/4/MATSM_DBBC4FB34C0F423698AA0729642543E3_PCD3D_SM5_7__BC5N_NOCCBN_DEV_SL_DBUF_UN__A41257E3B7220ABBC79D88AF900ADD624088A62A.udd" 1586
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/7/1/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_CD9741C64B03F9DCCB63A7BA1E46D__75232F1F3BCBB462A2D30549DF779AA395CA41B4.udd" 1587
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/0/4/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_CD9741C64B03F9DCCB63A7BA1E46D__43AF39DF6D900F34B4FFB73865C0372E49E7B877.udd" 1588
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/3/1/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_D9F540F74C6081232CB4E4BEBA8077CD___305664900E57960641BBF5328D8BCCFDD27FEE3E.udd" 1589
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/7/5/MATSM_DBBC4FB34C0F423698AA0729642543E3_PCD3D_SM4_7__BC5N_NOCCBN_DEV_SL_DBUF_UN__B7CACD7EE97C046912579C78925F1BA2E5374F52.udd" 1590
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/9/5/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_D9ED2E44476002AEDF91929CA3898__086F49EA39B314B8BEED872FDF26BADEAAD986F4.udd" 1591
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/9/1/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_D9F540F74C6081232CB4E4BEBA8077CD___0BFD27A6290D455CE2250A43B84B7B01B903CFE3.udd" 1592
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/7/7/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_D9F540F74C6081232CB4E4BEBA8077CD___9ED315E4F594B1DAED2CE7F9BC42D9432C1FA4C3.udd" 1593
 "C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/5/9/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_D9F540F74C6081232CB4E4BEBA8077CD___EE52C1A966F018D86F7F783E3E07B78329CD6AF0.udd" 1594
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/8/8/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_D9ED2E44476002AEDF91929CA3898__587D3FD39831757D13ADE6FC6F84A050CFB43171.udd" 1595
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/1/9/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_D9ED2E44476002AEDF91929CA3898__343BD054E5E8E399B4CB36FCFC86FBC200B1F7F8.udd" 1596
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/6/4/MATSM_DBBC4FB34C0F423698AA0729642543E3_PCD3D_SM5_7__BC5N_NOCCBN_DEV_SL_DBUF_UN__A41257E3B7220ABBC79D88AF900ADD624088A62A.udd" 1597
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/7/5/MATSM_DBBC4FB34C0F423698AA0729642543E3_PCD3D_SM4_7__BC5N_NOCCBN_DEV_SL_DBUF_UN__B7CACD7EE97C046912579C78925F1BA2E5374F52.udd" 1598
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/2/0/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_D9ED2E44476002AEDF91929CA3898__F55044296C4727A86C73F97BBDF1B43B25DF8E32.udd" 1595
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/6/1/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_D9ED2E44476002AEDF91929CA3898__ED7BB66E4344D91EB28DBB3F97A9CA7CF0140BF7.udd" 1596
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/8/8/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_D9ED2E44476002AEDF91929CA3898__587D3FD39831757D13ADE6FC6F84A050CFB43171.udd" 1597
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/1/9/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_D9ED2E44476002AEDF91929CA3898__343BD054E5E8E399B4CB36FCFC86FBC200B1F7F8.udd" 1598
 "C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/1/3/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_05B6F81945A62489FAE07FB6C93DE__962C681CF20E5812A31EEACCCE674AB4DD9DA3F4.udd" 1599
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/0/0/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_05B6F81945A62489FAE07FB6C93DE__2E25A6912218A48AB6912BC235619FB39C61BFE6.udd" 1600
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/6/7/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_05B6F81945A62489FAE07FB6C93DE__BFBC0FC4B3FD425996B660DD05714CFB3D00B87B.udd" 1601
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/7/7/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_05B6F81945A62489FAE07FB6C93DE__219A35AC1B048A5F4D2D317B0B72AFDC69F7CBA8.udd" 1602
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/8/0/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_05B6F81945A62489FAE07FB6C93DE__C1FCB2514EE7B3A61583E4277E5E2A03C82347D5.udd" 1603
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/8/0/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_47336E3D4A493AAF932972AB6667B__437C86058F7A1B4714700E1C3EABF5462BD59D82.udd" 1604
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/6/7/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_05B6F81945A62489FAE07FB6C93DE__BFBC0FC4B3FD425996B660DD05714CFB3D00B87B.udd" 1600
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/8/0/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_47336E3D4A493AAF932972AB6667B__437C86058F7A1B4714700E1C3EABF5462BD59D82.udd" 1601
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/0/0/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_05B6F81945A62489FAE07FB6C93DE__2E25A6912218A48AB6912BC235619FB39C61BFE6.udd" 1602
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/7/7/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_05B6F81945A62489FAE07FB6C93DE__219A35AC1B048A5F4D2D317B0B72AFDC69F7CBA8.udd" 1603
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/8/0/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_05B6F81945A62489FAE07FB6C93DE__C1FCB2514EE7B3A61583E4277E5E2A03C82347D5.udd" 1604
 "C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/0/1/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_47336E3D4A493AAF932972AB6667B__1F583EF3E28BD2674358148C973C4DD2A808AF5A.udd" 1605
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/5/5/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_47336E3D4A493AAF932972AB6667B__D74B8C70B6C4800B2172AE6630E69D1730E7C85A.udd" 1606
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/9/2/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_47336E3D4A493AAF932972AB6667B__F602A0126F44CD82BF16C685E19805A0C5A544BC.udd" 1607
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/9/2/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_47336E3D4A493AAF932972AB6667B__F602A0126F44CD82BF16C685E19805A0C5A544BC.udd" 1606
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/5/5/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_47336E3D4A493AAF932972AB6667B__D74B8C70B6C4800B2172AE6630E69D1730E7C85A.udd" 1607
 "C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/4/6/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_47336E3D4A493AAF932972AB6667B__1D8EEF5299E2933A2BBC34D24C30B8BC28A93104.udd" 1608
 "C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/7/5/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_EEFA9B6840058AA22568FAAEF7EDC__C9987A13B623AEC91D7E8D06B33B43EE3AAF9E96.udd" 1609
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/8/0/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_EEFA9B6840058AA22568FAAEF7EDC__6AB1E8B859CD49E41F17F5CF10400F30C880B03C.udd" 1610
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/7/5/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_C1C9C8A342366407A4091A9C08D4B__827695A22D742D6253430C13B63807508970F758.udd" 1611
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/7/5/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_C1C9C8A342366407A4091A9C08D4B__827695A22D742D6253430C13B63807508970F758.udd" 1610
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/8/0/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_EEFA9B6840058AA22568FAAEF7EDC__6AB1E8B859CD49E41F17F5CF10400F30C880B03C.udd" 1611
 "C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/4/9/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_C1C9C8A342366407A4091A9C08D4B__3F9953AE769AC389280EA239DEE36C0742581D90.udd" 1612
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/8/7/MATSM_DBBC4FB34C0F423698AA0729642543E3_PCD3D_SM5_7__BC5N_NOCCBN_DEV_SL_DBUF_UN__4FA9585F549C57CA4EC08258155E1DD933EBF820.udd" 1613
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/1/6/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_EEFA9B6840058AA22568FAAEF7EDC__58B448F2F452C59FD4ADA6B8D4033B10A1FE8793.udd" 1614
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/1/0/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_C1C9C8A342366407A4091A9C08D4B__AF5CB48FFEBBB32F40EFB46527360189E06D7BF8.udd" 1615
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/6/2/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_EEFA9B6840058AA22568FAAEF7EDC__6FCFFA43FD0FD7ABEC0078300FAB5D92FBB28FE9.udd" 1616
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/1/6/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_EEFA9B6840058AA22568FAAEF7EDC__58B448F2F452C59FD4ADA6B8D4033B10A1FE8793.udd" 1613
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/6/2/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_EEFA9B6840058AA22568FAAEF7EDC__6FCFFA43FD0FD7ABEC0078300FAB5D92FBB28FE9.udd" 1614
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/8/7/MATSM_DBBC4FB34C0F423698AA0729642543E3_PCD3D_SM5_7__BC5N_NOCCBN_DEV_SL_DBUF_UN__4FA9585F549C57CA4EC08258155E1DD933EBF820.udd" 1615
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/7/0/MATSM_DBBC4FB34C0F423698AA0729642543E3_PCD3D_SM4_7__BC5N_NOCCBN_DEV_SL_DBUF_UN__6FE5BC29195A791B8B652D7CFBC2C964741FB986.udd" 1616
 "C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/7/5/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_EEFA9B6840058AA22568FAAEF7EDC__DB6BCDD78170B105916E5DE11A6C37EF653A700F.udd" 1617
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/9/0/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_C1C9C8A342366407A4091A9C08D4B__E713F4133A3DA58E00B20F513A64AAA8717207F9.udd" 1618
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/1/1/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_EEFA9B6840058AA22568FAAEF7EDC__2F465D6DFF7371AD0E54E08E82DF7922DBCCB398.udd" 1619
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/4/2/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_C1C9C8A342366407A4091A9C08D4B__DF77D0410B0B6B54EDBC045CF83DCF1264F49B1A.udd" 1620
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/2/4/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_EEFA9B6840058AA22568FAAEF7EDC__5F21BCF556B67A6EAAB4BB97E91647A6766D95B8.udd" 1621
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/5/8/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_C1C9C8A342366407A4091A9C08D4B__783970C417DA4EF1FC3BD2C6C09158338C9FB8C0.udd" 1622
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/7/9/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_A99C50B24948088134ACC58E17E14CF7___5CD58CD13050BBB767045A0D60084FF5BD2D8533.udd" 1623
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/6/6/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_C1C9C8A342366407A4091A9C08D4B__EF120CEC45AB9434B30174F56B0AAC368A83A7E3.udd" 1624
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/9/7/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_B34F2C7E4ABAB3B9D9AE3CB533E82__3A38B84A15686AA07A1E327C77EFF9D481817D19.udd" 1625
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/6/2/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_B34F2C7E4ABAB3B9D9AE3CB533E82__EC4393C862A374753627355E57999F2AF91C6572.udd" 1626
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/2/8/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_A99C50B24948088134ACC58E17E14CF7___96512995E3885840268692226E509F797E45D7A1.udd" 1627
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/0/6/MATSM_DBBC4FB34C0F423698AA0729642543E3_PCD3D_SM5_7__BC5N_NOCCBN_DEV_SL_DBUF_UN__0DC612CDF53C98ABC688E3F5573EE1C18B6269DB.udd" 1628
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/2/4/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_B34F2C7E4ABAB3B9D9AE3CB533E82__F2AB2BA84C79A91C6D78A9DE1D05BBD9041BEF2F.udd" 1629
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/4/7/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_B34F2C7E4ABAB3B9D9AE3CB533E82__E6E4A36020BB69E4D54D27835B879152DB9BA43C.udd" 1630
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/1/1/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_B34F2C7E4ABAB3B9D9AE3CB533E82__C8612BF769123828ABD9CDB2BDDBB88DF979673F.udd" 1631
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/0/6/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_B34F2C7E4ABAB3B9D9AE3CB533E82__C737CFF8FEFA713992E9681CCDBA8D80937DA3C5.udd" 1632
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/2/2/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_B34F2C7E4ABAB3B9D9AE3CB533E82__BE3B0E2B5090E6160022164A03E4E313CE45A4C5.udd" 1633
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/6/3/MATSM_DBBC4FB34C0F423698AA0729642543E3_PCD3D_SM5_7__BC5N_NOCCBN_DEV_SL_DBUF_UN__D8902310A3950FFC5F9B8805EE7DB9814C82C40F.udd" 1634
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/2/3/MATSM_DBBC4FB34C0F423698AA0729642543E3_PCD3D_SM4_7__BC5N_NOCCBN_DEV_SL_DBUF_UN__A6D3239A91EF0427F6F9A512BCDC6D5458E9B38E.udd" 1635
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/2/7/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_A99C50B24948088134ACC58E17E14CF7___6796EE956A6D71361C4E60435677D9B67A60FBA8.udd" 1636
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/4/1/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_A99C50B24948088134ACC58E17E14CF7___4E1B06F2A85F7042E19CEB26B3E8BD4F3AC10434.udd" 1637
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/8/8/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_A99C50B24948088134ACC58E17E14CF7___F32E4178AF574D88DC76C9F8E8F4AC152DC56D13.udd" 1638
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/3/1/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_A99C50B24948088134ACC58E17E14CF7___76B332FBCCE10686C4838B5D3E3D74A6EBD36812.udd" 1639
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/0/4/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_A99C50B24948088134ACC58E17E14CF7___DD6CB94D2A0C10D06B3F3E4A0BD913E31DF16EF4.udd" 1640
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/2/4/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_651882474B8D225D4C0A3189DE524__6D2BE568DADD594ADC6286A70224754978603C3E.udd" 1641
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/3/8/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_651882474B8D225D4C0A3189DE524__DC4EDD2DE3AAFC705230F6A61E94767EAE4A8E0E.udd" 1642
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/6/4/TEXTURE_814DCC3DC72143F49509781513CB9855_DXT1_8183F1D54926BAEDAE00C597612895AE__22B2FFEA81F2E1DD72D160E7850E1841B5F90444.udd" 1643
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/1/1/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_EEFA9B6840058AA22568FAAEF7EDC__2F465D6DFF7371AD0E54E08E82DF7922DBCCB398.udd" 1618
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/2/4/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_EEFA9B6840058AA22568FAAEF7EDC__5F21BCF556B67A6EAAB4BB97E91647A6766D95B8.udd" 1619
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/0/6/MATSM_DBBC4FB34C0F423698AA0729642543E3_PCD3D_SM5_7__BC5N_NOCCBN_DEV_SL_DBUF_UN__0DC612CDF53C98ABC688E3F5573EE1C18B6269DB.udd" 1620
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/1/0/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_C1C9C8A342366407A4091A9C08D4B__AF5CB48FFEBBB32F40EFB46527360189E06D7BF8.udd" 1621
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/5/0/MATSM_DBBC4FB34C0F423698AA0729642543E3_PCD3D_SM4_7__BC5N_NOCCBN_DEV_SL_DBUF_UN__9DA170538A49D6976EC4454A5B888ED08251F2BE.udd" 1622
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/6/3/MATSM_DBBC4FB34C0F423698AA0729642543E3_PCD3D_SM5_7__BC5N_NOCCBN_DEV_SL_DBUF_UN__D8902310A3950FFC5F9B8805EE7DB9814C82C40F.udd" 1623
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/9/0/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_C1C9C8A342366407A4091A9C08D4B__E713F4133A3DA58E00B20F513A64AAA8717207F9.udd" 1624
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/2/3/MATSM_DBBC4FB34C0F423698AA0729642543E3_PCD3D_SM4_7__BC5N_NOCCBN_DEV_SL_DBUF_UN__A6D3239A91EF0427F6F9A512BCDC6D5458E9B38E.udd" 1625
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/4/2/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_C1C9C8A342366407A4091A9C08D4B__DF77D0410B0B6B54EDBC045CF83DCF1264F49B1A.udd" 1626
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/5/8/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_C1C9C8A342366407A4091A9C08D4B__783970C417DA4EF1FC3BD2C6C09158338C9FB8C0.udd" 1627
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/6/6/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_C1C9C8A342366407A4091A9C08D4B__EF120CEC45AB9434B30174F56B0AAC368A83A7E3.udd" 1628
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/9/7/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_B34F2C7E4ABAB3B9D9AE3CB533E82__3A38B84A15686AA07A1E327C77EFF9D481817D19.udd" 1629
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/7/9/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_A99C50B24948088134ACC58E17E14CF7___5CD58CD13050BBB767045A0D60084FF5BD2D8533.udd" 1630
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/2/8/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_A99C50B24948088134ACC58E17E14CF7___96512995E3885840268692226E509F797E45D7A1.udd" 1631
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/6/2/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_B34F2C7E4ABAB3B9D9AE3CB533E82__EC4393C862A374753627355E57999F2AF91C6572.udd" 1632
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/2/4/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_B34F2C7E4ABAB3B9D9AE3CB533E82__F2AB2BA84C79A91C6D78A9DE1D05BBD9041BEF2F.udd" 1633
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/4/7/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_B34F2C7E4ABAB3B9D9AE3CB533E82__E6E4A36020BB69E4D54D27835B879152DB9BA43C.udd" 1634
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/1/1/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_B34F2C7E4ABAB3B9D9AE3CB533E82__C8612BF769123828ABD9CDB2BDDBB88DF979673F.udd" 1635
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/0/6/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_B34F2C7E4ABAB3B9D9AE3CB533E82__C737CFF8FEFA713992E9681CCDBA8D80937DA3C5.udd" 1636
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/2/2/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_B34F2C7E4ABAB3B9D9AE3CB533E82__BE3B0E2B5090E6160022164A03E4E313CE45A4C5.udd" 1637
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/2/7/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_A99C50B24948088134ACC58E17E14CF7___6796EE956A6D71361C4E60435677D9B67A60FBA8.udd" 1638
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/4/1/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_A99C50B24948088134ACC58E17E14CF7___4E1B06F2A85F7042E19CEB26B3E8BD4F3AC10434.udd" 1639
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/8/8/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_A99C50B24948088134ACC58E17E14CF7___F32E4178AF574D88DC76C9F8E8F4AC152DC56D13.udd" 1640
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/3/1/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_A99C50B24948088134ACC58E17E14CF7___76B332FBCCE10686C4838B5D3E3D74A6EBD36812.udd" 1641
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/0/4/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_A99C50B24948088134ACC58E17E14CF7___DD6CB94D2A0C10D06B3F3E4A0BD913E31DF16EF4.udd" 1642
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/2/4/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_651882474B8D225D4C0A3189DE524__6D2BE568DADD594ADC6286A70224754978603C3E.udd" 1643
 "C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/2/0/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_651882474B8D225D4C0A3189DE524__0D0F5529F1E509663D281875BA1265AFA51AA51B.udd" 1644
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/5/1/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_F50177A34FD99779CCE83B89746A2__C7D409D4D48B959D62F4F9D740C29988F72C4DC0.udd" 1645
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/1/1/TEXTURE_814DCC3DC72143F49509781513CB9855_DXT1_8183F1D54926BAEDAE00C597612895AE__013A754929D8A14E133DE2C93A21D9AB7B35EABF.udd" 1646
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/7/7/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_F50177A34FD99779CCE83B89746A2__6C654A111905027C5BC65AE47DB1EE4A2D16D934.udd" 1647
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/2/0/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_F50177A34FD99779CCE83B89746A2__9B36E5A3CC4936D12BA51983CE399AC4CDCE7313.udd" 1648
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/6/4/TEXTURE_814DCC3DC72143F49509781513CB9855_BGRA8_1180BFB1405A7D44FA2F5A99EF9E887__D3DFA30DFBC7D4C666758BB6673A3ABA0E9ABA05.udd" 1649
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/7/2/TEXTURE_814DCC3DC72143F49509781513CB9855_DXT1_8183F1D54926BAEDAE00C597612895AE__029A2306B68630230A62B03E0296B0C01CA86C16.udd" 1650
-"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/6/1/TEXTURE_814DCC3DC72143F49509781513CB9855_RGBA16F_E14067BE456A75AD44DC21B8215BB__EEAC390C7DF9FAABC79D2B6B574FDB7443AC6C41.udd" 1651
-"../../../Engine/Content/Tutorial/BlueprintTutorials/TutorialAssets/Tutorial_BP_MacroLib.uasset" 1652
-"../../../Engine/Content/Tutorial/BlueprintTutorials/TutorialAssets/Tutorial_BP_Interface.uasset" 1653
-"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/Tutorial_DM.uasset" 1654
-"../../../Engine/Content/EditorMeshes/EditorCube.uasset" 1655
-"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/TutorialParticleSystem.uasset" 1656
-"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/M_smoke_subUV_blackbody.uasset" 1657
-"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/T_SmokeSubUV_8X8.uasset" 1658
-"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/T_soft_smoke.uasset" 1659
-"../../../Engine/Content/Tutorial/SubEditors/PersonaAnimBlueprintEditorWalkthrough.uasset" 1660
-"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/Character/NewBlendSpace1D.uasset" 1661
-"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/Character/Tutorial_Idle.uasset" 1662
-"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/Character/TutorialTPP_Skeleton.uasset" 1663
-"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/Character/Tutorial_Walk_Fwd.uasset" 1664
-"../../../Engine/Content/Tutorial/Landscape/LandscapeWalkThrough.uasset" 1665
-"../../../Engine/Content/Tutorial/Landscape/Landscape_Sculpt_Mode.uasset" 1666
-"../../../Engine/Content/Tutorial/Landscape/Landscape_Painting_Mode.uasset" 1667
-"../../../Engine/Content/Tutorial/Foliage/Foliage_Using_The_Tool_Tutorial.uasset" 1668
-"C:/Users/winktim/AppData/Local/Temp/UnrealShaderWorkingDir/5177FD414621BCB9B3B4579E5D0A6E6E/1/WorkerOutputOnly.out" 1669
-"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/Character/TutorialTPP_AnimBlueprint.uasset" 1670
-"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/Character/TutorialCharacter.uasset" 1671
-"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/Character/TutorialTPP.uasset" 1672
-"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/Character/TutorialTPP_Mat.uasset" 1673
-"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/Character/TutorialTPP_PhysicsAsset.uasset" 1674
-"../../../Engine/Content/Tutorial/Foliage/Foliage_Settings_Tutorial.uasset" 1675
-"../../../Engine/Content/MobileResources/HUD/T_Castle_ThumbstickOutter.uasset" 1676
-"../../../Engine/Content/MobileResources/HUD/T_Castle_ThumbstickInner.uasset" 1677
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/3/8/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_651882474B8D225D4C0A3189DE524__DC4EDD2DE3AAFC705230F6A61E94767EAE4A8E0E.udd" 1645
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/6/4/TEXTURE_814DCC3DC72143F49509781513CB9855_DXT1_8183F1D54926BAEDAE00C597612895AE__22B2FFEA81F2E1DD72D160E7850E1841B5F90444.udd" 1646
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/7/2/TEXTURE_814DCC3DC72143F49509781513CB9855_DXT1_8183F1D54926BAEDAE00C597612895AE__029A2306B68630230A62B03E0296B0C01CA86C16.udd" 1647
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/1/1/TEXTURE_814DCC3DC72143F49509781513CB9855_DXT1_8183F1D54926BAEDAE00C597612895AE__013A754929D8A14E133DE2C93A21D9AB7B35EABF.udd" 1648
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/5/1/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_F50177A34FD99779CCE83B89746A2__C7D409D4D48B959D62F4F9D740C29988F72C4DC0.udd" 1649
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/7/7/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_F50177A34FD99779CCE83B89746A2__6C654A111905027C5BC65AE47DB1EE4A2D16D934.udd" 1650
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/2/0/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_F50177A34FD99779CCE83B89746A2__9B36E5A3CC4936D12BA51983CE399AC4CDCE7313.udd" 1651
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/6/4/TEXTURE_814DCC3DC72143F49509781513CB9855_BGRA8_1180BFB1405A7D44FA2F5A99EF9E887__D3DFA30DFBC7D4C666758BB6673A3ABA0E9ABA05.udd" 1652
+"../../../Engine/Content/Tutorial/BlueprintTutorials/TutorialAssets/Tutorial_BP_MacroLib.uasset" 1653
+"../../../Engine/Content/Tutorial/BlueprintTutorials/TutorialAssets/Tutorial_BP_Interface.uasset" 1654
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/Tutorial_DM.uasset" 1655
+"C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/6/1/TEXTURE_814DCC3DC72143F49509781513CB9855_RGBA16F_E14067BE456A75AD44DC21B8215BB__EEAC390C7DF9FAABC79D2B6B574FDB7443AC6C41.udd" 1656
+"../../../Engine/Content/EditorMeshes/EditorCube.uasset" 1657
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/TutorialParticleSystem.uasset" 1658
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/M_smoke_subUV_blackbody.uasset" 1659
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/T_SmokeSubUV_8X8.uasset" 1660
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/T_soft_smoke.uasset" 1661
+"../../../Engine/Content/Tutorial/SubEditors/PersonaAnimBlueprintEditorWalkthrough.uasset" 1662
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/Character/NewBlendSpace1D.uasset" 1663
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/Character/Tutorial_Idle.uasset" 1664
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/Character/TutorialTPP_Skeleton.uasset" 1665
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/Character/Tutorial_Walk_Fwd.uasset" 1666
+"../../../Engine/Content/Tutorial/Landscape/LandscapeWalkThrough.uasset" 1667
+"../../../Engine/Content/Tutorial/Landscape/Landscape_Sculpt_Mode.uasset" 1668
+"../../../Engine/Content/Tutorial/Landscape/Landscape_Painting_Mode.uasset" 1669
+"../../../Engine/Content/Tutorial/Foliage/Foliage_Using_The_Tool_Tutorial.uasset" 1670
+"../../../Engine/Content/Tutorial/Foliage/Foliage_Settings_Tutorial.uasset" 1671
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/Character/TutorialTPP_AnimBlueprint.uasset" 1672
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/Character/TutorialCharacter.uasset" 1673
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/Character/TutorialTPP.uasset" 1674
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/Character/TutorialTPP_Mat.uasset" 1675
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/Character/TutorialTPP_PhysicsAsset.uasset" 1676
+"../../../Engine/Content/MobileResources/HUD/T_Castle_ThumbstickOutter.uasset" 1677
 "../../../Engine/Content/MobileResources/HUD/MobileHUDDirectionStick.uasset" 1678
 "../../../Engine/Content/MobileResources/HUD/MobileHUDDirectionPad3.uasset" 1679
 "../../../Engine/Content/MobileResources/HUD/MobileHUDDirectionPad2.uasset" 1680
@@ -1701,269 +1701,270 @@
 "C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/6/4/NAVCOLLISION_B89838347A4348138EE337A847529C5C_NAVCOLLISION_X_B93CD4E14A6777B0E__31E3DA45D8E78E9D3DB6EF32B4AAA5D18E0845DD.udd" 1701
 "C:/Users/winktim/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/8/4/PHYSX_58B79B73E9EA47C7A7C3213A6438018C_PHYSXPC_B93CD4E14A6777B0EE08AEB3D6057FD__2D58B2AB8D9674E0F278FB85A5FB8AAF09EDCBB6.udd" 1702
 "../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Content/Background/SM_Background_2.uasset" 1703
-"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Collections/PackagesRemovedFromChunk0.collection" 1704
-"../../../Engine/Shaders/ACES.usf" 1705
-"../../../Engine/Shaders/AtmosphereCommon.usf" 1706
-"../../../Engine/Shaders/AtmospherePrecompute.usf" 1707
-"../../../Engine/Shaders/AtmospherePrecomputeCommon.usf" 1708
-"../../../Engine/Shaders/AtmospherePrecomputeInscatter.usf" 1709
-"../../../Engine/Shaders/AtmosphericFogShader.usf" 1710
-"../../../Engine/Shaders/BasePassCommon.usf" 1711
-"../../../Engine/Shaders/BasePassPixelShader.usf" 1712
-"../../../Engine/Shaders/BasePassTessellationShaders.usf" 1713
-"../../../Engine/Shaders/BasePassVertexCommon.usf" 1714
-"../../../Engine/Shaders/BasePassVertexShader.usf" 1715
-"../../../Engine/Shaders/BRDF.usf" 1716
-"../../../Engine/Shaders/CapsuleShadowShaders.usf" 1717
-"../../../Engine/Shaders/CircleDOFCommon.usf" 1718
-"../../../Engine/Shaders/ClearReplacementShaders.usf" 1719
-"../../../Engine/Shaders/ColorUtils.usf" 1720
-"../../../Engine/Shaders/Common.usf" 1721
-"../../../Engine/Shaders/CommonViewUniformBuffer.usf" 1722
-"../../../Engine/Shaders/CompositeUIPixelShader.usf" 1723
-"../../../Engine/Shaders/ConvertToUniformMesh.usf" 1724
-"../../../Engine/Shaders/CopyShadowMaps.usf" 1725
-"../../../Engine/Shaders/CubemapCommon.usf" 1726
-"../../../Engine/Shaders/DebugViewModeCommon.usf" 1727
-"../../../Engine/Shaders/DebugViewModeVertexShader.usf" 1728
-"../../../Engine/Shaders/DecalCommon.usf" 1729
-"../../../Engine/Shaders/Decode32bppHDR.usf" 1730
-"../../../Engine/Shaders/DeferredDecal.usf" 1731
-"../../../Engine/Shaders/DeferredLightingCommon.usf" 1732
-"../../../Engine/Shaders/DeferredLightPixelShaders.usf" 1733
-"../../../Engine/Shaders/DeferredLightVertexShaders.usf" 1734
-"../../../Engine/Shaders/DeferredShadingCommon.usf" 1735
-"../../../Engine/Shaders/Definitions.usf" 1736
-"../../../Engine/Shaders/DepthOfFieldCommon.usf" 1737
-"../../../Engine/Shaders/DepthOnlyPixelShader.usf" 1738
-"../../../Engine/Shaders/DepthOnlyVertexShader.usf" 1739
-"../../../Engine/Shaders/DistanceFieldAOShared.usf" 1740
-"../../../Engine/Shaders/DistanceFieldGlobalIllumination.usf" 1741
-"../../../Engine/Shaders/DistanceFieldLightingPost.usf" 1742
-"../../../Engine/Shaders/DistanceFieldLightingShared.usf" 1743
-"../../../Engine/Shaders/DistanceFieldScreenGridLighting.usf" 1744
-"../../../Engine/Shaders/DistanceFieldShadowing.usf" 1745
-"../../../Engine/Shaders/DistanceFieldShadowingShared.usf" 1746
-"../../../Engine/Shaders/DistanceFieldSpecularOcclusion.usf" 1747
-"../../../Engine/Shaders/DistanceFieldSurfaceCacheLighting.usf" 1748
-"../../../Engine/Shaders/DistanceFieldSurfaceCacheLightingCompute.usf" 1749
-"../../../Engine/Shaders/DistortAccumulatePS.usf" 1750
-"../../../Engine/Shaders/DistortAccumulateVS.usf" 1751
-"../../../Engine/Shaders/DistortApplyScreenPS.usf" 1752
-"../../../Engine/Shaders/DitheredTransitionStencil.usf" 1753
-"../../../Engine/Shaders/DownsampleDepthPixelShader.usf" 1754
-"../../../Engine/Shaders/DynamicLightingCommon.usf" 1755
-"../../../Engine/Shaders/EvaluateSurfelMaterial.usf" 1756
-"../../../Engine/Shaders/EyeAdaptationCommon.usf" 1757
-"../../../Engine/Shaders/FastMath.usf" 1758
-"../../../Engine/Shaders/FilterPixelShader.usf" 1759
-"../../../Engine/Shaders/FilterVertexShader.usf" 1760
-"../../../Engine/Shaders/FlatTessellation.usf" 1761
-"../../../Engine/Shaders/ForwardLightingCommon.usf" 1762
-"../../../Engine/Shaders/Fxaa3_11.usf" 1763
-"../../../Engine/Shaders/FXAAShader.usf" 1764
-"../../../Engine/Shaders/GammaCorrection.usf" 1765
-"../../../Engine/Shaders/GammaCorrectionCommon.usf" 1766
-"../../../Engine/Shaders/GlobalDistanceField.usf" 1767
-"../../../Engine/Shaders/GlobalDistanceFieldShared.usf" 1768
-"../../../Engine/Shaders/GPUBenchmark.usf" 1769
-"../../../Engine/Shaders/GpuSkinCacheComputeShader.usf" 1770
-"../../../Engine/Shaders/GpuSkinCommon.usf" 1771
-"../../../Engine/Shaders/GpuSkinVertexFactory.usf" 1772
-"../../../Engine/Shaders/HdrCustomResolveShaders.usf" 1773
-"../../../Engine/Shaders/HeightfieldLighting.usf" 1774
-"../../../Engine/Shaders/HeightfieldLightingShared.usf" 1775
-"../../../Engine/Shaders/HeightFogCommon.usf" 1776
-"../../../Engine/Shaders/HeightFogPixelShader.usf" 1777
-"../../../Engine/Shaders/HeightFogVertexShader.usf" 1778
-"../../../Engine/Shaders/HitProxyPixelShader.usf" 1779
-"../../../Engine/Shaders/HitProxyVertexShader.usf" 1780
-"../../../Engine/Shaders/HZBOcclusion.usf" 1781
-"../../../Engine/Shaders/IESLightProfilesCommon.usf" 1782
-"../../../Engine/Shaders/InstancedStereo.usf" 1783
-"../../../Engine/Shaders/LandscapeGrassWeight.usf" 1784
-"../../../Engine/Shaders/LandscapeVertexFactory.usf" 1785
-"../../../Engine/Shaders/LightAccumulator.usf" 1786
-"../../../Engine/Shaders/LightFunctionCommon.usf" 1787
-"../../../Engine/Shaders/LightFunctionPixelShader.usf" 1788
-"../../../Engine/Shaders/LightFunctionVertexShader.usf" 1789
-"../../../Engine/Shaders/LightGridCommon.usf" 1790
-"../../../Engine/Shaders/LightGridInjection.usf" 1791
-"../../../Engine/Shaders/LightmapCommon.usf" 1792
-"../../../Engine/Shaders/LightMapDensityShader.usf" 1793
-"../../../Engine/Shaders/LightShaftShader.usf" 1794
-"../../../Engine/Shaders/LocalVertexFactory.usf" 1795
-"../../../Engine/Shaders/LocalVertexFactoryCommon.usf" 1796
-"../../../Engine/Shaders/LPVBuildGeometryVolume.usf" 1797
-"../../../Engine/Shaders/LPVClear.usf" 1798
-"../../../Engine/Shaders/LPVClearLists.usf" 1799
-"../../../Engine/Shaders/LPVCommon.usf" 1800
-"../../../Engine/Shaders/LPVDirectionalOcclusion.usf" 1801
-"../../../Engine/Shaders/LPVDirectLightInject.usf" 1802
-"../../../Engine/Shaders/LPVFinalPass.usf" 1803
-"../../../Engine/Shaders/LPVGeometryVolumeCommon.usf" 1804
-"../../../Engine/Shaders/LPVInject_AccumulateVplLists.usf" 1805
-"../../../Engine/Shaders/LPVInject_GenerateVplLists.usf" 1806
-"../../../Engine/Shaders/LPVPacking.usf" 1807
-"../../../Engine/Shaders/LPVPropagate.usf" 1808
-"../../../Engine/Shaders/LPVVisualise.usf" 1809
-"../../../Engine/Shaders/LPVWriteCommon.usf" 1810
-"../../../Engine/Shaders/LPVWriteVplCommon.usf" 1811
-"../../../Engine/Shaders/MaterialTemplate.usf" 1812
-"../../../Engine/Shaders/MaterialTexCoordScalesPixelShader.usf" 1813
-"../../../Engine/Shaders/MediaShaders.usf" 1814
-"../../../Engine/Shaders/MeshDecals.usf" 1815
-"../../../Engine/Shaders/meshpaintdilatepixelshader.usf" 1816
-"../../../Engine/Shaders/meshpaintdilatevertexshader.usf" 1817
-"../../../Engine/Shaders/MeshPaintPixelShader.usf" 1818
-"../../../Engine/Shaders/MeshPaintVertexShader.usf" 1819
-"../../../Engine/Shaders/MeshParticleVertexFactory.usf" 1820
-"../../../Engine/Shaders/MeshTexCoordSizeAccuracyPixelShader.usf" 1821
-"../../../Engine/Shaders/MetalCommon.usf" 1822
-"../../../Engine/Shaders/MiniFontCommon.usf" 1823
-"../../../Engine/Shaders/MinMaterialTexCoords.usf" 1824
-"../../../Engine/Shaders/MissingShaderPixelShader.usf" 1825
-"../../../Engine/Shaders/MobileBasePassCommon.usf" 1826
-"../../../Engine/Shaders/MobileBasePassPixelShader.usf" 1827
-"../../../Engine/Shaders/MobileBasePassVertexShader.usf" 1828
-"../../../Engine/Shaders/MobileMultiView.usf" 1829
-"../../../Engine/Shaders/MobileOpacityShaders.usf" 1830
-"../../../Engine/Shaders/MobileSceneCapture.usf" 1831
-"../../../Engine/Shaders/MonoscopicFarFieldRendering.usf" 1832
-"../../../Engine/Shaders/MonteCarlo.usf" 1833
-"../../../Engine/Shaders/MorpheusInclude.usf" 1834
-"../../../Engine/Shaders/MorphTargets.usf" 1835
-"../../../Engine/Shaders/NullPixelShader.usf" 1836
-"../../../Engine/Shaders/OcclusionQueryPixelShader.usf" 1837
-"../../../Engine/Shaders/OcclusionQueryVertexShader.usf" 1838
-"../../../Engine/Shaders/OculusShaders.usf" 1839
-"../../../Engine/Shaders/OculusStressShaders.usf" 1840
-"../../../Engine/Shaders/OneColorShader.usf" 1841
-"../../../Engine/Shaders/PaniniProjection.usf" 1842
-"../../../Engine/Shaders/ParticleBeamTrailVertexFactory.usf" 1843
-"../../../Engine/Shaders/ParticleBoundsShader.usf" 1844
-"../../../Engine/Shaders/ParticleCurveInjectionShader.usf" 1845
-"../../../Engine/Shaders/ParticleGPUSpriteVertexFactory.usf" 1846
-"../../../Engine/Shaders/ParticleInjectionShader.usf" 1847
-"../../../Engine/Shaders/ParticleSimulationShader.usf" 1848
-"../../../Engine/Shaders/ParticleSimVisualizeShader.usf" 1849
-"../../../Engine/Shaders/ParticleSortKeyGen.usf" 1850
-"../../../Engine/Shaders/ParticleSpriteVertexFactory.usf" 1851
-"../../../Engine/Shaders/ParticleVertexFactoryCommon.usf" 1852
-"../../../Engine/Shaders/PixelShaderOutputCommon.usf" 1853
-"../../../Engine/Shaders/PlanarReflectionShaders.usf" 1854
-"../../../Engine/Shaders/PlanarReflectionShared.usf" 1855
-"../../../Engine/Shaders/PNTriangles.usf" 1856
-"../../../Engine/Shaders/PositionOnlyDepthVertexShader.usf" 1857
-"../../../Engine/Shaders/PostProcessAmbient.usf" 1858
-"../../../Engine/Shaders/PostProcessAmbientOcclusion.usf" 1859
-"../../../Engine/Shaders/PostProcessBloom.usf" 1860
-"../../../Engine/Shaders/PostProcessBokehDOF.usf" 1861
-"../../../Engine/Shaders/PostProcessBusyWait.usf" 1862
-"../../../Engine/Shaders/PostProcessCircleDOF.usf" 1863
-"../../../Engine/Shaders/PostProcessCombineLUTs.usf" 1864
-"../../../Engine/Shaders/PostProcessCommon.usf" 1865
-"../../../Engine/Shaders/PostProcessCompositeEditorPrimitives.usf" 1866
-"../../../Engine/Shaders/PostProcessDOF.usf" 1867
-"../../../Engine/Shaders/PostProcessDownsample.usf" 1868
-"../../../Engine/Shaders/PostProcessEyeAdaptation.usf" 1869
-"../../../Engine/Shaders/PostProcessGBufferHints.usf" 1870
-"../../../Engine/Shaders/PostProcessHierarchical.usf" 1871
-"../../../Engine/Shaders/PostProcessHistogram.usf" 1872
-"../../../Engine/Shaders/PostProcessHistogramCommon.usf" 1873
-"../../../Engine/Shaders/PostProcessHistogramReduce.usf" 1874
-"../../../Engine/Shaders/PostProcessHMD.usf" 1875
-"../../../Engine/Shaders/PostProcessLensBlur.usf" 1876
-"../../../Engine/Shaders/PostProcessLensFlares.usf" 1877
-"../../../Engine/Shaders/PostProcessLpvIndirect.usf" 1878
-"../../../Engine/Shaders/PostProcessMaterialShaders.usf" 1879
-"../../../Engine/Shaders/PostProcessMobile.usf" 1880
-"../../../Engine/Shaders/PostProcessMotionBlur.usf" 1881
-"../../../Engine/Shaders/PostProcessNoiseBlur.usf" 1882
-"../../../Engine/Shaders/PostProcessPassThrough.usf" 1883
-"../../../Engine/Shaders/PostProcessSelectionOutline.usf" 1884
-"../../../Engine/Shaders/PostProcessSubsurface.usf" 1885
-"../../../Engine/Shaders/PostProcessTemporalAA.usf" 1886
-"../../../Engine/Shaders/PostProcessTemporalCommon.usf" 1887
-"../../../Engine/Shaders/PostProcessTestImage.usf" 1888
-"../../../Engine/Shaders/PostProcessTonemap.usf" 1889
-"../../../Engine/Shaders/PostProcessUpscale.usf" 1890
-"../../../Engine/Shaders/PostProcessVelocityFlatten.usf" 1891
-"../../../Engine/Shaders/PostProcessVisualizeBuffer.usf" 1892
-"../../../Engine/Shaders/PostProcessVisualizeDOF.usf" 1893
-"../../../Engine/Shaders/PostProcessVisualizeHDR.usf" 1894
-"../../../Engine/Shaders/PreCullTriangles.usf" 1895
-"../../../Engine/Shaders/PrimitiveDistanceAccuracyPixelShader.usf" 1896
-"../../../Engine/Shaders/QuadComplexityAccumulatePixelShader.usf" 1897
-"../../../Engine/Shaders/QuadOverdraw.usf" 1898
-"../../../Engine/Shaders/RadixSortShaders.usf" 1899
-"../../../Engine/Shaders/Random.usf" 1900
-"../../../Engine/Shaders/RecomputeTangentsCommon.usf" 1901
-"../../../Engine/Shaders/RecomputeTangentsPerTrianglePass.usf" 1902
-"../../../Engine/Shaders/RecomputeTangentsPerVertexPass.usf" 1903
-"../../../Engine/Shaders/ReflectionEnvironmentComposite.usf" 1904
-"../../../Engine/Shaders/ReflectionEnvironmentComputeShaders.usf" 1905
-"../../../Engine/Shaders/ReflectionEnvironmentShaders.usf" 1906
-"../../../Engine/Shaders/ReflectionEnvironmentShared.usf" 1907
-"../../../Engine/Shaders/RequiredTextureResolutionPixelShader.usf" 1908
-"../../../Engine/Shaders/ResolvePixelShader.usf" 1909
-"../../../Engine/Shaders/ResolveVertexShader.usf" 1910
-"../../../Engine/Shaders/RTWriteMaskDecode.usf" 1911
-"../../../Engine/Shaders/SceneCapturePixelShader.usf" 1912
-"../../../Engine/Shaders/ScreenPixelShader.usf" 1913
-"../../../Engine/Shaders/ScreenSpaceRayCast.usf" 1914
-"../../../Engine/Shaders/ScreenSpaceReflections.usf" 1915
-"../../../Engine/Shaders/ScreenVertexShader.usf" 1916
-"../../../Engine/Shaders/SeparableSSS.usf" 1917
-"../../../Engine/Shaders/SeparateTranslucency.usf" 1918
-"../../../Engine/Shaders/ShaderComplexityAccumulatePixelShader.usf" 1919
-"../../../Engine/Shaders/ShaderComplexityApplyPixelShader.usf" 1920
-"../../../Engine/Shaders/ShaderVersion.usf" 1921
-"../../../Engine/Shaders/ShadingModels.usf" 1922
-"../../../Engine/Shaders/ShadowDepthCommon.usf" 1923
-"../../../Engine/Shaders/ShadowDepthPixelShader.usf" 1924
-"../../../Engine/Shaders/ShadowDepthVertexShader.usf" 1925
-"../../../Engine/Shaders/ShadowFilteringCommon.usf" 1926
-"../../../Engine/Shaders/ShadowProjectionCommon.usf" 1927
-"../../../Engine/Shaders/ShadowProjectionPixelShader.usf" 1928
-"../../../Engine/Shaders/ShadowProjectionVertexShader.usf" 1929
-"../../../Engine/Shaders/SHCommon.usf" 1930
-"../../../Engine/Shaders/SimpleElementColorChannelMaskPixelShader.usf" 1931
-"../../../Engine/Shaders/SimpleElementHitProxyPixelShader.usf" 1932
-"../../../Engine/Shaders/SimpleElementNormalMapPixelShader.usf" 1933
-"../../../Engine/Shaders/SimpleElementPixelShader.usf" 1934
-"../../../Engine/Shaders/SimpleElementTexture2DPreviewPixelShader.usf" 1935
-"../../../Engine/Shaders/SimpleElementVertexShader.usf" 1936
-"../../../Engine/Shaders/SimpleF32PixelShader.usf" 1937
-"../../../Engine/Shaders/SimpleF32VertexShader.usf" 1938
-"../../../Engine/Shaders/SkyLighting.usf" 1939
-"../../../Engine/Shaders/SkyLightingShared.usf" 1940
-"../../../Engine/Shaders/SlateElementPixelShader.usf" 1941
-"../../../Engine/Shaders/SlatePostProcessPixelShader.usf" 1942
-"../../../Engine/Shaders/SlateShaderCommon.usf" 1943
-"../../../Engine/Shaders/SlateVertexShader.usf" 1944
-"../../../Engine/Shaders/SolidColorPixelShader.usf" 1945
-"../../../Engine/Shaders/SpeedTreeCommon.usf" 1946
-"../../../Engine/Shaders/StationaryLightOverlapShaders.usf" 1947
-"../../../Engine/Shaders/StereoLayerShader.usf" 1948
-"../../../Engine/Shaders/SurfelMaterialShared.usf" 1949
-"../../../Engine/Shaders/SurfelTree.usf" 1950
-"../../../Engine/Shaders/Tessellation.usf" 1951
-"../../../Engine/Shaders/TiledDeferredLightShaders.usf" 1952
-"../../../Engine/Shaders/TonemapCommon.usf" 1953
-"../../../Engine/Shaders/TranslucentLightingShaders.usf" 1954
-"../../../Engine/Shaders/TranslucentLightInjectionShaders.usf" 1955
-"../../../Engine/Shaders/TranslucentShadowDepthShaders.usf" 1956
-"../../../Engine/Shaders/UpdateTextureShaders.usf" 1957
-"../../../Engine/Shaders/VectorFieldCompositeShaders.usf" 1958
-"../../../Engine/Shaders/VectorFieldVisualizationVertexFactory.usf" 1959
-"../../../Engine/Shaders/VelocityCommon.usf" 1960
-"../../../Engine/Shaders/VelocityShader.usf" 1961
-"../../../Engine/Shaders/VertexFactoryCommon.usf" 1962
-"../../../Engine/Shaders/VisualizeShadingModels.usf" 1963
-"../../../Engine/Shaders/VisualizeTexture.usf" 1964
-"../../../Engine/Shaders/VulkanCommon.usf" 1965
-"../../../Engine/Shaders/WideCustomResolveShaders.usf" 1966
-"../../../Engine/Shaders/WideCustomResolve_Wide.usf" 1967
-"../../../Engine/Shaders/WideCustomResolve_Wider.usf" 1968
-"../../../Engine/Shaders/WideCustomResolve_Widest.usf" 1969
+"../../../Engine/Content/MobileResources/HUD/T_Castle_ThumbstickInner.uasset" 1704
+"../../../../../../Users/winktim/Documents/Unreal Projects/Anerops/Saved/Collections/PackagesRemovedFromChunk0.collection" 1705
+"../../../Engine/Shaders/ACES.usf" 1706
+"../../../Engine/Shaders/AtmosphereCommon.usf" 1707
+"../../../Engine/Shaders/AtmospherePrecompute.usf" 1708
+"../../../Engine/Shaders/AtmospherePrecomputeCommon.usf" 1709
+"../../../Engine/Shaders/AtmospherePrecomputeInscatter.usf" 1710
+"../../../Engine/Shaders/AtmosphericFogShader.usf" 1711
+"../../../Engine/Shaders/BasePassCommon.usf" 1712
+"../../../Engine/Shaders/BasePassPixelShader.usf" 1713
+"../../../Engine/Shaders/BasePassTessellationShaders.usf" 1714
+"../../../Engine/Shaders/BasePassVertexCommon.usf" 1715
+"../../../Engine/Shaders/BasePassVertexShader.usf" 1716
+"../../../Engine/Shaders/BRDF.usf" 1717
+"../../../Engine/Shaders/CapsuleShadowShaders.usf" 1718
+"../../../Engine/Shaders/CircleDOFCommon.usf" 1719
+"../../../Engine/Shaders/ClearReplacementShaders.usf" 1720
+"../../../Engine/Shaders/ColorUtils.usf" 1721
+"../../../Engine/Shaders/Common.usf" 1722
+"../../../Engine/Shaders/CommonViewUniformBuffer.usf" 1723
+"../../../Engine/Shaders/CompositeUIPixelShader.usf" 1724
+"../../../Engine/Shaders/ConvertToUniformMesh.usf" 1725
+"../../../Engine/Shaders/CopyShadowMaps.usf" 1726
+"../../../Engine/Shaders/CubemapCommon.usf" 1727
+"../../../Engine/Shaders/DebugViewModeCommon.usf" 1728
+"../../../Engine/Shaders/DebugViewModeVertexShader.usf" 1729
+"../../../Engine/Shaders/DecalCommon.usf" 1730
+"../../../Engine/Shaders/Decode32bppHDR.usf" 1731
+"../../../Engine/Shaders/DeferredDecal.usf" 1732
+"../../../Engine/Shaders/DeferredLightingCommon.usf" 1733
+"../../../Engine/Shaders/DeferredLightPixelShaders.usf" 1734
+"../../../Engine/Shaders/DeferredLightVertexShaders.usf" 1735
+"../../../Engine/Shaders/DeferredShadingCommon.usf" 1736
+"../../../Engine/Shaders/Definitions.usf" 1737
+"../../../Engine/Shaders/DepthOfFieldCommon.usf" 1738
+"../../../Engine/Shaders/DepthOnlyPixelShader.usf" 1739
+"../../../Engine/Shaders/DepthOnlyVertexShader.usf" 1740
+"../../../Engine/Shaders/DistanceFieldAOShared.usf" 1741
+"../../../Engine/Shaders/DistanceFieldGlobalIllumination.usf" 1742
+"../../../Engine/Shaders/DistanceFieldLightingPost.usf" 1743
+"../../../Engine/Shaders/DistanceFieldLightingShared.usf" 1744
+"../../../Engine/Shaders/DistanceFieldScreenGridLighting.usf" 1745
+"../../../Engine/Shaders/DistanceFieldShadowing.usf" 1746
+"../../../Engine/Shaders/DistanceFieldShadowingShared.usf" 1747
+"../../../Engine/Shaders/DistanceFieldSpecularOcclusion.usf" 1748
+"../../../Engine/Shaders/DistanceFieldSurfaceCacheLighting.usf" 1749
+"../../../Engine/Shaders/DistanceFieldSurfaceCacheLightingCompute.usf" 1750
+"../../../Engine/Shaders/DistortAccumulatePS.usf" 1751
+"../../../Engine/Shaders/DistortAccumulateVS.usf" 1752
+"../../../Engine/Shaders/DistortApplyScreenPS.usf" 1753
+"../../../Engine/Shaders/DitheredTransitionStencil.usf" 1754
+"../../../Engine/Shaders/DownsampleDepthPixelShader.usf" 1755
+"../../../Engine/Shaders/DynamicLightingCommon.usf" 1756
+"../../../Engine/Shaders/EvaluateSurfelMaterial.usf" 1757
+"../../../Engine/Shaders/EyeAdaptationCommon.usf" 1758
+"../../../Engine/Shaders/FastMath.usf" 1759
+"../../../Engine/Shaders/FilterPixelShader.usf" 1760
+"../../../Engine/Shaders/FilterVertexShader.usf" 1761
+"../../../Engine/Shaders/FlatTessellation.usf" 1762
+"../../../Engine/Shaders/ForwardLightingCommon.usf" 1763
+"../../../Engine/Shaders/Fxaa3_11.usf" 1764
+"../../../Engine/Shaders/FXAAShader.usf" 1765
+"../../../Engine/Shaders/GammaCorrection.usf" 1766
+"../../../Engine/Shaders/GammaCorrectionCommon.usf" 1767
+"../../../Engine/Shaders/GlobalDistanceField.usf" 1768
+"../../../Engine/Shaders/GlobalDistanceFieldShared.usf" 1769
+"../../../Engine/Shaders/GPUBenchmark.usf" 1770
+"../../../Engine/Shaders/GpuSkinCacheComputeShader.usf" 1771
+"../../../Engine/Shaders/GpuSkinCommon.usf" 1772
+"../../../Engine/Shaders/GpuSkinVertexFactory.usf" 1773
+"../../../Engine/Shaders/HdrCustomResolveShaders.usf" 1774
+"../../../Engine/Shaders/HeightfieldLighting.usf" 1775
+"../../../Engine/Shaders/HeightfieldLightingShared.usf" 1776
+"../../../Engine/Shaders/HeightFogCommon.usf" 1777
+"../../../Engine/Shaders/HeightFogPixelShader.usf" 1778
+"../../../Engine/Shaders/HeightFogVertexShader.usf" 1779
+"../../../Engine/Shaders/HitProxyPixelShader.usf" 1780
+"../../../Engine/Shaders/HitProxyVertexShader.usf" 1781
+"../../../Engine/Shaders/HZBOcclusion.usf" 1782
+"../../../Engine/Shaders/IESLightProfilesCommon.usf" 1783
+"../../../Engine/Shaders/InstancedStereo.usf" 1784
+"../../../Engine/Shaders/LandscapeGrassWeight.usf" 1785
+"../../../Engine/Shaders/LandscapeVertexFactory.usf" 1786
+"../../../Engine/Shaders/LightAccumulator.usf" 1787
+"../../../Engine/Shaders/LightFunctionCommon.usf" 1788
+"../../../Engine/Shaders/LightFunctionPixelShader.usf" 1789
+"../../../Engine/Shaders/LightFunctionVertexShader.usf" 1790
+"../../../Engine/Shaders/LightGridCommon.usf" 1791
+"../../../Engine/Shaders/LightGridInjection.usf" 1792
+"../../../Engine/Shaders/LightmapCommon.usf" 1793
+"../../../Engine/Shaders/LightMapDensityShader.usf" 1794
+"../../../Engine/Shaders/LightShaftShader.usf" 1795
+"../../../Engine/Shaders/LocalVertexFactory.usf" 1796
+"../../../Engine/Shaders/LocalVertexFactoryCommon.usf" 1797
+"../../../Engine/Shaders/LPVBuildGeometryVolume.usf" 1798
+"../../../Engine/Shaders/LPVClear.usf" 1799
+"../../../Engine/Shaders/LPVClearLists.usf" 1800
+"../../../Engine/Shaders/LPVCommon.usf" 1801
+"../../../Engine/Shaders/LPVDirectionalOcclusion.usf" 1802
+"../../../Engine/Shaders/LPVDirectLightInject.usf" 1803
+"../../../Engine/Shaders/LPVFinalPass.usf" 1804
+"../../../Engine/Shaders/LPVGeometryVolumeCommon.usf" 1805
+"../../../Engine/Shaders/LPVInject_AccumulateVplLists.usf" 1806
+"../../../Engine/Shaders/LPVInject_GenerateVplLists.usf" 1807
+"../../../Engine/Shaders/LPVPacking.usf" 1808
+"../../../Engine/Shaders/LPVPropagate.usf" 1809
+"../../../Engine/Shaders/LPVVisualise.usf" 1810
+"../../../Engine/Shaders/LPVWriteCommon.usf" 1811
+"../../../Engine/Shaders/LPVWriteVplCommon.usf" 1812
+"../../../Engine/Shaders/MaterialTemplate.usf" 1813
+"../../../Engine/Shaders/MaterialTexCoordScalesPixelShader.usf" 1814
+"../../../Engine/Shaders/MediaShaders.usf" 1815
+"../../../Engine/Shaders/MeshDecals.usf" 1816
+"../../../Engine/Shaders/meshpaintdilatepixelshader.usf" 1817
+"../../../Engine/Shaders/meshpaintdilatevertexshader.usf" 1818
+"../../../Engine/Shaders/MeshPaintPixelShader.usf" 1819
+"../../../Engine/Shaders/MeshPaintVertexShader.usf" 1820
+"../../../Engine/Shaders/MeshParticleVertexFactory.usf" 1821
+"../../../Engine/Shaders/MeshTexCoordSizeAccuracyPixelShader.usf" 1822
+"../../../Engine/Shaders/MetalCommon.usf" 1823
+"../../../Engine/Shaders/MiniFontCommon.usf" 1824
+"../../../Engine/Shaders/MinMaterialTexCoords.usf" 1825
+"../../../Engine/Shaders/MissingShaderPixelShader.usf" 1826
+"../../../Engine/Shaders/MobileBasePassCommon.usf" 1827
+"../../../Engine/Shaders/MobileBasePassPixelShader.usf" 1828
+"../../../Engine/Shaders/MobileBasePassVertexShader.usf" 1829
+"../../../Engine/Shaders/MobileMultiView.usf" 1830
+"../../../Engine/Shaders/MobileOpacityShaders.usf" 1831
+"../../../Engine/Shaders/MobileSceneCapture.usf" 1832
+"../../../Engine/Shaders/MonoscopicFarFieldRendering.usf" 1833
+"../../../Engine/Shaders/MonteCarlo.usf" 1834
+"../../../Engine/Shaders/MorpheusInclude.usf" 1835
+"../../../Engine/Shaders/MorphTargets.usf" 1836
+"../../../Engine/Shaders/NullPixelShader.usf" 1837
+"../../../Engine/Shaders/OcclusionQueryPixelShader.usf" 1838
+"../../../Engine/Shaders/OcclusionQueryVertexShader.usf" 1839
+"../../../Engine/Shaders/OculusShaders.usf" 1840
+"../../../Engine/Shaders/OculusStressShaders.usf" 1841
+"../../../Engine/Shaders/OneColorShader.usf" 1842
+"../../../Engine/Shaders/PaniniProjection.usf" 1843
+"../../../Engine/Shaders/ParticleBeamTrailVertexFactory.usf" 1844
+"../../../Engine/Shaders/ParticleBoundsShader.usf" 1845
+"../../../Engine/Shaders/ParticleCurveInjectionShader.usf" 1846
+"../../../Engine/Shaders/ParticleGPUSpriteVertexFactory.usf" 1847
+"../../../Engine/Shaders/ParticleInjectionShader.usf" 1848
+"../../../Engine/Shaders/ParticleSimulationShader.usf" 1849
+"../../../Engine/Shaders/ParticleSimVisualizeShader.usf" 1850
+"../../../Engine/Shaders/ParticleSortKeyGen.usf" 1851
+"../../../Engine/Shaders/ParticleSpriteVertexFactory.usf" 1852
+"../../../Engine/Shaders/ParticleVertexFactoryCommon.usf" 1853
+"../../../Engine/Shaders/PixelShaderOutputCommon.usf" 1854
+"../../../Engine/Shaders/PlanarReflectionShaders.usf" 1855
+"../../../Engine/Shaders/PlanarReflectionShared.usf" 1856
+"../../../Engine/Shaders/PNTriangles.usf" 1857
+"../../../Engine/Shaders/PositionOnlyDepthVertexShader.usf" 1858
+"../../../Engine/Shaders/PostProcessAmbient.usf" 1859
+"../../../Engine/Shaders/PostProcessAmbientOcclusion.usf" 1860
+"../../../Engine/Shaders/PostProcessBloom.usf" 1861
+"../../../Engine/Shaders/PostProcessBokehDOF.usf" 1862
+"../../../Engine/Shaders/PostProcessBusyWait.usf" 1863
+"../../../Engine/Shaders/PostProcessCircleDOF.usf" 1864
+"../../../Engine/Shaders/PostProcessCombineLUTs.usf" 1865
+"../../../Engine/Shaders/PostProcessCommon.usf" 1866
+"../../../Engine/Shaders/PostProcessCompositeEditorPrimitives.usf" 1867
+"../../../Engine/Shaders/PostProcessDOF.usf" 1868
+"../../../Engine/Shaders/PostProcessDownsample.usf" 1869
+"../../../Engine/Shaders/PostProcessEyeAdaptation.usf" 1870
+"../../../Engine/Shaders/PostProcessGBufferHints.usf" 1871
+"../../../Engine/Shaders/PostProcessHierarchical.usf" 1872
+"../../../Engine/Shaders/PostProcessHistogram.usf" 1873
+"../../../Engine/Shaders/PostProcessHistogramCommon.usf" 1874
+"../../../Engine/Shaders/PostProcessHistogramReduce.usf" 1875
+"../../../Engine/Shaders/PostProcessHMD.usf" 1876
+"../../../Engine/Shaders/PostProcessLensBlur.usf" 1877
+"../../../Engine/Shaders/PostProcessLensFlares.usf" 1878
+"../../../Engine/Shaders/PostProcessLpvIndirect.usf" 1879
+"../../../Engine/Shaders/PostProcessMaterialShaders.usf" 1880
+"../../../Engine/Shaders/PostProcessMobile.usf" 1881
+"../../../Engine/Shaders/PostProcessMotionBlur.usf" 1882
+"../../../Engine/Shaders/PostProcessNoiseBlur.usf" 1883
+"../../../Engine/Shaders/PostProcessPassThrough.usf" 1884
+"../../../Engine/Shaders/PostProcessSelectionOutline.usf" 1885
+"../../../Engine/Shaders/PostProcessSubsurface.usf" 1886
+"../../../Engine/Shaders/PostProcessTemporalAA.usf" 1887
+"../../../Engine/Shaders/PostProcessTemporalCommon.usf" 1888
+"../../../Engine/Shaders/PostProcessTestImage.usf" 1889
+"../../../Engine/Shaders/PostProcessTonemap.usf" 1890
+"../../../Engine/Shaders/PostProcessUpscale.usf" 1891
+"../../../Engine/Shaders/PostProcessVelocityFlatten.usf" 1892
+"../../../Engine/Shaders/PostProcessVisualizeBuffer.usf" 1893
+"../../../Engine/Shaders/PostProcessVisualizeDOF.usf" 1894
+"../../../Engine/Shaders/PostProcessVisualizeHDR.usf" 1895
+"../../../Engine/Shaders/PreCullTriangles.usf" 1896
+"../../../Engine/Shaders/PrimitiveDistanceAccuracyPixelShader.usf" 1897
+"../../../Engine/Shaders/QuadComplexityAccumulatePixelShader.usf" 1898
+"../../../Engine/Shaders/QuadOverdraw.usf" 1899
+"../../../Engine/Shaders/RadixSortShaders.usf" 1900
+"../../../Engine/Shaders/Random.usf" 1901
+"../../../Engine/Shaders/RecomputeTangentsCommon.usf" 1902
+"../../../Engine/Shaders/RecomputeTangentsPerTrianglePass.usf" 1903
+"../../../Engine/Shaders/RecomputeTangentsPerVertexPass.usf" 1904
+"../../../Engine/Shaders/ReflectionEnvironmentComposite.usf" 1905
+"../../../Engine/Shaders/ReflectionEnvironmentComputeShaders.usf" 1906
+"../../../Engine/Shaders/ReflectionEnvironmentShaders.usf" 1907
+"../../../Engine/Shaders/ReflectionEnvironmentShared.usf" 1908
+"../../../Engine/Shaders/RequiredTextureResolutionPixelShader.usf" 1909
+"../../../Engine/Shaders/ResolvePixelShader.usf" 1910
+"../../../Engine/Shaders/ResolveVertexShader.usf" 1911
+"../../../Engine/Shaders/RTWriteMaskDecode.usf" 1912
+"../../../Engine/Shaders/SceneCapturePixelShader.usf" 1913
+"../../../Engine/Shaders/ScreenPixelShader.usf" 1914
+"../../../Engine/Shaders/ScreenSpaceRayCast.usf" 1915
+"../../../Engine/Shaders/ScreenSpaceReflections.usf" 1916
+"../../../Engine/Shaders/ScreenVertexShader.usf" 1917
+"../../../Engine/Shaders/SeparableSSS.usf" 1918
+"../../../Engine/Shaders/SeparateTranslucency.usf" 1919
+"../../../Engine/Shaders/ShaderComplexityAccumulatePixelShader.usf" 1920
+"../../../Engine/Shaders/ShaderComplexityApplyPixelShader.usf" 1921
+"../../../Engine/Shaders/ShaderVersion.usf" 1922
+"../../../Engine/Shaders/ShadingModels.usf" 1923
+"../../../Engine/Shaders/ShadowDepthCommon.usf" 1924
+"../../../Engine/Shaders/ShadowDepthPixelShader.usf" 1925
+"../../../Engine/Shaders/ShadowDepthVertexShader.usf" 1926
+"../../../Engine/Shaders/ShadowFilteringCommon.usf" 1927
+"../../../Engine/Shaders/ShadowProjectionCommon.usf" 1928
+"../../../Engine/Shaders/ShadowProjectionPixelShader.usf" 1929
+"../../../Engine/Shaders/ShadowProjectionVertexShader.usf" 1930
+"../../../Engine/Shaders/SHCommon.usf" 1931
+"../../../Engine/Shaders/SimpleElementColorChannelMaskPixelShader.usf" 1932
+"../../../Engine/Shaders/SimpleElementHitProxyPixelShader.usf" 1933
+"../../../Engine/Shaders/SimpleElementNormalMapPixelShader.usf" 1934
+"../../../Engine/Shaders/SimpleElementPixelShader.usf" 1935
+"../../../Engine/Shaders/SimpleElementTexture2DPreviewPixelShader.usf" 1936
+"../../../Engine/Shaders/SimpleElementVertexShader.usf" 1937
+"../../../Engine/Shaders/SimpleF32PixelShader.usf" 1938
+"../../../Engine/Shaders/SimpleF32VertexShader.usf" 1939
+"../../../Engine/Shaders/SkyLighting.usf" 1940
+"../../../Engine/Shaders/SkyLightingShared.usf" 1941
+"../../../Engine/Shaders/SlateElementPixelShader.usf" 1942
+"../../../Engine/Shaders/SlatePostProcessPixelShader.usf" 1943
+"../../../Engine/Shaders/SlateShaderCommon.usf" 1944
+"../../../Engine/Shaders/SlateVertexShader.usf" 1945
+"../../../Engine/Shaders/SolidColorPixelShader.usf" 1946
+"../../../Engine/Shaders/SpeedTreeCommon.usf" 1947
+"../../../Engine/Shaders/StationaryLightOverlapShaders.usf" 1948
+"../../../Engine/Shaders/StereoLayerShader.usf" 1949
+"../../../Engine/Shaders/SurfelMaterialShared.usf" 1950
+"../../../Engine/Shaders/SurfelTree.usf" 1951
+"../../../Engine/Shaders/Tessellation.usf" 1952
+"../../../Engine/Shaders/TiledDeferredLightShaders.usf" 1953
+"../../../Engine/Shaders/TonemapCommon.usf" 1954
+"../../../Engine/Shaders/TranslucentLightingShaders.usf" 1955
+"../../../Engine/Shaders/TranslucentLightInjectionShaders.usf" 1956
+"../../../Engine/Shaders/TranslucentShadowDepthShaders.usf" 1957
+"../../../Engine/Shaders/UpdateTextureShaders.usf" 1958
+"../../../Engine/Shaders/VectorFieldCompositeShaders.usf" 1959
+"../../../Engine/Shaders/VectorFieldVisualizationVertexFactory.usf" 1960
+"../../../Engine/Shaders/VelocityCommon.usf" 1961
+"../../../Engine/Shaders/VelocityShader.usf" 1962
+"../../../Engine/Shaders/VertexFactoryCommon.usf" 1963
+"../../../Engine/Shaders/VisualizeShadingModels.usf" 1964
+"../../../Engine/Shaders/VisualizeTexture.usf" 1965
+"../../../Engine/Shaders/VulkanCommon.usf" 1966
+"../../../Engine/Shaders/WideCustomResolveShaders.usf" 1967
+"../../../Engine/Shaders/WideCustomResolve_Wide.usf" 1968
+"../../../Engine/Shaders/WideCustomResolve_Wider.usf" 1969
+"../../../Engine/Shaders/WideCustomResolve_Widest.usf" 1970
