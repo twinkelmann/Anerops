@@ -35,7 +35,7 @@ Nous avons utilisé [Unreal Engine 4.15](https://www.unrealengine.com/en-US/what
 
 Nous avons utilisé Qt au lieu de VS2017 pour développer à cause des performances
 médiocres d'IntelliSense dans ce dernier. En effet, la colorisation syntaxique
-ainsi que l'autocompletion était inutilisable, randant le développement
+ainsi que l'autocompletion était inutilisable, rendant le développement
 impossible. Il a tout fois été conservé pour la compilation du code, étant
 fait pour fonctionner de base avec Unreal Engine.
 
