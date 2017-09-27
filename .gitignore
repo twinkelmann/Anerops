@@ -1,8 +1,13 @@
 Binaries
+Debug
 Intermediate
 Backup
+Saved
+Build
 Logs
 *.db
 *.db-*
 *.ipch
 *.opendb
+.vs
+*BuiltData.uasset
