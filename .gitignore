@@ -11,3 +11,4 @@ Logs
 *.opendb
 .vs
 *BuiltData.uasset
+*.pak
