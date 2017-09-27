@@ -33,6 +33,31 @@ la version cross-plateform, qui n'est pas compatible avec ce projet.
 Nous avons utilisé [Unreal Engine 4.15](https://www.unrealengine.com/en-US/what-is-unreal-engine-4) comme moteur de jeu,
 [Visual Studio 2017](https://www.visualstudio.com/) pour compiler le code et [Qt Creator](https://www1.qt.io/download/) pour développer.
 
+Nous avons utilisé Qt au lieu de VS2017 pour développer à cause des performances
+médiocres d'IntelliSense dans ce dernier. En effet, la colorisation syntaxique
+ainsi que l'autocompletion était inutilisable, randant le développement
+impossible. Il a tout fois été conservé pour la compilation du code, étant
+fait pour fonctionner de base avec Unreal Engine.
+
+Nous avons également utilisé [Blender](https://blender.org) et [Gimp](https://www.gimp.org/) afin de retoucher des modèles 3D
+et des images.
+
+## Masques
+
+Les différent modèles ont été récupérés sur Internet, et adaptés de la manière
+suivante:
+
+La caméra nous met à disposition 32 points sur le visage.
+Ces points sont visibles dans le fichier `landmarks_id.txt`,
+à la racine de ce projet.
+
+En utilisant le logiciel **Blender**, une armature (un squelette virtuel) a été
+ajouté à chaque masque, avec un os pour chacun des points, faisant bouger
+la partie correspondante du mesh (objet 3D).
+
+Plus tard, il est possible de déplacer chacun des os à l'endroit indiqué par
+la caméra en utilisant leurs noms.
+
 ## Code
 
 Toute la partie du code communicant avec la cameré a été écrite en **C++**.
