@@ -20,9 +20,9 @@ Il contient une explication sur le fonctionnement et la logique du projet.
 
 Nous avons utilisé le SDK Intel RealSense version 2016 R3.
 
-Driver: `intel_rs_dcm_sr300_3.3.27.5718.exe`
-Base SDK: `intel_rs_sdk_mw_core_offline_11.0.27.1384.exe`
-Extension SDK Face: `intel_rs_sdk_mw_face_hybrid_11.0.28.2787.exe`
+- Driver: `intel_rs_dcm_sr300_3.3.27.5718.exe`
+- Base SDK: `intel_rs_sdk_mw_core_offline_11.0.27.1384.exe`
+- Extension SDK Face: `intel_rs_sdk_mw_face_hybrid_11.0.28.2787.exe`
 
 Chacun de ces fichiers ont tous étés téléchargés depuis la [Dev Zone d'Intel](https://software.intel.com/en-us/realsense-sdk-windows-eol).
 Cette version du SDK a toute fois été abandonnée depuis peu, en faveur de
@@ -64,7 +64,7 @@ Il s'occupe aussi du recalibrage. Ce prosessus consiste à capturer la différen
 l'utilisateur et la position des os par défaut. Cette différence peut ensuite
 être ajoutée à chaque position récupérée depuis la caméra afin de correspondre
 au masque avec plus de fidélité.
-Il s'occupe également du délais avant la recalibration et de l'interface qui y
+Il s'occupe également du délais avant la recalibration, de l'interface qui y
 est associée et du changement de masque.
 
 ## Scène
